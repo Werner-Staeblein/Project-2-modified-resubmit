@@ -188,6 +188,11 @@ Results also provides option for user to start new quiz. This will take the user
 
 Testing was done incrementally with every change in functionality of code (Javascript). Only once the manual functionality testing was completed, the visual testing started with changes of CSS. Website was also tested on different browsers and on different screen sizes using Google Chrome and Firefox developer tools.
 
+**Issues resolved**
+
+- ./questions.js not loaded into quiz.js with error message "does not provide export named 'default'. Solution via Stackoverflow search. Found out that 'export default' in questions.js is needed for question.js to be IMPORTED into quiz.js
+
+
 # User Stories
 
 
