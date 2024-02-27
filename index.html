@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Javscript Quiz App to test your knowledge on one of the most important languages for the web">
+  <meta name="keywords"
+    content="Javscript Quiz QuizzApp">
+  <meta name="author" content="Werner Stäblein">
+
+  <meta property="og:title" content="Javscript Quiz">
+  <meta property="og:description"
+    content="Javscript Quiz App to test your knowledge on one of the most important languages for the web">
+
+  <title>Javscript Quiz App</title>
+
+  <!-- APPLE TOUCH ICON AND FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon_32_x_32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon_16_x_16.jpg">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <img class="logo" id="logo" src="icons/icons8-javascript-240.png" alt="Javscript logo" title="Click here to restart the quiz">
+    <h1>Test you Javscript Knowledge</h1>
+  </header>
+
+
+  <div id="instructions">         
+    <h2>Welcome to Javascript Quiz</h2>
+    
+    <p>You will receive 10 randomly selected questions drawn from a Javascript Quiz database</p>
+    <p>There are 4 answer choices for each question</p>
+    <p>You can select only ONE answer</p>
+    <p>Before you submit your answer you can still make up your mind</p>
+       
+    <p>If you want to start the quiz again, please press the JS logo</p>
+    <p>Once you restart the quiz, a new set of 10 questions will be displayed</p>
+    
+    <button id="startQuizBtn">Start JS Quiz</button>
+  </div>
+
+<script type="module" src="quiz.js"></script>
+
+</body>
+</html>
