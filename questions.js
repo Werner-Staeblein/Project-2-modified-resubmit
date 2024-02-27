@@ -29,6 +29,7 @@ const quizData = [
     }
   ];
   
+  export default quizData;
   console.log(quizData.length)
   
   
