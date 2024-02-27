@@ -74,11 +74,9 @@ shows results / result supported with icon
 
 Design was based on the key colors in the Javascript logo. Using the colors included in the JS logo, a color palette was generated with coolors
 
-The Javscript icon was downloaded from **[JavscriptLogo]**([readme_assets/Color%20palette%20JS%20Quiz.png](https://icons8.com/icons/set/javascript)) 
-
 ### Color Palette
 
-![Palette](readme_assets/color_palette%20_javascript_quiz.png)
+<img src="readme_assets/color_palette _javascript_quiz.png" width="500" height="300">
 
 <span style="color:red">__describe what colors used for what part of the page__</span>
 
