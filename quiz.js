@@ -6,6 +6,11 @@ const showAnswerButton = document.getElementById('showAnswer');
 
 import quizData from './questions.js';
 
+let currentQuestion = 0;
+let score = 0;
+let incorrectAnswers = [];
+let selectedQuestions = [];
+
 document.addEventListener("DOMContentLoaded", function () {
     const startQuizBtn = document.getElementById('startQuizBtn');
     const instructionsDiv = document.getElementById('instructions');
@@ -20,6 +25,18 @@ document.addEventListener("DOMContentLoaded", function () {
   
 });
 
+function startGame() {
+
+  console.log("Game started!");
+
+  selectedQuestions = shuffleArray(quizData).slice(0, 2);
+
+  currentQuestion = 0;
+  score = 0;
+  incorrectAnswers = [];
+  displayQuestion();
+}
+
 /**
  * Function to randomize the questions. This function picks a random element
  * from each original array and excludes it from the next draw.
@@ -33,15 +50,24 @@ function shuffleArray(array) {
   return array;
 }
 
-function startGame() {
-  console.log("Game started!");
+function displayQuestion() {
+  if (currentQuestion < selectedQuestions.length) {
+    const questionData = selectedQuestions[currentQuestion];
 
-  selectedQuestions = shuffleArray(quizData).slice(0, 10);
+    const questionElement = document.createElement('div');
+    questionElement.className = 'question';
+    questionElement.innerHTML = `<p class="question-counter">Question: ${currentQuestion + 1}/${selectedQuestions.length}</p>${questionData.question}`;
 
-  currentQuestion = 0;
-  score = 0;
-  incorrectAnswers = [];
-  displayQuestion();
-}
-
-
+    const optionsElement = document.createElement('div');
+    optionsElement.className = 'options';
+    
+    quizContainer.innerHTML = '';
+    quizContainer.appendChild(questionElement);
+    quizContainer.appendChild(optionsElement);
+    
+    resultContainer.style.display = 'none';
+    retryButton.style.display = 'none';
+    showAnswerButton.style.display = 'none';
+    submitButton.style.display = 'inline-block';
+  } else {
+}}
