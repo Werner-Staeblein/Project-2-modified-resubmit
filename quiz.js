@@ -20,8 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
       startQuizBtn.style.display = 'none';
       instructionsDiv.style.display = 'none';
       quizContainer.style.display = 'block';
-      startGame();
+      startGame();      
     });
+
+    submitButton.addEventListener('click', checkAnswer);
   
 });
 
@@ -75,7 +77,7 @@ function displayQuestion() {
       option.appendChild(optionText);
       optionsElement.appendChild(option);
     }
-      
+
     quizContainer.innerHTML = '';
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
@@ -86,3 +88,27 @@ function displayQuestion() {
     submitButton.style.display = 'inline-block';
   } else {
 }}
+
+function checkAnswer() {
+  
+  const selectedOption = document.querySelector('input[name="quiz"]:checked');
+  if (selectedOption) {
+
+    const answer = selectedOption.value;
+
+    const correctAnswerText = selectedQuestions[currentQuestion].choices[selectedQuestions[currentQuestion].correctAnswer];
+
+    if (answer === correctAnswerText) {
+      score++;
+      console.log('Correct!');
+    } else {
+      incorrectAnswers.push({
+        question: selectedQuestions[currentQuestion].question,
+        incorrectAnswer: answer,
+        correctAnswer: correctAnswerText,
+      });
+      console.log('Incorrect!');
+    }
+    
+  }
+}
