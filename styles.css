@@ -1,15 +1,21 @@
 
 
 
+/*----------------------------------------------------------
+              Styling of Quiz Container
+-----------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
+.container {
+    width: 60vw;
+    height: auto;
+    padding: 1.2rem;
+    border-radius: 0.7rem;
+    text-align: center;
+    margin-bottom: 30vh;
+    background: blue;
+    display: none;
+}
+ 
 
 /*----------------------------------------------------------
               Styling of quiz container

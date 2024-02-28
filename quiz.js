@@ -60,7 +60,22 @@ function displayQuestion() {
 
     const optionsElement = document.createElement('div');
     optionsElement.className = 'options';
-    
+
+    for (let i = 0; i < questionData.choices.length; i++) {
+      const option = document.createElement('label');
+      option.className = 'option';
+
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'quiz';
+      radio.value = questionData.choices[i];
+      const optionText = document.createTextNode(questionData.choices[i]);
+
+      option.appendChild(radio);
+      option.appendChild(optionText);
+      optionsElement.appendChild(option);
+    }
+      
     quizContainer.innerHTML = '';
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
