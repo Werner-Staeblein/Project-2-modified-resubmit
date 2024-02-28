@@ -1,5 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  /*All hexadecimal color codes from color palette converted to RGB color
+  so that alpha values can be used. Color palette in HEX code originally
+  
+    --background1: #f8D000;
+    --color1: #000000;
+    --background2: #947C00;
+    --color2: #010101;
+    -background3: #B89B00;
+  */
+  
+:root{
+    --background1: rgb(248, 208, 0);
+    --background2: rgb(148, 124, 0);
+    --background3: rgb(184, 155, 0);
+    --background_alpha1: rgba(248, 208, 0, 0.5); 
+    --background_alpha2: rgba(248, 208, 0, 0.5); 
+    --color1: rgb(0, 0, 0);
+    --color2: rgb(1, 1, 1);     
+}
 
-
+header img{
+    width: 8rem;
+    margin-right: 3rem;
+    border-radius: 7rem;
+}
+  
+header h1{
+    color: var(--background2);
+    font-weight: bold;
+    text-shadow: 0.1rem -0.1rem 0.1rem black;
+} 
 
 /*----------------------------------------------------------
               Styling of Quiz Container
