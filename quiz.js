@@ -109,6 +109,18 @@ function checkAnswer() {
       });
       console.log('Incorrect!');
     }
+
+    currentQuestion++;
+    selectedOption.checked = false;
+    if (currentQuestion < selectedQuestions.length) {
+      displayQuestion();
+    } else {
+      displayResult();
+      
+      // displayResult() still to be defined. Check whether it is possible to click through numerous questions
+      // selecetdQuestions.length currently defined as 4
+      submitButton.style.display = 'none';
+    }
     
   }
 }
