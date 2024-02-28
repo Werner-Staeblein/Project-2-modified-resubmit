@@ -124,3 +124,12 @@ function checkAnswer() {
     
   }
 }
+
+function displayResult() {
+  
+  resultContainer.style.display = 'block';
+  retryButton.style.display = 'inline-block';
+  showAnswerButton.style.display = 'inline-block';
+
+}
+
