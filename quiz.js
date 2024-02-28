@@ -6,6 +6,9 @@ const showAnswerButton = document.getElementById('showAnswer');
 
 import quizData from './questions.js';
 
+const logo = document.getElementById("logo");
+logo.addEventListener('click', retryQuiz);
+
 let currentQuestion = 0;
 let score = 0;
 let incorrectAnswers = [];
@@ -117,9 +120,7 @@ function checkAnswer() {
       displayQuestion();
     } else {
       displayResult();
-      
-      // displayResult() still to be defined. Check whether it is possible to click through numerous questions
-      // selecetdQuestions.length currently defined as 4
+            
       submitButton.style.display = 'none';
     }
     
@@ -147,8 +148,5 @@ function retryQuiz() {
   quizContainer.style.display = 'block';
   displayQuestion();
 }
-// Check done that shuffleArray() reshuffles completely new
-
-// further check if retryQuiz can be linked to icon id=loogo
 
 // next logical step now: activate a button show incorrect answers
