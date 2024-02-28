@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     submitButton.addEventListener('click', checkAnswer);
+    retryButton.addEventListener('click', retryQuiz);
   
 });
 
@@ -133,3 +134,21 @@ function displayResult() {
 
 }
 
+/**
+ * Function retry sets current question + score back to ZERO
+ * New set of questions picked from questions-Array
+*/
+
+function retryQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  incorrectAnswers = [];
+  selectedQuestions = shuffleArray([...quizData]).slice(0, 4);
+  quizContainer.style.display = 'block';
+  displayQuestion();
+}
+
+// must do: Questions start from ZERO, Score starts from ZERO, incorrectAnswers starts from ZERO
+// check "correctAnswers" processing above. Check again if the shuffleArray really shuffles a new
+// set of questions
+// further check if retryQuiz can be linked to icon id=loogo
