@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     submitButton.addEventListener('click', checkAnswer);
     retryButton.addEventListener('click', retryQuiz);
+    showAnswerButton.addEventListener('click', showAnswer);
   
 });
 
@@ -149,4 +150,13 @@ function retryQuiz() {
   displayQuestion();
 }
 
-// next logical step now: activate a button show incorrect answers
+function showAnswer() {
+  
+  quizContainer.style.display = 'none';
+  submitButton.style.display = 'none';
+  retryButton.style.display = 'inline-block';
+  showAnswerButton.style.display = 'none';
+
+  console.log("show answer button clicked")
+  
+}
