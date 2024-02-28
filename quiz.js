@@ -29,7 +29,7 @@ function startGame() {
 
   console.log("Game started!");
 
-  selectedQuestions = shuffleArray(quizData).slice(0, 2);
+  selectedQuestions = shuffleArray(quizData).slice(0, 4);
 
   currentQuestion = 0;
   score = 0;
