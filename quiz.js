@@ -147,8 +147,8 @@ function retryQuiz() {
   quizContainer.style.display = 'block';
   displayQuestion();
 }
+// Check done that shuffleArray() reshuffles completely new
 
-// must do: Questions start from ZERO, Score starts from ZERO, incorrectAnswers starts from ZERO
-// check "correctAnswers" processing above. Check again if the shuffleArray really shuffles a new
-// set of questions
 // further check if retryQuiz can be linked to icon id=loogo
+
+// next logical step now: activate a button show incorrect answers
