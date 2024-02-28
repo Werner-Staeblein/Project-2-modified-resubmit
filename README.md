@@ -186,7 +186,9 @@ Results also provides option for user to start new quiz. This will take the user
 
 # Testing
 
-Testing was done incrementally with every change in functionality of code (Javascript). Only once the manual functionality testing was completed, the visual testing started with changes of CSS. Website was also tested on different browsers and on different screen sizes using Google Chrome and Firefox developer tools.
+Testing was done incrementally with every change in functionality of code (Javascript). 
+
+Only once the manual functionality testing was completed, the visual testing started with additions of CSS. Website was also tested on different browsers and on different screen sizes using Google Chrome and Firefox developer tools.
 
 **Issues resolved**
 
