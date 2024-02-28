@@ -50,10 +50,24 @@ header h1{
     text-shadow: 0.1rem -0.1rem 0.1rem black;
 } 
 
-/*----------------------------------------------------------
+/*--------------------------------------------------------------
         Styling of all Instructions and Start JS Quiz button
------------------------------------------------------------*/
- 
+----------------------------------------------------------------*/
+
+#instructions h2{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--background2);
+    font-weight: bold;
+    font-size: 2.7rem;
+    text-shadow: 0.3rem -0.2rem 0.2rem black;
+}
+  
+#instructions p{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
 #startQuizBtn {
     display: block;
     margin: 5rem auto 0 auto;
@@ -73,7 +87,7 @@ header h1{
 }
 
 /*----------------------------------------------------------
-              Styling of Quiz Container
+              Styling of Quiz Container | Sizing
 -----------------------------------------------------------*/
 
 .container {
@@ -86,10 +100,9 @@ header h1{
     background: blue;
     display: none;
 }
- 
 
 /*----------------------------------------------------------
-              Styling of quiz container
+              Styling of quiz container | Content
 -----------------------------------------------------------*/
 
 .question-counter{
