@@ -24,6 +24,20 @@
     --color2: rgb(1, 1, 1);     
 }
 
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    margin: 5vh auto;
+    border-bottom: 0.2rem solid var(--background2);
+    padding: 1rem;  
+}
+  
+header h1{
+    margin: 0;
+}
+
 header img{
     width: 8rem;
     margin-right: 3rem;
