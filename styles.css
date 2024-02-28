@@ -102,6 +102,26 @@ header h1{
 }
 
 /*----------------------------------------------------------
+              Styling of submit button
+-----------------------------------------------------------*/
+
+#submit,
+#retry,
+#showAnswer{
+  display: block;
+  margin: 3rem 0 0 2rem;
+  padding: 1.4rem;
+  background-color: var(--background2);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0.4rem -0.4rem 1rem var(--color1);
+}
+
+/*----------------------------------------------------------
               Styling of quiz container | Content
 -----------------------------------------------------------*/
 
