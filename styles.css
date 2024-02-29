@@ -1,7 +1,7 @@
 /*
-Still to do on CSS before styling of radio buttons and quiz container:
+Still to do on CSS 
 
-- background-color for background of quiz container and instructions?
+- Radio buttons and options styling
 
 */
 
@@ -40,6 +40,7 @@ body {
     height: 100vh;
     margin: 0 auto ;
     font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(45deg, var(--background_alpha1), var(--background_alpha2));
 }
 
 header{
@@ -156,6 +157,12 @@ header h1{
     margin-bottom: 1.6rem;  
 }
 
+/*Style of the answer-text for the radio buttons*/
+
+.options .option {
+    font-size: 1.6rem;
+}
+  
 
 /*-----------------------------------------------------------------------------------
                       Styling of result container
