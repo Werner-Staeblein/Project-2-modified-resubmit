@@ -56,8 +56,63 @@ const quizData = [
         "<!-- This is a comment -->",
       ],
       correctAnswer: 1,
-    }
+    },
 
+    {
+      question: "What does the '=== operator' do in JavaScript?",
+      choices: [
+        "Checks for equality with type coercion",
+        "Checks for equality without type coercion",
+        "Assigns a value to a variable",
+        "Compares two strings lexicographically",
+      ],
+      correctAnswer: 2,
+    },
+    
+    {
+      question: "How do you pick a document element based on the value of its id attribute?",
+      choices: [
+        "getElementsbyId()",
+        "getElementbyId()",
+        "both getElementsbyId() and getElementbyId()",
+        "getElement",
+      ],
+      correctAnswer: 2,
+    },
+  
+    {
+      question: "What is the output of the following code: var x = [1, 2, 3]; console.log(x.length);",
+      choices: [
+        "1",
+        "2",
+        "3",
+        "4",
+      ],
+      correctAnswer: 2,
+    },
+    
+    {
+      question: "What does the forEach method do in JavaScript?",
+      choices: [
+        "Adds a new element to the end of an array",
+        "Removes an element from the beginning of an array",
+        "Executes a function once for each element in an array",
+        "Reverses the order of the elements in an array",
+      ],
+      correctAnswer: 2,
+    },
+    
+    {
+      question: "What is the difference between == and === operators in JavaScript?",
+      choices: [
+        "They are interchangeable",
+        "== performs a strict comparison, while === performs a loose comparison",
+        "=== performs a strict comparison, while == performs a loose comparison",
+        "They both perform the same type of comparison",
+      ],
+      correctAnswer: 2,
+    }
+  
   ];
   
   export default quizData;
