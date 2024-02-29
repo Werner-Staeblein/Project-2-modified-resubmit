@@ -136,12 +136,10 @@ function displayResult() {
   const smiley = getSmiley(score);
   resultContainer.innerHTML = `<p class="smiley-text">${getSmiley(score)}</p>
   </p>
-  
-  score ${score} out of ${selectedQuestions.length}  `
+  <br>
+  <p class="final-score-text"><br>You scored ${score} out of ${selectedQuestions.length}!</p>`
   }
-
-  console.log(getSmiley(score))
-
+ 
 /**
  * Function retry sets current question + score back to ZERO
  * New set of questions picked from questions-Array
