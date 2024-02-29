@@ -177,5 +177,13 @@ header h1{
     margin-top: 2.5rem;
     font-weight: bold;
     color: rgba(255,255,255,0.8);
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--color1);
 }
   
+.final-score-text{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: -0.7rem;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--color1);
+}
