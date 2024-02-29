@@ -133,11 +133,11 @@ function displayResult() {
   retryButton.style.display = 'inline-block';
   showAnswerButton.style.display = 'inline-block';
 
-  const smiley = getSmiley(score);
+  // const smiley = getSmiley(score);
   resultContainer.innerHTML = `<p class="smiley-text">${getSmiley(score)}</p>
   </p>
   <br>
-  <p class="final-score-text"><br>You scored ${score} out of ${selectedQuestions.length}!</p>`
+  <p class="final-score-text"><br>You scored ${score} out of ${selectedQuestions.length}!</p>`;
   }
  
 /**
@@ -156,7 +156,7 @@ function retryQuiz() {
 
 function showAnswer() {
   
-  console.log("show answer button clicked")
+  console.log("show answer button clicked");
 
   quizContainer.style.display = 'none';
   submitButton.style.display = 'none';
