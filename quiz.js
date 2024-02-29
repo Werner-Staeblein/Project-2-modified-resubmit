@@ -36,7 +36,7 @@ function startGame() {
 
   console.log("Game started!");
 
-  selectedQuestions = shuffleArray(quizData).slice(0, 4);
+  selectedQuestions = shuffleArray(quizData).slice(0, 2);
 
   currentQuestion = 0;
   score = 0;
@@ -124,8 +124,7 @@ function checkAnswer() {
             
       submitButton.style.display = 'none';
     }
-    
-  }
+}
 }
 
 function displayResult() {
@@ -145,18 +144,42 @@ function retryQuiz() {
   currentQuestion = 0;
   score = 0;
   incorrectAnswers = [];
-  selectedQuestions = shuffleArray([...quizData]).slice(0, 4);
+  selectedQuestions = shuffleArray([...quizData]).slice(0, 2);
   quizContainer.style.display = 'block';
   displayQuestion();
 }
 
 function showAnswer() {
   
+  console.log("show answer button clicked")
+
   quizContainer.style.display = 'none';
   submitButton.style.display = 'none';
   retryButton.style.display = 'inline-block';
   showAnswerButton.style.display = 'none';
 
-  console.log("show answer button clicked")
+/**
+ * for-loop iterates over array defined above. On every incorrect answer, the array collects the question, the incorrect answer clickedFunction and
+ * the answer that is correct for that question. Concatenation of incorrect answers with += yields "list" of incorrect answers 
+*/
+  let incorrectAnswersHtml = '';
+  
+  for (let i = 0; i < incorrectAnswers.length; i++) {
+    incorrectAnswersHtml += `
+      <p class="incorrect-answer">
+        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
+        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
+        <strong class="correct-answer">Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+      </p>
+    `;
+  }  
+
+  resultContainer.innerHTML = `
+  <p class="incorrect">Incorrect Answers:</p>
+
+  ${incorrectAnswersHtml}
+  `;
+
+  resultContainer.classList.add('result-container');
   
 }
