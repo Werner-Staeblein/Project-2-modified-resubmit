@@ -260,7 +260,7 @@ Desktop
 This project is deployed to GitHub pages. The deployment steps are as follows:
 
 1. Log in to Github und www.github.com
-2. Find repository of this project named (Werner-Staeblein/Project-1)
+2. Find repository of this project named (Werner-Staeblein/Project-2)
 3. In the headings of the repository find "settings". The settings are on outer right hand side next to "insight" and "security" in the repository sub-heading. Click "settings" here 
 4. In settings, a navigation on the left-hand side is shown. This navigation has the first heading "General". In this column that starts with "General" and und der "code and automation" click the link named "Pages". This link named "Pages" is directly on top of the submenu "Security". What matters here is that "Pages" is clicked.
 5. You will now see a heading named "GitHub Pages". In the GitHub Pages, go to "build and deployment". In the heading "Branch" choose the options "main" and "/root"
