@@ -1,9 +1,6 @@
-
 /*
-Still to do on CSS before styling of radio buttons and showAnswer section:
+Still to do on CSS before styling of radio buttons and quiz container:
 
-- quiz container is not centered
-- instructions are not centered
 - background-color for background of quiz container and instructions?
 
 */
@@ -32,6 +29,17 @@ Still to do on CSS before styling of radio buttons and showAnswer section:
     --background_alpha2: rgba(248, 208, 0, 0.5); 
     --color1: rgb(0, 0, 0);
     --color2: rgb(1, 1, 1);     
+}
+
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    height: 100vh;
+    margin: 0 auto ;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
