@@ -18,12 +18,13 @@ The goal of the website is for users to test their knowledge in Javascript.
 
 ### As a first time user
 
-- As a website visotor I want to receive instructions what the quiz is about
+- As a first-time website visotor I want to receive instructions what the quiz is about
+- I want to easily and intuitively navigate through the quiz
 - I want to know where to start the quiz indicated by a start button
 - I want to see my score at the end of the quiz
 - I want want to know the number of questions already answered (progress indication/bar)
-- I want to restart the quiz either while I am taking the quiz or at the end of the quiz
-- I want to see different questions each time that I am running the quiz
+- I want to restart the quiz either while I am taking the quiz or at the end of the quiz (user control)
+- I want to see different questions each time that I am running the quiz for the app to be more entertaining
 - I want to see the correct answers for those quiz questions answered incorrectly
 
 ### As a returning user
@@ -31,7 +32,7 @@ The goal of the website is for users to test their knowledge in Javascript.
 - I want to answer different questions so that I do not see the same questions again.
 - I want to play the game as many quiz rounds that I would want to
 
-## Structure
+# Structure
 
 The website provides instructions for the quiz on the opening page and allows user to press start button for the quiz.
 
@@ -45,10 +46,31 @@ The user has the option to either (i) see the correct answers for those question
 
 After opening a quiz with the start button, the user can decide to restart the quiz by clicking on the logo on the top left of the website. This will take the user back to the start of the quiz.
 
-## Opening Page
+### Opening Page | Instructions page
 
 The opening page provides a logo, clear headline what the page is about "Javscript Quiz" and instructions for the user to play the quiz combined with the start button for the quiz
 
+![OpeningPage](readme_assets/instructions_page_js_quiz.png)
+
+### Quiz Page
+
+The quiz page continues to show the logo and title of the website. Once the start button was clicked, the instructions page is no longer visible and is now replaced with the quiz question box. 
+
+The radio buttons for the questions provide the user to click one possible answer. Radio buttons are custom-styled to support overall design and appearance of question section.
+
+Once the user submits a choice on the radio button, the next quiz question automatically appears
+(automatic user feedback).
+
+![QuizPage](readme_assets/quiz_page_js_quiz.png)
+  
+### Results Page
+
+Results page is extension of quiz page.
+
+After finishing 10 quiz questions, the user is provided the score of the quiz with optionality to view correct answers to questions answered incorrectly and to restart the quiz again.
+
+![ResultsPage](readme_assets/interaction_and_user_feedback.png)
+  
 ### User Goal
 
 <span style="color:red">__further checks to be done/possibly overlap with user stories__</span>
@@ -57,28 +79,16 @@ The opening page provides a logo, clear headline what the page is about "Javscri
 
 <span style="color:red">__further cheks to be done/possibly overlap with user stories__</span>
 
-## Quiz Page
-
-The quiz page continues to show the logo and title of the website. Once the start button was clicked, the instructions page is no longer visible and is now replaced with the question box. 
-
-The radio buttons for the questions provide the user to click one possible answer. 
-
-Once the user submits a choice on the radio button, the next quiz question automatically appears. After finishing 10 quiz questions, the user is provided the score of the quiz with optionality to view correct answers to questions answered incorrectly and to restart the quiz again.
-  
-## Results Page
-
-Results page is extension of quiz page.
-shows results / result supported with icon
 
 # Design
 
-Design was based on the key colors in the Javascript logo. Using the colors included in the JS logo, a color palette was generated with coolors
+Design was based on the key colors in the Javascript logo. Using the colors included in the JS logo, a color palette was generated with coolors. This ensures conistent feel for user.
+
+User activity such as buttons highlighted with box-shadows to make overall design more appealing.
 
 ### Color Palette
 
 <img src="readme_assets/color_palette _javascript_quiz.png" width="500" height="300">
-
-<span style="color:red">__describe what colors used for what part of the page__</span>
 
 The colour palette was created with: **[coolors](https://www.color-hex.com)**
 
@@ -94,18 +104,7 @@ The Javascript icon was downloaded from **[Icons8.com](https://icons8.com/icons/
 
 - alternative text/labels used to enable screen readers providing information
 - contrasting used to have best possible visibility for the user
-
-<span style="color:red">__include reference and information about the testing of accessibility in lighthouse__
-</span>
-
-### Visual Effects
-
-### Buttons
-
-<span style="color:red">__describe hover effects and change of color of buttons, if any, once pressed__</span>
-
-![Buttons](readme_assets/)
-
+- Accessibility for visually impaired (color blindness) was tested with Google Lighthouse
 
 # Features
 
@@ -113,7 +112,7 @@ The Javascript icon was downloaded from **[Icons8.com](https://icons8.com/icons/
 
 ![Logo](icons/icons8-javascript-240.png)
 
-The logo is shown on all pages of the website. The logo likewise is a hpyerlink to restart the quiz if the user either wants to restart a quiz while having started a quiz or once a quiz round is completed and the user decides to play another quiz round.
+The logo is shown on all pages of the website. The logo likewise is a hpyerlink to restart the quiz if the user either wants to restart a quiz while having started a quiz or once a quiz round is completed and the user decides to play another quiz round (user control)
 
 On hover, a tooltip is display with information that the quiz can be restarted with click on the logo.
 
@@ -137,6 +136,23 @@ Once clicked, the user will automatically move forward to the next quiz question
 
 <span style="color:red">__![Questions/ Quiz Page](assets/readme/quizpage.png) | a picture of the quiz page will be neeed here with name quizpage__</span>
 
+### Visual Effects
+
+- Change in background color on :hover on the start button
+
+### Customized radio buttons for answer choices
+
+Radio buttons to select answer were customized in CSS to support overall appeal and coherent color experience while playing
+the quiz.
+
+![CustomizedRadioButtons](readme_assets/customized_radio_button_styling_js_quiz.png)
+
+
+### User feedback on scores achieved
+
+![User_Feedback](readme_assets/interaction_and_user_feedback.png)
+
+
 ### Results Page
 
 Results page is last question plus information about result achieved.
@@ -154,6 +170,27 @@ Results also provides option for user to start new quiz. This will take the user
 ![Results-page](readme_assets/)
 
 <span style="color:red">__![Questions/ Quiz Page](assets/readme/resultspage.png) | a picture of the results page will be neeed here with name quizpage__</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Technologies
 
