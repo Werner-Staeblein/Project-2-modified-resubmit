@@ -1,16 +1,14 @@
 # Javscript Quiz App - Javascript Project: Milestone 2
 
-Javscript Quiz is an interactive quiz for users to answer 10 randomly picked questions on Javscript. 
-Questions created are stored in a separate Array and the Quiz randomly picks 10 of those questions to be answered. 
-The goal of the website is for users to test their knowledge in Javascript.
+Javscript Quiz is an interactive quiz for users to answer questions on their knowledge of Javascript. 
+Questions created are stored in a separate Array and the Quiz randomly picks 10 of those questions to be answered.
+The color palette is harmoniously coordinated with the logo, allowing for a coherent and calm image with its bright and warm colors.
 
 ## Live project
 
-<span style="color:red">__View the live project__</span>
+![Responsive Design](readme_assets/instructions_page_js_quiz.png)
 
-![Responsive Design](readme_assets/)
-
-<span style="color:red">__quiz-picture.png once the project is live__</span>
+The live project can be viewed here under this link **[FinalProject](https://werner-staeblein.github.io/Project-2/)**
 
 # User Experience (UX)
 
@@ -29,8 +27,9 @@ The goal of the website is for users to test their knowledge in Javascript.
 
 ### As a returning user
 
-- I want to answer different questions so that I do not see the same questions again.
+- I want to answer different questions so that I do not see the same questions again
 - I want to play the game as many quiz rounds that I would want to
+
 
 # Structure
 
@@ -40,11 +39,15 @@ Once the quiz is started with start button, the user receives a sequence of 10 q
 
 The 10 questions are randomly drawn from a catalogue of quiz questions to ensure that each quiz round provides different set of questions.
 
-Once the quiz is completed with 10 questions answere, the user is automatically shown the results page including the score of correct answers.
+Once the quiz is completed with 10 questions answered, the user is automatically shown the results page including the score of correct answers.
 
-The user has the option to either (i) see the correct answers for those questions where the user incorrectly answered a quiz question or (ii) restart the quiz. If user decides to see the correct answers for quiz questions answered incorrectly, the user has the option to restart the quiz again.
+The user has the option to either 
+- (i) see the correct answers for those questions where the user incorrectly answered a quiz question or 
+- (ii) restart the quiz 
 
-After opening a quiz with the start button, the user can decide to restart the quiz by clicking on the logo on the top left of the website. This will take the user back to the start of the quiz.
+If user decides to see the correct answers for quiz questions answered incorrectly, the user still maintains the option to restart the quiz again. Regardless of the user option to restart the quiz at the end of the quiz with the retry-Button, the user can always start a new quiz round by clicking on the JS logo.
+
+After opening a quiz with the start button, the user can decide to restart the quiz by clicking on the logo on the top left of the website. This will take the user back to the start of the quiz. User does not have to finish a quiz round to be able to start a new quiz round. No score, however, is shown, when user starts a new quiz round while the round was not completed with 10 questions answered. Interim scores for discontinued quiz rounds are not stored.
 
 ### Opening Page | Instructions page
 
