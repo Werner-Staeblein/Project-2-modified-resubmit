@@ -113,12 +113,13 @@ header h1{
     width: 60vw;
     height: auto;
     padding: 1.2rem;
+    background-color: #fff;
+    box-shadow: 0.2rem 0.4rem 0.4rem var(--color1);
     border-radius: 0.7rem;
     text-align: center;
-    margin-bottom: 30vh;
     display: none;
+    margin-bottom: 30vh;
     background: linear-gradient(45deg, var(--background1), var(--background2));
-    box-shadow: 0.2rem 0.4rem 0.4rem var(--color1);
 }
 
 /*----------------------------------------------------------
@@ -155,6 +156,23 @@ header h1{
     font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 1.6rem;  
+}
+
+/* Styles for radio buttons and labels */
+.option {
+    display: block;
+    margin-bottom: 1.4rem;
+    text-align: left;
+}
+  
+.option:first-child{
+    margin-top: 2rem;
+}
+  
+.option input[type="radio"] {
+    vertical-align: middle;
+    padding-left: 5rem;
+    margin-right: 1rem;
 }
 
 /*Style of the answer-text for the radio buttons*/
