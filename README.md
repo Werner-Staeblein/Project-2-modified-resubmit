@@ -144,11 +144,10 @@ Final score out of 10 is displayed.
 
 A message is shown depending on the score achieved
 
-- if score is higher than or equal to XXX, user is shown "_________________"
-- if score is higher than or equal to XXX, user is shown "_________________"
-- if score is higher than or equal to XXX, user is shown "_________________"
-- if score is higher than or equal to XXX, user is shown "_________________"
-- if score is higher than or equal to XXX, user is shown "_________________"
+- if score is equal to 10, user is shown "Seems you are a Javascript wizard"
+- if score is higher than or equal to 8 but less than 10, user is shown "Nearing the gold medal"
+- if score is higher than or equal to 6 but less than 8, user is shown "Good knowledge but more is yet to come"
+- if score is less than 6, user is shown "Try again to improve your score"
 
 Results also provides option for user to start new quiz. This will take the user to the beginning of the website with a quiz starting again with the first question.
 
@@ -254,3 +253,42 @@ Mobile
 Desktop
 
 <!-- <img src="readme_assets/lighthouse_desktop.png" alt="Mobile Page" width="600"/> -->
+
+
+# Deployment
+
+This project is deployed to GitHub pages. The deployment steps are as follows:
+
+1. Log in to Github und www.github.com
+2. Find repository of this project named (Werner-Staeblein/Project-1)
+3. In the headings of the repository find "settings". The settings are on outer right hand side next to "insight" and "security" in the repository sub-heading. Click "settings" here 
+4. In settings, a navigation on the left-hand side is shown. This navigation has the first heading "General". In this column that starts with "General" and und der "code and automation" click the link named "Pages". This link named "Pages" is directly on top of the submenu "Security". What matters here is that "Pages" is clicked.
+5. You will now see a heading named "GitHub Pages". In the GitHub Pages, go to "build and deployment". In the heading "Branch" choose the options "main" and "/root"
+6. Click Save
+7. The project from the GitHub site will be deployed at the URL displayed under "Deployments". This heading "Deployments" can be found on the starting page of the GitHub Project. This starting page of the GitHub project can be found here
+
+The link to the project is 
+**[FinalProject](https://werner-staeblein.github.io/Project-2/)**
+
+
+# Credits
+
+### Logic of the quizz app
+
+I used a guide to create to quiz app written by Faraz **[Step-by-step-guide-for-quiz-app](https://www.codewithfaraz.com/content/161/build-a-quiz-application-with-html-css-and-javascript-step-by-step-guide#javascript-code)**
+
+For the logic of the quiz and interactivity coding with Javascript, I likewise used the book "Programmieren Lernen mit Javascript" authored by Stephan Elter
+
+For the randomized shuffling of questions.js array the Fisher-Yates from this source was used **[Stackoverflow Fisher-Yates Randomization](
+https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)**
+
+### Javascript quiz questions
+
+The questions for the question.js that serves as the pool for random drawing of questions were partly taken from **[Sanfoundry](https://www.sanfoundry.com/1000-javascript-questions-answers/)** and **[Laurence Svekis](https://basescripts.com/110-javascript-quiz-questions-with-solutions-pdf-download-test-your-knowledge
+)**
+
+### Custom radio buttons
+
+I used the blog of Stephanie Eckles **[Custom radio buttons](https://moderncss.dev/pure-css-custom-styled-radio-buttons/)** to make custom style of the radio buttons
+
+
