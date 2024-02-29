@@ -36,7 +36,7 @@ function startGame() {
 
   console.log("Game started!");
 
-  selectedQuestions = shuffleArray(quizData).slice(0, 2);
+  selectedQuestions = shuffleArray(quizData).slice(0, 10);
 
   currentQuestion = 0;
   score = 0;
@@ -149,7 +149,7 @@ function retryQuiz() {
   currentQuestion = 0;
   score = 0;
   incorrectAnswers = [];
-  selectedQuestions = shuffleArray([...quizData]).slice(0, 2);
+  selectedQuestions = shuffleArray([...quizData]).slice(0, 10);
   quizContainer.style.display = 'block';
   displayQuestion();
 }
