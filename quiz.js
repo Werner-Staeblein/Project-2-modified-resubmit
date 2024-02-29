@@ -133,7 +133,14 @@ function displayResult() {
   retryButton.style.display = 'inline-block';
   showAnswerButton.style.display = 'inline-block';
 
-}
+  const smiley = getSmiley(score);
+  resultContainer.innerHTML = `<p class="smiley-text">${getSmiley(score)}</p>
+  </p>
+  
+  score ${score} out of ${selectedQuestions.length}  `
+  }
+
+  console.log(getSmiley(score))
 
 /**
  * Function retry sets current question + score back to ZERO
@@ -181,5 +188,19 @@ function showAnswer() {
   `;
 
   resultContainer.classList.add('result-container');
-  
+}
+
+function getSmiley(score) {
+  switch (score) {
+    case 10:
+      return 'Seems you are a Javscript Wizard';
+    case 8:
+    case 9:
+      return 'Nearing the gold medal';
+    case 6:
+    case 7:
+      return 'Good knowledge but more is yet to come';
+    default:
+      return 'Try again to improve your score';
+  }
 }
