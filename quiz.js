@@ -91,8 +91,8 @@ function displayQuestion() {
     retryButton.style.display = 'none';
     showAnswerButton.style.display = 'none';
     submitButton.style.display = 'inline-block';
-  } else {
-}}
+  }
+}
 
 function checkAnswer() {
   

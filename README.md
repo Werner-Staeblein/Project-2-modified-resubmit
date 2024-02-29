@@ -292,3 +292,10 @@ The questions for the question.js that serves as the pool for random drawing of 
 I used the blog of Stephanie Eckles **[Custom radio buttons](https://moderncss.dev/pure-css-custom-styled-radio-buttons/)** to make custom style of the radio buttons
 
 
+# Content
+
+The content for this website has been written by Werner Stäblein and the authors mentioned above in credits for the Javscript questions.
+
+Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)**. I also reviewed a variety of different Readme.md prepared and included in the respective GitHub profiles of Code Institute students. I tried to pick the best of all ideas and suggestions.
+
+# Acknowledgements
