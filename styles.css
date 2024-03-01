@@ -300,4 +300,16 @@ header h1{
      height: 100%;
     }
 }
+
+@media screen and (max-width: 480px){
+  
+    .container{
+        margin-bottom: 70vh;
+    }
+    
+    body{
+        height: 100%;
+    }
+}
+    
    
