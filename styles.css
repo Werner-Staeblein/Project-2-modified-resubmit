@@ -309,5 +309,22 @@ header h1{
         height: 100%;
     }
 }
+
+@media screen and (max-width: 400px){
+    .options .option {
+        font-size: 1.7rem;
+        display: flex;
+        align-items: center;
+    }
+     
+    .option input[type="radio"] {
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        margin-left: -1rem;
+    }
+      
+    .container{
+        margin-bottom: 20vh;
+    }
+}
     
-   
