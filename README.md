@@ -53,7 +53,7 @@ After opening a quiz with the start button, the user can decide to restart the q
 
 The opening page provides a logo, clear headline what the page is about "Javscript Quiz" and instructions for the user to play the quiz combined with the start button for the quiz
 
-![OpeningPage](readme_assets/instructions_page_js_quiz.png)
+<img src="readme_assets/instructions_page_js_quiz.png" width="700" height="400">
 
 ### Quiz Page
 
@@ -64,7 +64,7 @@ The radio buttons for the questions provide the user to click one possible answe
 Once the user submits a choice on the radio button, the next quiz question automatically appears
 (automatic user feedback).
 
-![QuizPage](readme_assets/quiz_page_js_quiz.png)
+<img src="readme_assets/quiz_page_js_quiz.png" width="700" height="400">
   
 ### Results Page
 
@@ -72,7 +72,7 @@ Results page is extension of quiz page.
 
 After finishing 10 quiz questions, the user is provided the score of the quiz with optionality to view correct answers to questions answered incorrectly and to restart the quiz again.
 
-![ResultsPage](readme_assets/interaction_and_user_feedback.png)
+<img src="readme_assets/interaction_and_user_feedback.png" width="700" height="400">
   
 ### User Goal
 
@@ -91,7 +91,7 @@ User activity such as buttons highlighted with box-shadows to make overall desig
 
 ### Color Palette
 
-<img src="readme_assets/color_palette _javascript_quiz.png" width="500" height="300">
+<img src="readme_assets/color_palette _javascript_quiz.png" width="700" height="400">
 
 The colour palette was created with: **[coolors](https://www.color-hex.com)**
 
@@ -148,13 +148,11 @@ Once clicked, the user will automatically move forward to the next quiz question
 Radio buttons to select answer were customized in CSS to support overall appeal and coherent color experience while playing
 the quiz.
 
-![CustomizedRadioButtons](readme_assets/customized_radio_button_styling_js_quiz.png)
-
+<img src="readme_assets/customized_radio_button_styling_js_quiz.png" width="700" height="400">
 
 ### User feedback on scores achieved
 
-![User_Feedback](readme_assets/interaction_and_user_feedback.png)
-
+<img src="readme_assets/interaction_and_user_feedback.png" width="700" height="400">
 
 ### Results Page
 
@@ -173,27 +171,6 @@ Results also provides option for user to start new quiz. This will take the user
 ![Results-page](readme_assets/)
 
 <span style="color:red">__![Questions/ Quiz Page](assets/readme/resultspage.png) | a picture of the results page will be neeed here with name quizpage__</span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Technologies
 
@@ -225,52 +202,88 @@ Results also provides option for user to start new quiz. This will take the user
 
 # Testing
 
-Testing was done incrementally with every change in functionality of code (Javascript). 
+Testing was done incrementally with every change in functionality of code (Javascript) using console.log.
+Only once there were no error messages shown, the development process continued and thus resolving issues along the development process.
 
-Only once the manual functionality testing was completed, the visual testing started with additions of CSS. Website was also tested on different browsers and on different screen sizes using Google Chrome and Firefox developer tools.
+Only once the manual functionality testing was completed, the visual testing started with additions of CSS.
 
 **Issues resolved**
 
 - ./questions.js not loaded into quiz.js with error message "does not provide export named 'default'. Solution via Stackoverflow search. Found out that 'export default' in questions.js is needed for question.js to be IMPORTED into quiz.js
+- in the manual responsiveness testing, font-sizes were adapted
+
+### 1. Feature Testing
+
+Features of the site were tested manually in several test runs to ensure that sie performs intended functionality on all of the key features.
+
+| Feature                   | Test Case                                 | Outcome |
+| -----------               | ----------------------------              | -----------------                         |
+| Logo                      | click of logo                             | restarts the quiz                         |
+| Logo                      | hover over logo                           | display info to                           |
+| Start Quiz button         | click of start button                     | starts the quiz                           |
+| progress bar              | click through quiz                        | progress bar counts correctly             |
+| customized radio button   | click button                              | button takes inteneded color shade        |
+| submit question button    | click of button                           | automatically forwards to next question   |
+| user feedback scores      | click through quiz numerous times         | correct user feedback shown               |
+| retry button              | click of retry button                     | starts a new quiz round                   |
+| show answers button       | click show answers button                 | displays answers answered incorrectly     |
 
 
-# User Stories
+### 2. Browser Compatibility
+
+Primary browsers that the audience commonly uses were used to test functionality and visual consistency (layout, design, consistent
+display of content)
+
+|    Browser test    |  Intended appearance  |  Intended responsiveness  |
+| :----------------: | :--------------------: | :------------------------: |
+|       Chrome       |          Good          |            Good            |
+|        Edge        |          Good          |            Good            |
+|       Firefox      |          Good          |            Good            |
+
+### 3. Responsiveness
+
+|    Device tested          |  vw-width           |  Rendered as expected      |
+| :----------------:        | :--------------------: | :------------------------: |
+|       iPhone SE           |          375px          |            Good            |
+|                           |                    |                        |
+|      iPad Pro             |         1.024px           |       Good                 |
 
 
-| Expectations of user website                             | Realisation in website                                 |
-| -------------------------------------------------------- | ------------------------------------------------------- |
-| User wants to understand the purpose of the website      | The first page shows the logo clearly indicating that the site is about Javascript.                             |
-| User wants to understand the use of the website          | First page provides instructions on the quiz and how it can be played.                                          |
-| User wants to run the quiz easilty and understand progress | Quiz questions are numbered so user can always verify progress on number of questions answered. User has four answer buttons to choose from
-| User wants to obtain score of quiz| Once 10 quiz questions are answered, user receives final score |
-| User wants to see incorrect answered questions                           | User is shown correct answers for quiz questions answered incorrectly once button is clicked |
-| User may want to run quiz again        | User has option to run quiz again with new set of questions. This is either achieved by clicking on the logo or the restart game button at the end of the quiz |
 
-# Solved issues
 
-Numerous issues while coding were resolved
 
-### Automated Testing
+
+### Automated Testing (Code Validation and Lighthouse testing)
 
 1. **[W3 Markup Validation](https://validator.w3.org/) - HTML Validation**
 
-The website was tested with HTML validator.
+The website was tested with HTML validator. No error messages
 
-<span style="color:red">__![Home Page HTML](readme_assets/) | a picture of the validation of the HTML done__</span>
+<span style="color:red; font-weight:bold">a picture of the validation of the HTML done</span>
 
-- [Home Page HTML](readme_assets/IndexHTML.png)
+<!-- <img src="readme_assets/" width="700" height="400"> -->
 
-1. **[W3 Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
 
-The CSS stylesheet was tested with CSS validator.
+2. **[W3 Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
 
-<span style="color:red">__![CSS Stylling](readme_assets/) | a picture of the validation of the CSS valiation done__</span>
+The CSS stylesheet was tested with CSS validator. No error messages or syntactical errors.
 
-2. [style.css CSS](readme_assets/CSS_Styles.png.png)
+<span style="color:red; font-weight:bold">A picture of the validation of the CSS done</span>
 
-3. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
+<!-- <img src="readme_assets/" width="700" height="400"> -->
 
-Google lighthouse reported performance of XYZ on the desktop view / check mobile view
+
+3. **[Beautifytools](https://beautifytools.com/javascript-validator.php) - Javascript validation**
+
+The website was tested with JS valiator beautifytools. No error messages or syntactical errors.
+
+<span style="color:red; font-weight:bold">A picture of the JS validation done</span>
+
+<!-- <img src="readme_assets/" width="700" height="400"> -->
+
+4. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
+
+<span style="color:red; font-weight:bold">Final lighthouse scores in table</span>
 
 **lighthouse test desktop (scores reported by lighthouse)**
 
@@ -286,13 +299,11 @@ Google lighthouse reported performance of XYZ on the desktop view / check mobile
 | index.html          |      |      |      |      |
 | FILE ABC       |      |      |          |      |
 
-<span style="color:red">__Include two pictures of lighthouse testing for mobile and desktop view with width and height possibly defined to ensure smooth appearance of Readme, see code below__</span>
 
-Mobile
+<span style="color:red; font-weight:bold">Include two pictures of lighthouse testing for mobile and desktop</span>
 
-Desktop
-
-<!-- <img src="readme_assets/lighthouse_desktop.png" alt="Mobile Page" width="600"/> -->
+<!-- <img src="readme_assets/" width="700" height="400"> -->
+<!-- <img src="readme_assets/" width="700" height="400"> -->
 
 
 # Deployment
