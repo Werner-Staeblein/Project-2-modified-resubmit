@@ -1,7 +1,10 @@
 # Javscript Quiz App - Javascript Project: Milestone 2
 
 Javscript Quiz is an interactive quiz for users to answer questions on their knowledge of Javascript. 
-Questions created are stored in a separate Array and the Quiz randomly picks 10 of those questions to be answered.
+Questions created are stored in a separate Array. 
+
+The Quiz randomly picks 10 of those questions to be answered.
+
 The color palette is harmoniously coordinated with the logo, allowing for a coherent and calm image with its bright and warm colors.
 
 ## Live project
@@ -33,7 +36,7 @@ The live project can be viewed here under this link **[FinalProject](https://wer
 
 # Structure
 
-The website provides instructions for the quiz on the opening page and allows user to press start button for the quiz.
+The website provides instructions for the quiz on the opening page and allows user to press the Start JS Quiz button for the quiz.
 
 Once the quiz is started with start button, the user receives a sequence of 10 questions related to Javscript. 
 
@@ -41,13 +44,20 @@ The 10 questions are randomly drawn from a catalogue of quiz questions to ensure
 
 Once the quiz is completed with 10 questions answered, the user is automatically shown the results page including the score of correct answers.
 
-The user has the option to either 
+The user has the option to either
+
 - (i) see the correct answers for those questions where the user incorrectly answered a quiz question or 
 - (ii) restart the quiz 
 
-If user decides to see the correct answers for quiz questions answered incorrectly, the user still maintains the option to restart the quiz again. Regardless of the user option to restart the quiz at the end of the quiz with the retry-Button, the user can always start a new quiz round by clicking on the JS logo.
+If user decides to see the correct answers for quiz questions answered incorrectly, the user still maintains the option to restart the quiz again. 
 
-After opening a quiz with the start button, the user can decide to restart the quiz by clicking on the logo on the top left of the website. This will take the user back to the start of the quiz. User does not have to finish a quiz round to be able to start a new quiz round. No score, however, is shown, when user starts a new quiz round while the round was not completed with 10 questions answered. Interim scores for discontinued quiz rounds are not stored.
+Regardless of the user option to restart the quiz at the end of the quiz with the retry-Button, the user can always start a new quiz round by clicking on the JS logo.
+
+After opening a quiz with the start button, the user can decide to restart the quiz by clicking on the logo on the top left of the website. This will take the user back to the start of the quiz. 
+
+User does not have to finish a quiz round to be able to start a new quiz round. No score, however, is shown when user starts a new quiz round while the round was not completed with 10 questions answered. 
+
+Interim scores for discontinued quiz rounds are not stored.
 
 ### Opening Page | Instructions page
 
@@ -74,20 +84,13 @@ After finishing 10 quiz questions, the user is provided the score of the quiz wi
 
 <img src="readme_assets/interaction_and_user_feedback.png" width="700" height="400">
   
-### User Goal
-
-<span style="color:red">__further checks to be done/possibly overlap with user stories__</span>
-
-### Website Goal
-
-<span style="color:red">__further cheks to be done/possibly overlap with user stories__</span>
-
-
 # Design
 
 Design was based on the key colors in the Javascript logo. Using the colors included in the JS logo, a color palette was generated with coolors. This ensures conistent feel for user.
 
 User activity such as buttons highlighted with box-shadows to make overall design more appealing.
+
+For the background of the quiz a linear gradient using the color scheme was used. Different linear gradient used for the quiz box to ensure appealing color design aligned to the base color scheme of the Javascript logo.
 
 ### Color Palette
 
@@ -102,12 +105,6 @@ Standard fonts available were used with Arial, Helvetica for reasons of legibili
 ### Images
 
 The Javascript icon was downloaded from **[Icons8.com](https://icons8.com/icons/set/javascript)**
-
-### Accessibility
-
-- alternative text/labels used to enable screen readers providing information
-- contrasting used to have best possible visibility for the user
-- Accessibility for visually impaired (color blindness) was tested with Google Lighthouse
 
 # Features
 
@@ -125,10 +122,8 @@ On the start page the instructions for the quiz are provided.
 User is informed that questions are drawn randomly from a set of questions.
 The start button is prominently placed so that user can easily navigate to the start of the quiz.
 
-<span style="color:red">__describe the background for applied across all pages__</span>
+<img src="readme_assets/start_page_instructions.png" width="700" height="400">
 
-<span style="color:red">__![Start Page](readme_assets/) | a picture of the start page will be neeed here with name startpage__</span>
-  
 ### Quiz Questions
 
 Quiz section are 10 questions for the user to answer. While answering the questions, the user can see the progress on the number of questions answered. 
@@ -136,8 +131,6 @@ Quiz section are 10 questions for the user to answer. While answering the questi
 Every questions has four radio buttons to choose from. A user can change the radio button/answer for as long as the submit button is not clicked.
 
 Once clicked, the user will automatically move forward to the next quiz question until question no. 10 is reached. While answering the quiz questions, the user is not provided feedback on the correctness of the answers clicked. The incorect answers are displayed at the end of the quiz including a solution to the correct answer.
-
-<span style="color:red">__![Questions/ Quiz Page](assets/readme/quizpage.png) | a picture of the quiz page will be neeed here with name quizpage__</span>
 
 ### Visual Effects
 
@@ -168,9 +161,15 @@ A message is shown depending on the score achieved
 
 Results also provides option for user to start new quiz. This will take the user to the beginning of the website with a quiz starting again with the first question.
 
-![Results-page](readme_assets/)
+### Show Answer
+Once the ShowAnswer button in the results page is clicked, the user is shown the incorrect answers
+including the underlying question, the user's answer in the quiz and the correct answer to the 
+question. 
 
-<span style="color:red">__![Questions/ Quiz Page](assets/readme/resultspage.png) | a picture of the results page will be neeed here with name quizpage__</span>
+As questions are drawn randomly from a auiz array, the user may not face the same question again in
+the next quiz round but user can learn from the questions answered incorrectly.
+
+<img src="readme_assets/screenshot_incorrect_answerbox.png" width="700" height="400">
 
 # Technologies
 
@@ -242,16 +241,21 @@ display of content)
 
 ### 3. Responsiveness
 
-|    Device tested          |  vw-width           |  Rendered as expected      |
-| :----------------:        | :--------------------: | :------------------------: |
-|       iPhone SE           |          375px          |            Good            |
-|                           |                    |                        |
-|      iPad Pro             |         1.024px           |       Good                 |
+|    Device tested                  |  vw-width                 |  Rendered as expected      |
+| :----------------:                | :--------------------:    | :------------------------: |
+|       iPhone 5SE                  |          320px            |            Good            |
+|       Samsung Galaxy 8+           |          360px            |            Good            |
+|       Samsung Galaxy S20 Ulrtra   |          412px            |            Good            |
+|       iPaid Mini                  |          768px            |            Good            |
+|       IPadAir                     |          820px            |            Good            |
+|      iPad Pro                     |         1.024px           |            Good            |
 
 
+### 4. Accessibility
 
-
-
+- alternative text/labels used to enable screen readers providing information
+- contrasting used to have best possible visibility for the user
+- Accessibility for visually impaired (color blindness) was tested with Google Lighthouse
 
 ### Automated Testing (Code Validation and Lighthouse testing)
 
@@ -290,21 +294,18 @@ The website was tested with JS valiator beautifytools. No error messages or synt
 | File                |  Perf.  | Access. | Best P. | SEO     |
 |---------------------|---------|---------|---------|---------|
 | index.html          |      |      |      |      |
-| FILE ABC       |      |      |          |      |
+
 
 **lighthouse test mobile (scores reported by lighthouse)**
 
 | File                |  Perf.  | Access. | Best P. | SEO     |
 |---------------------|---------|---------|---------|---------|
 | index.html          |      |      |      |      |
-| FILE ABC       |      |      |          |      |
-
 
 <span style="color:red; font-weight:bold">Include two pictures of lighthouse testing for mobile and desktop</span>
 
 <!-- <img src="readme_assets/" width="700" height="400"> -->
 <!-- <img src="readme_assets/" width="700" height="400"> -->
-
 
 # Deployment
 
