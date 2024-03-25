@@ -4,16 +4,6 @@
     box-sizing: border-box;
 }
   
-/*All hexadecimal color codes from color palette converted to RGB color
-so that alpha values can be used. Color palette in HEX code originally
-  
-    --background1: #f8D000;
-    --color1: #000000;
-    --background2: #947C00;
-    --color2: #010101;
-    -background3: #B89B00;
-*/
-  
 :root{
     --background1: rgb(248, 208, 0);
     --background2: rgb(148, 124, 0);

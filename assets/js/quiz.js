@@ -15,25 +15,25 @@ let incorrectAnswers = [];
 let selectedQuestions = [];
 
 /**
- * EventListeners for the functions and ensure that quiz only runs when page (DOM) is loaded
+ * EventListeners for the functions and ensure that quiz only
+ * runs when page (DOM) is loaded
 */
 
 document.addEventListener("DOMContentLoaded", function () {
     const startQuizBtn = document.getElementById('startQuizBtn');
     const instructionsDiv = document.getElementById('instructions');
     const quizContainer = document.querySelector('.container');
-  
+
     startQuizBtn.addEventListener('click', function () {
       startQuizBtn.style.display = 'none';
       instructionsDiv.style.display = 'none';
       quizContainer.style.display = 'block';
-      startGame();      
+      startGame();
     });
 
     submitButton.addEventListener('click', checkAnswer);
     retryButton.addEventListener('click', retryQuiz);
     showAnswerButton.addEventListener('click', showAnswer);
-  
 });
 
 /**
@@ -101,7 +101,7 @@ function displayQuestion() {
     quizContainer.innerHTML = '';
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
-    
+
     resultContainer.style.display = 'none';
     retryButton.style.display = 'none';
     showAnswerButton.style.display = 'none';
@@ -110,12 +110,13 @@ function displayQuestion() {
 }
 
 /**
- * Function to compare selected answer with correctAnswer from questions.js array
- * labels and radio (input) buttons. Increase of count variable for correct answers
+ * Function to compare selected answer with correctAnswer from
+ * questions.js array labels and radio (input) buttons.
+ * Increase of count variable for correct answers
 */
 
 function checkAnswer() {
-  
+
   const selectedOption = document.querySelector('input[name="quiz"]:checked');
   if (selectedOption) {
 
@@ -131,7 +132,6 @@ function checkAnswer() {
         incorrectAnswer: answer,
         correctAnswer: correctAnswerText,
       });
-      
     }
 
     currentQuestion++;
@@ -140,7 +140,6 @@ function checkAnswer() {
       displayQuestion();
     } else {
       displayResult();
-            
       submitButton.style.display = 'none';
     }
 }
@@ -152,7 +151,7 @@ function checkAnswer() {
 */
 
 function displayResult() {
-  
+
   resultContainer.style.display = 'block';
   retryButton.style.display = 'inline-block';
   showAnswerButton.style.display = 'inline-block';
@@ -162,7 +161,7 @@ function displayResult() {
   <br>
   <p class="final-score-text"><br>You scored ${score} out of ${selectedQuestions.length}!</p>`;
 }
-  
+
 /**
  * Function retry sets current question + score back to ZERO
  * New set of questions picked from questions-Array
@@ -178,19 +177,19 @@ function retryQuiz() {
 }
 
 function showAnswer() {
-  
+
   quizContainer.style.display = 'none';
   submitButton.style.display = 'none';
   retryButton.style.display = 'inline-block';
   showAnswerButton.style.display = 'none';
 
 /**
- * for-loop iterates over array defined above. On every incorrect answer, the array collects the question, the incorrect answer clickedFunction and
- * the answer that is correct for that question. Concatenation of incorrect answers with += yields "list" of incorrect answers 
+ * for-loop iterates over array defined above. On every incorrect answer, the array collects
+ * the question, the incorrect answer clickedFunction and the answer that is correct for
+ * that question. Concatenation of incorrect answers with += yields "list" of incorrect answers
 */
-
   let incorrectAnswersHtml = '';
-  
+
   for (let i = 0; i < incorrectAnswers.length; i++) {
     incorrectAnswersHtml += `
       <p class="incorrect-answer">
@@ -199,7 +198,7 @@ function showAnswer() {
         <strong class="correct-answer">Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
       </p>
     `;
-  }  
+  }
 
   resultContainer.innerHTML = `
   <p class="incorrect">Incorrect Answers:</p>
@@ -211,8 +210,9 @@ function showAnswer() {
 }
 
 /**
- * switch case to display feedback on quiz achievement depending on score in counter variable score 
- * case 8 and case 9 are combination, case 6 and case 7 are combination, each yielding same outcome 
+ * switch case to display feedback on quiz achievement depending on
+ * score in counter variable score case 8 and case 9 are combination,
+ * case 6 and case 7 are combination, each yielding same outcome
 */
 
 function getSmiley(score) {

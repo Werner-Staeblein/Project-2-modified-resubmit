@@ -211,6 +211,14 @@ Only once the manual functionality testing was completed, the visual testing sta
 - ./questions.js not loaded into quiz.js with error message "does not provide export named 'default'. Solution via Stackoverflow search. Found out that 'export default' in questions.js is needed for question.js to be IMPORTED into quiz.js
 - in the manual responsiveness testing, font-sizes were adapted
 
+
+**Issues not resolved**
+
+- jslint.com indicates error of "unable to finish unexpected let" in the function shuffleArray(array). Removing the let in the for-loop makes the question options disappear. Unable to resolve. Other JS validator **[Beautifytools](https://beautifytools.com/javascript-validator.php)** interestingly does NOT show this to be an error
+
+
+
+
 ### 1. Feature Testing
 
 Features of the site were tested manually in several test runs to ensure that sie performs intended functionality on all of the key features.
@@ -263,28 +271,28 @@ display of content)
 
 The website was tested with HTML validator. No error messages
 
-<span style="color:red; font-weight:bold">a picture of the validation of the HTML done</span>
-
-<!-- <img src="readme_assets/" width="700" height="400"> -->
+![HTML Validator](readme_assets/w3c_html_validation_screenshot.png)
 
 2. **[W3 Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
 
 The CSS stylesheet was tested with CSS validator. No error messages or syntactical errors.
 
-<span style="color:red; font-weight:bold">A picture of the validation of the CSS done</span>
-
-<!-- <img src="readme_assets/" width="700" height="400"> -->
-
+![Jigsaw CSS valiation](readme_assets/jigsaw_css_validation_screenshot.png)
 
 3. **[Beautifytools](https://beautifytools.com/javascript-validator.php) - Javascript validation**
 
 The website was tested with JS valiator beautifytools. No error messages or syntactical errors.
 
-<span style="color:red; font-weight:bold">A picture of the JS validation done</span>
+![Beautifytool JS Validator](readme_assets/js_validation_beautifytools_screenshot.png)
 
-<!-- <img src="readme_assets/" width="700" height="400"> -->
+4. **[JSlint](https://www.jslint.com/) - Javascript validation**
 
-4. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
+Using JSLint validator mostly shows warnings primarily suggesting
+to use double quotes and not single quotes
+
+![JS Lint Validator](readme_assets/JS_Lint_Screenshot.png)
+
+5. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
 
 <span style="color:red; font-weight:bold">Final lighthouse scores in table</span>
 
