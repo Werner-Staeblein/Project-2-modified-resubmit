@@ -14,6 +14,10 @@ let score = 0;
 let incorrectAnswers = [];
 let selectedQuestions = [];
 
+/**
+ * EventListeners for the functions and ensure that quiz only runs when page (DOM) is loaded
+*/
+
 document.addEventListener("DOMContentLoaded", function () {
     const startQuizBtn = document.getElementById('startQuizBtn');
     const instructionsDiv = document.getElementById('instructions');
@@ -32,9 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
   
 });
 
-function startGame() {
+/**
+ * Function to startGame. Shuffles the questions.js array and picks
+ * 10 out of 40 questions in the questions.js array.
+ * Function shuffleArray to randomize questions taken from Stackoverflow
+*/
 
-  console.log("Game started!");
+function startGame() {
 
   selectedQuestions = shuffleArray(quizData).slice(0, 10);
 
@@ -48,7 +56,8 @@ function startGame() {
  * Function to randomize the questions. This function picks a random element
  * from each original array and excludes it from the next draw.
  * Function taken from Stackoverflow
- */
+*/
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -56,6 +65,12 @@ function shuffleArray(array) {
   }
   return array;
 }
+
+/**
+ * Function to show questions including creation of questions container
+ * labels and radio (input) buttons.
+ * Function taken from Stackoverflow
+*/
 
 function displayQuestion() {
   if (currentQuestion < selectedQuestions.length) {
@@ -94,6 +109,11 @@ function displayQuestion() {
   }
 }
 
+/**
+ * Function to compare selected answer with correctAnswer from questions.js array
+ * labels and radio (input) buttons. Increase of count variable for correct answers
+*/
+
 function checkAnswer() {
   
   const selectedOption = document.querySelector('input[name="quiz"]:checked');
@@ -105,14 +125,13 @@ function checkAnswer() {
 
     if (answer === correctAnswerText) {
       score++;
-      console.log('Correct!');
     } else {
       incorrectAnswers.push({
         question: selectedQuestions[currentQuestion].question,
         incorrectAnswer: answer,
         correctAnswer: correctAnswerText,
       });
-      console.log('Incorrect!');
+      
     }
 
     currentQuestion++;
@@ -127,19 +146,23 @@ function checkAnswer() {
 }
 }
 
+/**
+ * Function to show results container and make retry/showAnswer button visible
+ * Use count variable score to display final score
+*/
+
 function displayResult() {
   
   resultContainer.style.display = 'block';
   retryButton.style.display = 'inline-block';
   showAnswerButton.style.display = 'inline-block';
 
-  // const smiley = getSmiley(score);
   resultContainer.innerHTML = `<p class="smiley-text">${getSmiley(score)}</p>
   </p>
   <br>
   <p class="final-score-text"><br>You scored ${score} out of ${selectedQuestions.length}!</p>`;
-  }
- 
+}
+  
 /**
  * Function retry sets current question + score back to ZERO
  * New set of questions picked from questions-Array
@@ -156,8 +179,6 @@ function retryQuiz() {
 
 function showAnswer() {
   
-  console.log("show answer button clicked");
-
   quizContainer.style.display = 'none';
   submitButton.style.display = 'none';
   retryButton.style.display = 'inline-block';
@@ -167,6 +188,7 @@ function showAnswer() {
  * for-loop iterates over array defined above. On every incorrect answer, the array collects the question, the incorrect answer clickedFunction and
  * the answer that is correct for that question. Concatenation of incorrect answers with += yields "list" of incorrect answers 
 */
+
   let incorrectAnswersHtml = '';
   
   for (let i = 0; i < incorrectAnswers.length; i++) {
@@ -187,6 +209,11 @@ function showAnswer() {
 
   resultContainer.classList.add('result-container');
 }
+
+/**
+ * switch case to display feedback on quiz achievement depending on score in counter variable score 
+ * case 8 and case 9 are combination, case 6 and case 7 are combination, each yielding same outcome 
+*/
 
 function getSmiley(score) {
   switch (score) {
