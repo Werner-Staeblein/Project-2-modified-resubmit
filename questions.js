@@ -11,14 +11,14 @@ const quizData = [
     },
     
     {
-      question: "What does the '=== operator' do in JavaScript?",
+      question: "What is the purpose of the setTimeout function in JavaScript?",
       choices: [
-        "Checks for equality with type coercion",
-        "Checks for equality without type coercion",
-        "Assigns a value to a variable",
-        "Compares two strings lexicographically",
+        "Defines a time delay before executing a function",
+        "Compares two values for strict equality",
+        "Creates a new array from an existing one",
+        "Sorts the elements of an array in place"
       ],
-      correctAnswer: 1,
+      correctAnswer: 0
     },
     
     {
@@ -59,14 +59,14 @@ const quizData = [
     },
 
     {
-      question: "What does the '=== operator' do in JavaScript?",
+      question: "What does the event.preventDefault() method do in JavaScript?",
       choices: [
-        "Checks for equality with type coercion",
-        "Checks for equality without type coercion",
-        "Assigns a value to a variable",
-        "Compares two strings lexicographically",
+        "Prevents the default behavior of an event from occurring",
+        "Returns the data type of an expression",
+        "Executes a function after a specified number of milliseconds",
+        "Inserts content at the beginning of an element"
       ],
-      correctAnswer: 2,
+      correctAnswer: 0
     },
     
     {
@@ -433,7 +433,4 @@ const quizData = [
    
   ];
   
-  export default quizData;
-  console.log(quizData.length)
-  
-  
+  export default quizData;  
