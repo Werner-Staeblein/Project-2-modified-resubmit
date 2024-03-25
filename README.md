@@ -126,11 +126,12 @@ The button named start is prominently placed so that user can easily navigate to
 
 ### Quiz Questions
 
-Quiz section are 10 questions for the user to answer. While answering the questions, the user can see the progress on the number of questions answered. 
+Quiz section are 10 questions for the user to answer. While answering the questions, the user is shown a progress indicator on the number of questions answered.
 
-Every questions has four radio buttons to choose from. A user can change the radio button/answer for as long as the submit button is not clicked.
+Every questions has four radio buttons to choose from. A user can change the radio button/answer for as long as the submit button is not clicked. User actions
+are confirmed through change in color of radio button. Feedback is given to user once an answer to a questions with radio button was selected.
 
-Once clicked, the user will automatically move forward to the next quiz question until question no. 10 is reached. While answering the quiz questions, the user is not provided feedback on the correctness of the answers clicked. The incorect answers are displayed at the end of the quiz including a solution to the correct answer.
+Once clicked, the user will automatically move forward to the next quiz question until question no. 10 is reached. While answering the quiz questions, the user is not provided feedback on the correctness of the answers clicked. Decision was to provide feedback to user at the end of the quiz. The incorect answers are displayed at the end of the quiz including a solution to the correct answer.
 
 ### Visual Effects
 
@@ -187,7 +188,9 @@ the next quiz round but user can learn from the questions answered incorrectly.
 
 - **[W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/)** - W3C Jigsaw CSS validator for validation of CSS code
 
-- **[Javascript Validator](https://beautifytools.com/javascript-validator.php)** to validate the Javscript code.
+- **[Javascript Validator Beautfiytools](https://beautifytools.com/javascript-validator.php)** to validate the Javscript code.
+
+- **[Javascript Validator JSLint](https://www.jslint.com/)** to validate the Javscript code.
 
 - **[Visual Code Studios](https://code.visualstudio.com/)** - IDE used to draft the webiste and make working progress remarks in the README.md including placehoders to check for final polishing
 
@@ -211,13 +214,9 @@ Only once the manual functionality testing was completed, the visual testing sta
 - ./questions.js not loaded into quiz.js with error message "does not provide export named 'default'. Solution via Stackoverflow search. Found out that 'export default' in questions.js is needed for question.js to be IMPORTED into quiz.js
 - in the manual responsiveness testing, font-sizes were adapted
 
-
 **Issues not resolved**
 
 - jslint.com indicates error of "unable to finish unexpected let" in the function shuffleArray(array). Removing the let in the for-loop makes the question options disappear. Unable to resolve. Other JS validator **[Beautifytools](https://beautifytools.com/javascript-validator.php)** interestingly does NOT show this to be an error
-
-
-
 
 ### 1. Feature Testing
 
@@ -234,7 +233,6 @@ Features of the site were tested manually in several test runs to ensure that si
 | user feedback scores      | click through quiz numerous times         | correct user feedback shown               |
 | retry button              | click of retry button                     | starts a new quiz round                   |
 | show answers button       | click show answers button                 | displays answers answered incorrectly     |
-
 
 ### 2. Browser Compatibility
 
@@ -257,7 +255,6 @@ display of content)
 |       iPaid Mini                  |          768px            |            Good            |
 |       IPadAir                     |          820px            |            Good            |
 |      iPad Pro                     |         1.024px           |            Good            |
-
 
 ### 4. Accessibility
 
@@ -294,25 +291,21 @@ to use double quotes and not single quotes
 
 5. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
 
-<span style="color:red; font-weight:bold">Final lighthouse scores in table</span>
-
 **lighthouse test desktop (scores reported by lighthouse)**
 
 | File                |  Perf.  | Access. | Best P. | SEO     |
 |---------------------|---------|---------|---------|---------|
-| index.html          |      |      |      |      |
+| index.html          | 96     | 100      | 96   | 100    |
 
+![Lighthouse Testing Desktop](readme_assets/lighthouse_testing_desktop_screenshot.png)
 
 **lighthouse test mobile (scores reported by lighthouse)**
 
 | File                |  Perf.  | Access. | Best P. | SEO     |
 |---------------------|---------|---------|---------|---------|
-| index.html          |      |      |      |      |
+| index.html          |   95   | 100   | 96    | 100   |
 
-<span style="color:red; font-weight:bold">Include two pictures of lighthouse testing for mobile and desktop</span>
-
-<!-- <img src="readme_assets/" width="700" height="400"> -->
-<!-- <img src="readme_assets/" width="700" height="400"> -->
+![Lighthouse Testing Desktop](readme_assets/lighthouse_testing_mobile_screenshot.png)
 
 # Deployment
 
@@ -328,7 +321,6 @@ This project is deployed to GitHub pages. The deployment steps are as follows:
 
 The link to the project is 
 **[FinalProject](https://werner-staeblein.github.io/Project-2/)**
-
 
 # Credits
 
@@ -350,11 +342,19 @@ The questions for the question.js that serves as the pool for random drawing of 
 
 I used the blog of Stephanie Eckles **[Custom radio buttons](https://moderncss.dev/pure-css-custom-styled-radio-buttons/)** to make custom style of the radio buttons
 
-
 # Content
 
 The content for this website has been written by Werner Stäblein and the authors mentioned above in credits for the Javscript questions.
 
-Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)**. I also reviewed a variety of different Readme.md prepared and included in the respective GitHub profiles of Code Institute students. I tried to pick the best of all ideas and suggestions.
+Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)**. 
+
+The video titled "README.md - Manual Testing Write Up Overview" **[Manual Testing Write Up](https://www.youtube.com/watch?v=Q66HZgkDSOo)** by Kasia Bogucka made it easy
+to structure the README section on testing.
+
+I also reviewed a variety of different Readme.md prepared and included in the respective GitHub profiles of Code Institute students. I tried to pick the best of all ideas and suggestions.
 
 # Acknowledgements
+
+Special thanks to my mentor David Bowers. Incredible to see how much value I was able to add with his ideas and instructions. All advice provided by David for project 1 was feeding into project 2 and thanks to his guidance, the development process including documentation has become much more efficient.
+
+My fellow students at CI have helped a lot with their various postings, questions, answers with myself being able to pick up ideas, avoid mistakes and stay motivated
