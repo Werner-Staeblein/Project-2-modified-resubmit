@@ -109,7 +109,7 @@ The Javascript icon was downloaded from **[Icons8.com](https://icons8.com/icons/
 
 ### The logo
 
-![Logo](icons/icons8-javascript-240.png)
+![Logo](assets/icons/icons8-javascript-240.png)
 
 The logo is shown on all pages of the website. The logo likewise is a hpyerlink to restart the quiz if the user either wants to restart a quiz while having started a quiz or once a quiz round is completed and the user decides to play another quiz round (user control)
 
