@@ -19,7 +19,7 @@ The live project can be viewed here under this link **[FinalProject](https://wer
 
 ### As a first time user
 
-- As a first-time website visotor I want to receive instructions what the quiz is about
+- As a first time website visitor I want to receive instructions what the quiz is about
 - I want to easily and intuitively navigate through the quiz
 - I want to know where to start the quiz indicated by a start button
 - I want to see my score at the end of the quiz
@@ -31,14 +31,13 @@ The live project can be viewed here under this link **[FinalProject](https://wer
 ### As a returning user
 
 - I want to answer different questions so that I do not see the same questions again
-- I want to play the game as many quiz rounds that I would want to
-
+- I want to play the game as many times that I would want to
 
 # Structure
 
-The website provides instructions for the quiz on the opening page and allows user to press the Start JS Quiz button for the quiz.
+The website provides instructions for the quiz on the opening page and allows user to press the button "Start JS Quiz" for the quiz.
 
-Once the quiz is started with start button, the user receives a sequence of 10 questions related to Javscript. 
+Once the quiz is started with start button, the user receives a sequence of ten questions related to Javscript. 
 
 The 10 questions are randomly drawn from a catalogue of quiz questions to ensure that each quiz round provides different set of questions.
 
@@ -55,48 +54,48 @@ Regardless of the user option to restart the quiz at the end of the quiz with th
 
 After opening a quiz with the start button, the user can decide to restart the quiz by clicking on the logo on the top left of the website. This will take the user back to the start of the quiz. 
 
-User does not have to finish a quiz round to be able to start a new quiz round. No score, however, is shown when user starts a new quiz round while the round was not completed with 10 questions answered. 
+User does not have to finish a quiz round to be able to start a new quiz round. There is no score, however,  shown when user starts a new quiz round while the round was not completed with 10 questions answered. 
 
 Interim scores for discontinued quiz rounds are not stored.
 
 ### Opening Page | Instructions page
 
-The opening page provides a logo, clear headline what the page is about "Javscript Quiz" and instructions for the user to play the quiz combined with the start button for the quiz
+The opening page provides a logo, clear headline what the page is about "Javscript Quiz", and instructions for the user to play the quiz combined with the start button for the quiz
 
-<img src="readme_assets/instructions_page_js_quiz.png" width="700" height="400">
+![Instructions Page](readme_assets/instructions_page_js_quiz.png)
 
 ### Quiz Page
 
 The quiz page continues to show the logo and title of the website. Once the start button was clicked, the instructions page is no longer visible and is now replaced with the quiz question box. 
 
-The radio buttons for the questions provide the user to click one possible answer. Radio buttons are custom-styled to support overall design and appearance of question section.
+The radio buttons for the questions provide options to the user to click one possible answer. Radio buttons are custom-styled to support overall design and appearance of question section.
 
 Once the user submits a choice on the radio button, the next quiz question automatically appears
 (automatic user feedback).
 
-<img src="readme_assets/quiz_page_js_quiz.png" width="700" height="400">
-  
+![Quiz Page](readme_assets/quiz_page_js_quiz.png)
+ 
 ### Results Page
 
-Results page is extension of quiz page.
+The results page is an extension of the quiz page.
 
 After finishing 10 quiz questions, the user is provided the score of the quiz with optionality to view correct answers to questions answered incorrectly and to restart the quiz again.
 
-<img src="readme_assets/interaction_and_user_feedback.png" width="700" height="400">
-  
+![Results Page](readme_assets/interaction_and_user_feedback.png)
+
 # Design
 
 Design was based on the key colors in the Javascript logo. Using the colors included in the JS logo, a color palette was generated with coolors. This ensures conistent feel for user.
 
 User activity such as buttons highlighted with box-shadows to make overall design more appealing.
 
-For the background of the quiz a linear gradient using the color scheme was used. Different linear gradient used for the quiz box to ensure appealing color design aligned to the base color scheme of the Javascript logo.
+A linear gradient using the color scheme was used for the background of the quiz. Different linear gradient used for the quiz box to ensure appealing color design aligned to the base color scheme of the Javascript logo.
 
 ### Color Palette
 
-<img src="readme_assets/color_palette _javascript_quiz.png" width="700" height="400">
+![Color Palette](readme_assets/color_palette%20_javascript_quiz.png)
 
-The colour palette was created with: **[coolors](https://www.color-hex.com)**
+The color palette was created with: **[coolors](https://www.color-hex.com)**
 
 ### Typography
 
@@ -119,10 +118,11 @@ On hover, a tooltip is display with information that the quiz can be restarted w
 ### Start Page quiz instructions page
 
 On the start page the instructions for the quiz are provided. 
-User is informed that questions are drawn randomly from a set of questions.
-The start button is prominently placed so that user can easily navigate to the start of the quiz.
 
-<img src="readme_assets/start_page_instructions.png" width="700" height="400">
+The user is informed that questions are  randomly drawn from a set of questions.
+The button named start is prominently placed so that user can easily navigate to the start of the quiz.
+
+![Start Page](readme_assets/start_page_instructions.png)
 
 ### Quiz Questions
 
@@ -141,25 +141,25 @@ Once clicked, the user will automatically move forward to the next quiz question
 Radio buttons to select answer were customized in CSS to support overall appeal and coherent color experience while playing
 the quiz.
 
-<img src="readme_assets/customized_radio_button_styling_js_quiz.png" width="700" height="400">
+![Radio Buttons](readme_assets/customized_radio_button_styling_js_quiz.png)
 
 ### User feedback on scores achieved
 
-<img src="readme_assets/interaction_and_user_feedback.png" width="700" height="400">
+![User Feedback](readme_assets/interaction_and_user_feedback.png)
 
 ### Results Page
 
 Results page is last question plus information about result achieved.
 Final score out of 10 is displayed.
 
-A message is shown depending on the score achieved
+Depending on the score achieved, a message is shown.
 
 - if score is equal to 10, user is shown "Seems you are a Javascript wizard"
 - if score is higher than or equal to 8 but less than 10, user is shown "Nearing the gold medal"
 - if score is higher than or equal to 6 but less than 8, user is shown "Good knowledge but more is yet to come"
-- if score is less than 6, user is shown "Try again to improve your score"
+- if score is lower than 6, user is shown "Try again to improve your score"
 
-Results also provides option for user to start new quiz. This will take the user to the beginning of the website with a quiz starting again with the first question.
+Results also provides option for user to start new quiz. This will take the user to the beginning of the website with a quiz again starting at the first question.
 
 ### Show Answer
 Once the ShowAnswer button in the results page is clicked, the user is shown the incorrect answers
@@ -169,7 +169,7 @@ question.
 As questions are drawn randomly from a auiz array, the user may not face the same question again in
 the next quiz round but user can learn from the questions answered incorrectly.
 
-<img src="readme_assets/screenshot_incorrect_answerbox.png" width="700" height="400">
+![Incorrect Answer Box](readme_assets/screenshot_incorrect_answerbox.png)
 
 # Technologies
 
@@ -193,7 +193,7 @@ the next quiz round but user can learn from the questions answered incorrectly.
 
 - **[Google Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools)**- To check responsiveness of page, debug code, and important lighthouse checks for performance, accessibility, best practices, SEO
 
-- **[Techsini](https://techsini.com/multi-mockup/index.php)** - to generate multi-device image with different screensizes and devices possibly used by user
+- **[Techsini](https://techsini.com/multi-mockup/index.php)** - to generate multi-device image with different screen-sizes and devices possibly used by user
 
 - **[www.color-hex.com](https://www.color-hex.com)** - to generate the color palette for the site
 
@@ -266,7 +266,6 @@ The website was tested with HTML validator. No error messages
 <span style="color:red; font-weight:bold">a picture of the validation of the HTML done</span>
 
 <!-- <img src="readme_assets/" width="700" height="400"> -->
-
 
 2. **[W3 Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
 
