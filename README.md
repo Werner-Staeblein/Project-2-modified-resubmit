@@ -172,6 +172,21 @@ the next quiz round but user can learn from the questions answered incorrectly.
 
 ![Incorrect Answer Box](readme_assets/screenshot_incorrect_answerbox.png)
 
+### Possible Future Features
+
+- a timer feature could be added to so that the amount of time for each question or the entire set of ten questions for the user is limited
+
+- a highscore feature could be added for users repeating the quiz multiple times
+
+- a feature of displaying the optionality to show the correct answers after answering each quiz question could be added (rather than showing the results and correct answers only at the end)
+
+- an additional feature of more explanatory notes for each answer could be provided in the showAnswer section so that user is not only shown the correct answer but likewise some additional explanation why the answer is the correct one
+
+- Enlarge the underlying selection of quiz questions beyond 40 and, possibly, classify questions into categories such "starter/intermediate/advanced"
+
+- allow user to pre-select knowledge status and take quiz questions based on categorical organisation of quiz questions into buckets of "starter/intermediate/advanced"
+
+
 # Technologies
 
 - Languages: HTML, CSS, JavaScript
