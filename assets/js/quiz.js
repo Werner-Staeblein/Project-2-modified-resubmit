@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = randomQuestionPick(quizData).slice(0, 40);
+  selectedQuestions = randomQuestionPick(quizData).slice(0, 5);
 
   unansweredQuestion = 0;
   points = 0;
@@ -178,7 +178,7 @@ function retryQuiz() {
   unansweredQuestion = 0;
   points = 0;
   wrongAnswers = [];
-  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 40);
+  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 5);
   quizWrapper.style.display = 'block';
   displayQuestion();
 }

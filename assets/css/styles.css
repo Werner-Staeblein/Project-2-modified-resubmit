@@ -200,32 +200,35 @@ header h1{
                       Styling of resultDisplay container
 ------------------------------------------------------------------------------------*/
 
-.resultDisplay-container .wrong{
-    margin-bottom: 2rem;
-    text-decoration: underline;
-    font-size: 1.8rem;
-}
-  
-.wrong-answer {
-    margin-top: 2rem;
-    font-size: 1.7rem;
+.correct-answers,
+.wrong-answers {
+  font-size: 1em;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1.5rem;
 }
 
-.smiley-text{
-    font-size: 2rem;
-    margin-top: 2.5rem;
-    font-weight: bold;
-    color: rgba(255,255,255,0.8);
-    text-shadow: 0.3rem 0.3rem 0.3rem var(--color1);
+.correct-answers .results,
+.wrong-answers .results {
+  font-weight: bold;
+  font-size: 1.2em;
 }
+
+.correct-answer,
+.wrong-answer {
+    margin-bottom: 1rem;
+  }
   
-.final-score-text{
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: -0.7rem;
-    color: rgba(255,255,255,0.8);
-    text-shadow: 0.3rem 0.3rem 0.3rem var(--color1);
+.resultDisplay-container {
+  padding: 20px;
 }
+
+.results {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+
 
 /*-----------------------------------------------------------------------------------
                       Responsiveness
