@@ -1,8 +1,8 @@
-const quizContainer = document.getElementById('quiz');
-const resultContainer = document.getElementById('result');
-const submitButton = document.getElementById('submit');
-const retryButton = document.getElementById('retry');
-const showAnswerButton = document.getElementById('showAnswer');
+const quizWrapper = document.getElementById('trivia');
+const resultDisplay = document.getElementById('outcome');
+const actionButton = document.getElementById('submitAction');
+const restartButton = document.getElementById('tryAgain');
+const showSolutionButton = document.getElementById('displayAnswers');
 
 import quizData from './questions.js';
 
@@ -22,18 +22,18 @@ let selectedQuestions = [];
 document.addEventListener("DOMContentLoaded", function () {
     const startQuizBtn = document.getElementById('startQuizBtn');
     const instructionsDiv = document.getElementById('instructions');
-    const quizContainer = document.querySelector('.container');
+    const quizWrapper = document.querySelector('.container');
 
     startQuizBtn.addEventListener('click', function () {
       startQuizBtn.style.display = 'none';
       instructionsDiv.style.display = 'none';
-      quizContainer.style.display = 'block';
+      quizWrapper.style.display = 'block';
       startGame();
     });
 
-    submitButton.addEventListener('click', checkAnswer);
-    retryButton.addEventListener('click', retryQuiz);
-    showAnswerButton.addEventListener('click', showAnswer);
+    actionButton.addEventListener('click', checkAnswer);
+    restartButton.addEventListener('click', retryQuiz);
+    showSolutionButton.addEventListener('click', showSolution);
 });
 
 /**
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = shuffleArray(quizData).slice(0, 60);
+  selectedQuestions = shuffleArray(quizData).slice(0, 5);
 
   currentQuestion = 0;
   score = 0;
@@ -98,14 +98,14 @@ function displayQuestion() {
       optionsElement.appendChild(option);
     }
 
-    quizContainer.innerHTML = '';
-    quizContainer.appendChild(questionElement);
-    quizContainer.appendChild(optionsElement);
+    quizWrapper.innerHTML = '';
+    quizWrapper.appendChild(questionElement);
+    quizWrapper.appendChild(optionsElement);
 
-    resultContainer.style.display = 'none';
-    retryButton.style.display = 'none';
-    showAnswerButton.style.display = 'none';
-    submitButton.style.display = 'inline-block';
+    resultDisplay.style.display = 'none';
+    restartButton.style.display = 'none';
+    showSolutionButton.style.display = 'none';
+    actionButton.style.display = 'inline-block';
   }
 }
 
@@ -140,23 +140,23 @@ function checkAnswer() {
       displayQuestion();
     } else {
       displayResult();
-      submitButton.style.display = 'none';
+      actionButton.style.display = 'none';
     }
 }
 }
 
 /**
- * Function to show results container and make retry/showAnswer button visible
+ * Function to show results container and make retry/showSolution button visible
  * Use count variable score to display final score
 */
 
 function displayResult() {
 
-  resultContainer.style.display = 'block';
-  retryButton.style.display = 'inline-block';
-  showAnswerButton.style.display = 'inline-block';
+  resultDisplay.style.display = 'block';
+  restartButton.style.display = 'inline-block';
+  showSolutionButton.style.display = 'inline-block';
 
-  resultContainer.innerHTML = `<p class="smiley-text">${getSmiley(score)}</p>
+  resultDisplay.innerHTML = `<p class="smiley-text">${getSmiley(score)}</p>
   </p>
   <br>
   <p class="final-score-text"><br>You scored ${score} out of ${selectedQuestions.length}!</p>`;
@@ -172,16 +172,16 @@ function retryQuiz() {
   score = 0;
   incorrectAnswers = [];
   selectedQuestions = shuffleArray([...quizData]).slice(0, 60);
-  quizContainer.style.display = 'block';
+  quizWrapper.style.display = 'block';
   displayQuestion();
 }
 
-function showAnswer() {
+function showSolution() {
 
-  quizContainer.style.display = 'none';
-  submitButton.style.display = 'none';
-  retryButton.style.display = 'inline-block';
-  showAnswerButton.style.display = 'none';
+  quizWrapper.style.display = 'none';
+  actionButton.style.display = 'none';
+  restartButton.style.display = 'inline-block';
+  showSolutionButton.style.display = 'none';
 
 /**
  * for-loop iterates over array defined above. On every incorrect answer, the array collects
@@ -200,13 +200,13 @@ function showAnswer() {
     `;
   }
 
-  resultContainer.innerHTML = `
+  resultDisplay.innerHTML = `
   <p class="incorrect">Incorrect Answers:</p>
 
   ${incorrectAnswersHtml}
   `;
 
-  resultContainer.classList.add('result-container');
+  resultDisplay.classList.add('resultDisplay-container');
 }
 
 /**

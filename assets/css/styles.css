@@ -109,8 +109,8 @@ header h1{
             Styling of submit, retry, showAnswer button
 -----------------------------------------------------------*/
 
-#submit,
-#retry,
+#submitAction,
+#tryAgain,
 #showAnswer{
   display: block;
   margin: 3rem 0 0 2rem;
@@ -134,6 +134,7 @@ header h1{
     font-weight: bold;
     font-size: 1.8rem;
 }
+
 
 .question{
     font-size: 1.5rem;
@@ -196,10 +197,10 @@ header h1{
 }
   
 /*-----------------------------------------------------------------------------------
-                      Styling of result container
+                      Styling of resultDisplay container
 ------------------------------------------------------------------------------------*/
 
-.result-container .incorrect{
+.resultDisplay-container .incorrect{
     margin-bottom: 2rem;
     text-decoration: underline;
     font-size: 1.8rem;
