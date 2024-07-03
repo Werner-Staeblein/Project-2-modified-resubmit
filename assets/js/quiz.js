@@ -98,7 +98,7 @@ function displayQuestion() {
       option.appendChild(optionText);
       optionsElement.appendChild(option);
     }
-
+    
     quizWrapper.innerHTML = '';
     quizWrapper.appendChild(questionElement);
     quizWrapper.appendChild(optionsElement);
