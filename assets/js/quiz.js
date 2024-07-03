@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = shuffleArray(quizData).slice(0, 10);
+  selectedQuestions = shuffleArray(quizData).slice(0, 60);
 
   currentQuestion = 0;
   score = 0;
@@ -171,7 +171,7 @@ function retryQuiz() {
   currentQuestion = 0;
   score = 0;
   incorrectAnswers = [];
-  selectedQuestions = shuffleArray([...quizData]).slice(0, 10);
+  selectedQuestions = shuffleArray([...quizData]).slice(0, 60);
   quizContainer.style.display = 'block';
   displayQuestion();
 }
