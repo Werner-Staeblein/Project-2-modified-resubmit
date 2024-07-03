@@ -202,9 +202,9 @@ header h1{
 
 .correct-answers,
 .wrong-answers {
-  font-size: 1em;
-  padding: 10px 20px;
-  border-bottom: 2px solid #ccc;
+  font-size: 1.6rem;
+  padding: 0.7rem 1.3rem;
+  border-bottom: 2px solid var(--background2);
   margin-bottom: 1.5rem;
 }
 
