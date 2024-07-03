@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       startGame();
     });
 
-    actionButton.addEventListener('click', checkAnswer);
+    actionButton.addEventListener('click', answerCheck);
     restartButton.addEventListener('click', retryQuiz);
     showSolutionButton.addEventListener('click', showSolution);
 });
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = shuffleArray(quizData).slice(0, 5);
+  selectedQuestions = randomQuestionPick(quizData).slice(0, 5);
 
   unansweredQuestion = 0;
   points = 0;
@@ -54,12 +54,13 @@ function startGame() {
 }
 
 /**
- * Function to randomize the questions. This function picks a random element
- * from each original array and excludes it from the next draw.
+ * Function to randomize the questions. This function picks a random element from the original array of questions included in 
+ * questions.js file. This randomly picked element/question is then excluded from the next draw. This ensures that no question or
+ * element from the questions array is picked twice.
  * Function taken from Stackoverflow
 */
 
-function shuffleArray(array) {
+function randomQuestionPick(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -116,22 +117,26 @@ function displayQuestion() {
  * Increase of count variable for correct answers
 */
 
-function checkAnswer() {
-
+function answerCheck() {
   const selectedOption = document.querySelector('input[name="quiz"]:checked');
   if (selectedOption) {
-
     const answer = selectedOption.value;
-
     const correctAnswerText = selectedQuestions[unansweredQuestion].choices[selectedQuestions[unansweredQuestion].correctAnswer];
 
     if (answer === correctAnswerText) {
       points++;
+      wrongAnswers.push({
+        question: selectedQuestions[unansweredQuestion].question,
+        userAnswer: answer,
+        correctAnswer: correctAnswerText,
+        isCorrect: true
+      });
     } else {
       wrongAnswers.push({
         question: selectedQuestions[unansweredQuestion].question,
-        wrongAnswers: answer,
+        userAnswer: answer,
         correctAnswer: correctAnswerText,
+        isCorrect: false
       });
     }
 
@@ -143,7 +148,7 @@ function checkAnswer() {
       displayResult();
       actionButton.style.display = 'none';
     }
-}
+  }
 }
 
 /**
@@ -172,41 +177,46 @@ function retryQuiz() {
   unansweredQuestion = 0;
   points = 0;
   wrongAnswers = [];
-  selectedQuestions = shuffleArray([...quizData]).slice(0, 5);
+  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 5);
   quizWrapper.style.display = 'block';
   displayQuestion();
 }
 
-
 function showSolution() {
-
+  
   quizWrapper.style.display = 'none';
   actionButton.style.display = 'none';
   restartButton.style.display = 'inline-block';
   showSolutionButton.style.display = 'none';
 
-
-/**
- * for-loop iterates over array defined above. On every wrong answer, the array collects
- * the question, the wrong answer clickedFunction and the answer that is correct for
- * that question. Concatenation of wrong answers with += yields "list" of wrong answers
-*/
-  let wrongAnswersHtml = '';
+  
+  let correctAnswersHtml = '<div class="correct-answers"><p class="results">Correct Answers:</p>';
+  let wrongAnswersHtml = '<div class="wrong-answers"><p class="results">Wrong Answers:</p>';
 
   for (let i = 0; i < wrongAnswers.length; i++) {
-    wrongAnswersHtml += `
-      <p class="wrong-answer">
-        <strong>Question:</strong> ${wrongAnswers[i].question}<br>
-        <strong>Your Answer:</strong> ${wrongAnswers[i].wrongAnswers}<br>
-        <strong class="correct-answer">Correct Answer:</strong> ${wrongAnswers[i].correctAnswer}
+    const answerData = wrongAnswers[i];
+    const questionHtml = `
+      <p class="${answerData.isCorrect ? 'correct-answer' : 'wrong-answer'}">
+        <strong>Question:</strong> ${answerData.question}<br>
+        <strong>Your Answer:</strong> ${answerData.userAnswer}<br>
+        <strong class="correct-answer">Correct Answer:</strong> ${answerData.correctAnswer}
       </p>
     `;
+
+    if (answerData.isCorrect) {
+      correctAnswersHtml += questionHtml;
+    } else {
+      wrongAnswersHtml += questionHtml;
+    }
   }
 
-  resultDisplay.innerHTML = `
-  <p class="wrong">Wrong Answers:</p>
+  correctAnswersHtml += '</div>';
+  wrongAnswersHtml += '</div>';
 
-  ${wrongAnswersHtml}
+  
+  resultDisplay.innerHTML = `
+    ${correctAnswersHtml}
+    ${wrongAnswersHtml}
   `;
 
   resultDisplay.classList.add('resultDisplay-container');
