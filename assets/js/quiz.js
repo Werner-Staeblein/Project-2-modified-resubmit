@@ -195,7 +195,7 @@ function showSolution() {
 
   for (let i = 0; i < wrongAnswers.length; i++) {
     wrongAnswersHtml += `
-      <p class="incorrect-answer">
+      <p class="wrong-answer">
         <strong>Question:</strong> ${wrongAnswers[i].question}<br>
         <strong>Your Answer:</strong> ${wrongAnswers[i].wrongAnswers}<br>
         <strong class="correct-answer">Correct Answer:</strong> ${wrongAnswers[i].correctAnswer}
@@ -204,7 +204,7 @@ function showSolution() {
   }
 
   resultDisplay.innerHTML = `
-  <p class="incorrect">Incorrect Answers:</p>
+  <p class="wrong">Wrong Answers:</p>
 
   ${wrongAnswersHtml}
   `;

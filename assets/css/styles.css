@@ -200,13 +200,13 @@ header h1{
                       Styling of resultDisplay container
 ------------------------------------------------------------------------------------*/
 
-.resultDisplay-container .incorrect{
+.resultDisplay-container .wrong{
     margin-bottom: 2rem;
     text-decoration: underline;
     font-size: 1.8rem;
 }
   
-.incorrect-answer {
+.wrong-answer {
     margin-top: 2rem;
     font-size: 1.7rem;
 }
