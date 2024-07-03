@@ -75,6 +75,7 @@ function randomQuestionPick(array) {
  * Function taken from Stackoverflow
 */
 
+
 function displayQuestion() {
   if (unansweredQuestion < selectedQuestions.length) {
     const questionData = selectedQuestions[unansweredQuestion];
