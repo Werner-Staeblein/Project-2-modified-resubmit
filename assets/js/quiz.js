@@ -11,7 +11,7 @@ logo.addEventListener('click', retryQuiz);
 
 let unansweredQuestion = 0;
 let points = 0;
-let incorrectAnswers = [];
+let wrongAnswers = [];
 let selectedQuestions = [];
 
 
@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = shuffleArray(quizData).slice(0, 40);
+  selectedQuestions = shuffleArray(quizData).slice(0, 5);
 
   unansweredQuestion = 0;
   points = 0;
-  incorrectAnswers = [];
+  wrongAnswers = [];
   displayQuestion();
 }
 
@@ -128,9 +128,9 @@ function checkAnswer() {
     if (answer === correctAnswerText) {
       points++;
     } else {
-      incorrectAnswers.push({
+      wrongAnswers.push({
         question: selectedQuestions[unansweredQuestion].question,
-        incorrectAnswer: answer,
+        wrongAnswers: answer,
         correctAnswer: correctAnswerText,
       });
     }
@@ -171,8 +171,8 @@ function displayResult() {
 function retryQuiz() {
   unansweredQuestion = 0;
   points = 0;
-  incorrectAnswers = [];
-  selectedQuestions = shuffleArray([...quizData]).slice(0, 40);
+  wrongAnswers = [];
+  selectedQuestions = shuffleArray([...quizData]).slice(0, 5);
   quizWrapper.style.display = 'block';
   displayQuestion();
 }
@@ -185,20 +185,20 @@ function showSolution() {
   restartButton.style.display = 'inline-block';
   showSolutionButton.style.display = 'none';
 
-  
-/**
- * for-loop iterates over array defined above. On every incorrect answer, the array collects
- * the question, the incorrect answer clickedFunction and the answer that is correct for
- * that question. Concatenation of incorrect answers with += yields "list" of incorrect answers
-*/
-  let incorrectAnswersHtml = '';
 
-  for (let i = 0; i < incorrectAnswers.length; i++) {
-    incorrectAnswersHtml += `
+/**
+ * for-loop iterates over array defined above. On every wrong answer, the array collects
+ * the question, the wrong answer clickedFunction and the answer that is correct for
+ * that question. Concatenation of wrong answers with += yields "list" of wrong answers
+*/
+  let wrongAnswersHtml = '';
+
+  for (let i = 0; i < wrongAnswers.length; i++) {
+    wrongAnswersHtml += `
       <p class="incorrect-answer">
-        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
-        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
-        <strong class="correct-answer">Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+        <strong>Question:</strong> ${wrongAnswers[i].question}<br>
+        <strong>Your Answer:</strong> ${wrongAnswers[i].wrongAnswers}<br>
+        <strong class="correct-answer">Correct Answer:</strong> ${wrongAnswers[i].correctAnswer}
       </p>
     `;
   }
@@ -206,7 +206,7 @@ function showSolution() {
   resultDisplay.innerHTML = `
   <p class="incorrect">Incorrect Answers:</p>
 
-  ${incorrectAnswersHtml}
+  ${wrongAnswersHtml}
   `;
 
   resultDisplay.classList.add('resultDisplay-container');
