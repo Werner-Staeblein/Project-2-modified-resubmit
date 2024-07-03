@@ -89,7 +89,7 @@ header h1{
 }
 
 /*----------------------------------------------------------
-              Styling of Quiz Container | Sizing
+              Styling of Trivia Container | Sizing
 -----------------------------------------------------------*/
 
 .container {
@@ -105,9 +105,9 @@ header h1{
     background: linear-gradient(45deg, var(--background1), var(--background2));
 }
 
-/*----------------------------------------------------------
-            Styling of submit, retry, showAnswer button
------------------------------------------------------------*/
+/*--------------------------------------------------------------------
+            Styling of submitAction, tryAgain, displayAnswer button
+----------------------------------------------------------------------*/
 
 #submitAction,
 #tryAgain,
@@ -126,7 +126,7 @@ header h1{
 }
 
 /*----------------------------------------------------------
-              Styling of quiz container | Content
+              Styling of trivia container | Content
 -----------------------------------------------------------*/
 
 .question-counter{
