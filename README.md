@@ -3,7 +3,7 @@
 Javscript Quiz is an interactive quiz for users to answer questions on their knowledge of Javascript. 
 Questions created are stored in a separate Array. 
 
-The Quiz randomly picks 10 of those questions to be answered.
+The Quiz randomly picks 10 of those questions to be answered and provides the user the choose among four different answers of which only one is correct.
 
 The color palette is harmoniously coordinated with the logo, allowing for a coherent and calm image with its bright and warm colors.
 
@@ -11,7 +11,7 @@ The color palette is harmoniously coordinated with the logo, allowing for a cohe
 
 ![Responsive Design](readme_assets/instructions_page_js_quiz.png)
 
-The live project can be viewed here under this link **[FinalProject](https://werner-staeblein.github.io/Project-2/)**
+The live project can be viewed here under this link **[FinalProject](https://github.com/Werner-Staeblein/Project-2-modified-resubmit)**
 
 # User Experience (UX)
 
@@ -22,11 +22,11 @@ The live project can be viewed here under this link **[FinalProject](https://wer
 - As a first time website visitor I want to receive instructions what the quiz is about
 - I want to easily and intuitively navigate through the quiz
 - I want to know where to start the quiz indicated by a start button
-- I want to see my score at the end of the quiz
+- I want to see the points achieved at the end of the quiz
 - I want want to know the number of questions already answered (progress indication/bar)
 - I want to restart the quiz either while I am taking the quiz or at the end of the quiz (user control)
 - I want to see different questions each time that I am running the quiz for the app to be more entertaining
-- I want to see the correct answers for those quiz questions answered incorrectly
+- I want to see all trivia questions answered when I either have answered correctly (even if I guessed the answer) and all questions that I have answered incorrectly included the right answer thereto
 
 ### As a returning user
 
@@ -56,7 +56,7 @@ After opening a quiz with the start button, the user can decide to restart the q
 
 User does not have to finish a quiz round to be able to start a new quiz round. There is no score, however,  shown when user starts a new quiz round while the round was not completed with 10 questions answered. 
 
-Interim scores for discontinued quiz rounds are not stored.
+Interim points achieved for discontinued quiz rounds are not stored.
 
 ### Opening Page | Instructions page
 
@@ -64,22 +64,22 @@ The opening page provides a logo, clear headline what the page is about "Javscri
 
 ![Instructions Page](readme_assets/instructions_page_js_quiz.png)
 
-### Quiz Page
+### Trivia Page
 
-The quiz page continues to show the logo and title of the website. Once the start button was clicked, the instructions page is no longer visible and is now replaced with the quiz question box. 
+The trivia page continues to show the logo and title of the website. Once the start button was clicked, the instructions page is no longer visible and is now replaced with the trivia question box. 
 
 The radio buttons for the questions provide options to the user to click one possible answer. Radio buttons are custom-styled to support overall design and appearance of question section.
 
 Once the user submits a choice on the radio button, the next quiz question automatically appears
 (automatic user feedback).
 
-![Quiz Page](readme_assets/quiz_page_js_quiz.png)
+![Trivia Page](readme_assets/quiz_page_js_quiz.png)
  
 ### Results Page
 
-The results page is an extension of the quiz page.
+The results page is an extension of the trivia page.
 
-After finishing 10 quiz questions, the user is provided the score of the quiz with optionality to view correct answers to questions answered incorrectly and to restart the quiz again.
+After finishing 10 quiz questions, the user is provided the points achieved in the quiz round with optionality to view correct answers and questions answered incorrectly. For both cases, the user is provided the correct answer even if answered correctly as the user may have guessed an answer from the four answer options.
 
 ![Results Page](readme_assets/interaction_and_user_feedback.png)
 
@@ -155,12 +155,12 @@ Final score out of 10 is displayed.
 
 Depending on the score achieved, a message is shown.
 
-- if score is equal to 10, user is shown "Seems you are a Javascript wizard"
-- if score is higher than or equal to 8 but less than 10, user is shown "Nearing the gold medal"
-- if score is higher than or equal to 6 but less than 8, user is shown "Good knowledge but more is yet to come"
-- if score is lower than 6, user is shown "Try again to improve your score"
+- if number of points achieved is equal to 10, user is shown "Seems you are a Javascript wizard"
+- if number of points is higher than or equal to 8 but less than 10, user is shown "Nearing the gold medal"
+- if number of points is higher than or equal to 6 but less than 8, user is shown "Good knowledge but more is yet to come"
+- if number of points lower than 6, user is shown "Try again to improve your score"
 
-Results also provides option for user to start new quiz. This will take the user to the beginning of the website with a quiz again starting at the first question.
+The results page also provides option for user to start new quiz. This will take the user to the beginning of the website with the trivia starting at the first question.
 
 ### Show Answer
 Once the ShowAnswer button in the results page is clicked, the user is shown the incorrect answers
@@ -177,8 +177,6 @@ the next quiz round but user can learn from the questions answered incorrectly.
 - a timer feature could be added to so that the amount of time for each question or the entire set of ten questions for the user is limited
 
 - a highscore feature could be added for users repeating the quiz multiple times
-
-- a feature of displaying the optionality to show the correct answers after answering each quiz question could be added (rather than showing the results and correct answers only at the end)
 
 - an additional feature of more explanatory notes for each answer could be provided in the showAnswer section so that user is not only shown the correct answer but likewise some additional explanation why the answer is the correct one
 
@@ -220,9 +218,12 @@ the next quiz round but user can learn from the questions answered incorrectly.
 # Testing
 
 Testing was done incrementally with every change in functionality of code (Javascript) using console.log.
+
 Only once there were no error messages shown, the development process continued and thus resolving issues along the development process.
 
 Only once the manual functionality testing was completed, the visual testing started with additions of CSS.
+
+Various testings on different screen sizes with different types of devices (mobile phones, tablets) to check the responsiveness of the trivia container and the results container verifying that none of the content overflows beyond the limits of the device tested.
 
 **Issues resolved**
 
@@ -339,7 +340,7 @@ This project is deployed to GitHub pages. The deployment steps are as follows:
 7. The project from the GitHub site will be deployed at the URL displayed under "Deployments". This heading "Deployments" can be found on the starting page of the GitHub Project. This starting page of the GitHub project can be found here
 
 The link to the project is 
-**[FinalProject](https://werner-staeblein.github.io/Project-2/)**
+**[FinalProject](https://github.com/Werner-Staeblein/Project-2-modified-resubmit)**
 
 # Credits
 
