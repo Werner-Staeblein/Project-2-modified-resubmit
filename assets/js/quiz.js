@@ -188,7 +188,6 @@ function showSolution() {
   actionButton.style.display = 'none';
   restartButton.style.display = 'inline-block';
   showSolutionButton.style.display = 'none';
-
   
   let correctAnswersHtml = '<div class="correct-answers"><p class="results">Correct Answers:</p>';
   let wrongAnswersHtml = '<div class="wrong-answers"><p class="results">Wrong Answers:</p>';
@@ -221,6 +220,8 @@ function showSolution() {
 
   resultDisplay.classList.add('resultDisplay-container');
 }
+
+
 
 /**
  * switch case to display feedback on quiz achievement depending on
