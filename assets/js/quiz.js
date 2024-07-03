@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = shuffleArray(quizData).slice(0, 5);
+  selectedQuestions = shuffleArray(quizData).slice(0, 40);
 
   unansweredQuestion = 0;
   points = 0;
@@ -172,7 +172,7 @@ function retryQuiz() {
   unansweredQuestion = 0;
   points = 0;
   incorrectAnswers = [];
-  selectedQuestions = shuffleArray([...quizData]).slice(0, 5);
+  selectedQuestions = shuffleArray([...quizData]).slice(0, 40);
   quizWrapper.style.display = 'block';
   displayQuestion();
 }
@@ -185,6 +185,7 @@ function showSolution() {
   restartButton.style.display = 'inline-block';
   showSolutionButton.style.display = 'none';
 
+  
 /**
  * for-loop iterates over array defined above. On every incorrect answer, the array collects
  * the question, the incorrect answer clickedFunction and the answer that is correct for
