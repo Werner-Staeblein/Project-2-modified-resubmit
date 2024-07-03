@@ -14,6 +14,7 @@ let score = 0;
 let incorrectAnswers = [];
 let selectedQuestions = [];
 
+
 /**
  * EventListeners for the functions and ensure that quiz only
  * runs when page (DOM) is loaded
