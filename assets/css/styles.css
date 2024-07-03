@@ -302,7 +302,7 @@ header h1{
 
 @media screen and (max-width: 400px){
     .options .option {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         display: flex;
         align-items: center;
     }

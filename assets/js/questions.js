@@ -59,7 +59,7 @@ const quizData = [
     },
 
     {
-      "question": "What does the `addEventListener()` method do in JavaScript?",
+      "question": "What does the <br> `addEventListener()` <br> method do in JavaScript?",
       "choices": [
         "It creates a new HTML element.",
         "It adds a new CSS rule to the stylesheet.",
