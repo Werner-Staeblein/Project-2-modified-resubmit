@@ -202,16 +202,24 @@ header h1{
 
 .correct-answers,
 .wrong-answers {
-  font-size: 1.6rem;
-  padding: 0.7rem 1.3rem;
-  border-bottom: 2px solid var(--background2);
-  margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    padding: 0.7rem 1.3rem;
+    border-bottom: 2px solid var(--background2);
+    margin-bottom: 1.5rem;
+}
+
+.correct-heading{
+    color: green;
+}
+
+.wrong-heading{
+    color: red;
 }
 
 .correct-answers .results,
 .wrong-answers .results {
-  font-weight: bold;
-  font-size: 1.2em;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 .correct-answer,
@@ -220,15 +228,14 @@ header h1{
   }
   
 .resultDisplay-container {
-  padding: 20px;
+    padding: 20px;
 }
 
 .results {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
 }
-
 
 /*-----------------------------------------------------------------------------------
                       Responsiveness

@@ -190,8 +190,8 @@ function showSolution() {
   restartButton.style.display = 'inline-block';
   showSolutionButton.style.display = 'none';
   
-  let correctAnswersHtml = '<div class="correct-answers"><p class="results">Correct Answers:</p>';
-  let wrongAnswersHtml = '<div class="wrong-answers"><p class="results">Wrong Answers:</p>';
+  let correctAnswersHtml = '<div class="correct-answers"><p class="results correct-heading">Correct Answers:</p>';
+  let wrongAnswersHtml = '<div class="wrong-answers"><p class="results wrong-heading">Wrong Answers:</p>';
 
   for (let i = 0; i < wrongAnswers.length; i++) {
     const answerData = wrongAnswers[i];
