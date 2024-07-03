@@ -9,7 +9,7 @@ import quizData from './questions.js';
 const logo = document.getElementById("logo");
 logo.addEventListener('click', retryQuiz);
 
-let currentQuestion = 0;
+let unansweredQuestion = 0;
 let score = 0;
 let incorrectAnswers = [];
 let selectedQuestions = [];
@@ -47,7 +47,7 @@ function startGame() {
 
   selectedQuestions = shuffleArray(quizData).slice(0, 5);
 
-  currentQuestion = 0;
+  unansweredQuestion = 0;
   score = 0;
   incorrectAnswers = [];
   displayQuestion();
@@ -74,12 +74,12 @@ function shuffleArray(array) {
 */
 
 function displayQuestion() {
-  if (currentQuestion < selectedQuestions.length) {
-    const questionData = selectedQuestions[currentQuestion];
+  if (unansweredQuestion < selectedQuestions.length) {
+    const questionData = selectedQuestions[unansweredQuestion];
 
     const questionElement = document.createElement('div');
     questionElement.className = 'question';
-    questionElement.innerHTML = `<p class="question-counter">Question: ${currentQuestion + 1}/${selectedQuestions.length}</p>${questionData.question}`;
+    questionElement.innerHTML = `<p class="question-counter">Question: ${unansweredQuestion + 1}/${selectedQuestions.length}</p>${questionData.question}`;
 
     const optionsElement = document.createElement('div');
     optionsElement.className = 'options';
@@ -123,21 +123,21 @@ function checkAnswer() {
 
     const answer = selectedOption.value;
 
-    const correctAnswerText = selectedQuestions[currentQuestion].choices[selectedQuestions[currentQuestion].correctAnswer];
+    const correctAnswerText = selectedQuestions[unansweredQuestion].choices[selectedQuestions[unansweredQuestion].correctAnswer];
 
     if (answer === correctAnswerText) {
       score++;
     } else {
       incorrectAnswers.push({
-        question: selectedQuestions[currentQuestion].question,
+        question: selectedQuestions[unansweredQuestion].question,
         incorrectAnswer: answer,
         correctAnswer: correctAnswerText,
       });
     }
 
-    currentQuestion++;
+    unansweredQuestion++;
     selectedOption.checked = false;
-    if (currentQuestion < selectedQuestions.length) {
+    if (unansweredQuestion < selectedQuestions.length) {
       displayQuestion();
     } else {
       displayResult();
@@ -169,7 +169,7 @@ function displayResult() {
 */
 
 function retryQuiz() {
-  currentQuestion = 0;
+  unansweredQuestion = 0;
   score = 0;
   incorrectAnswers = [];
   selectedQuestions = shuffleArray([...quizData]).slice(0, 5);
