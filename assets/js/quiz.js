@@ -45,13 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = randomQuestionPick(quizData).slice(0, 5);
+  selectedQuestions = randomQuestionPick(quizData).slice(0, 40);
 
   unansweredQuestion = 0;
   points = 0;
   wrongAnswers = [];
   displayQuestion();
 }
+
 
 /**
  * Function to randomize the questions. This function picks a random element from the original array of questions included in 
@@ -177,7 +178,7 @@ function retryQuiz() {
   unansweredQuestion = 0;
   points = 0;
   wrongAnswers = [];
-  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 5);
+  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 40);
   quizWrapper.style.display = 'block';
   displayQuestion();
 }
