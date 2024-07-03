@@ -343,7 +343,7 @@ const quizData = [
       ],
       correctAnswer: 0
     },
-    
+
     {
       question: "Which keyword is used to declare a constant in JavaScript?",
       choices: [
@@ -434,4 +434,6 @@ const quizData = [
   ];
   
   console.log(quizData.length);
-  export default quizData;  
+  export default quizData;
+
+  

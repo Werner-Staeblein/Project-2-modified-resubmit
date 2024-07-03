@@ -227,11 +227,15 @@ Only once the manual functionality testing was completed, the visual testing sta
 **Issues resolved**
 
 - ./questions.js not loaded into quiz.js with error message "does not provide export named 'default'. Solution via Stackoverflow search. Found out that 'export default' in questions.js is needed for question.js to be IMPORTED into quiz.js
+
 - in the manual responsiveness testing, font-sizes were adapted
+
+- In my questions.js I had difficulties to use text that includes questions with consoloe.log(). It was difficult to make line breaks on theses questions so that the text does not overflow. Therefore, I replace questions where a space between characters can not be used with questions that do have a good line break on smaller screen sizes
 
 **Issues not resolved**
 
 - jslint.com indicates error of "unable to finish unexpected let" in the function shuffleArray(array). Removing the let in the for-loop makes the question options disappear. Unable to resolve. Other JS validator **[Beautifytools](https://beautifytools.com/javascript-validator.php)** interestingly does NOT show this to be an error
+
 
 ### 1. Feature Testing
 
