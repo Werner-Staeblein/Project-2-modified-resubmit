@@ -177,6 +177,7 @@ function retryQuiz() {
   displayQuestion();
 }
 
+
 function showSolution() {
 
   quizWrapper.style.display = 'none';
