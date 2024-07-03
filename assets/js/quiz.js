@@ -10,7 +10,7 @@ const logo = document.getElementById("logo");
 logo.addEventListener('click', retryQuiz);
 
 let unansweredQuestion = 0;
-let score = 0;
+let points = 0;
 let incorrectAnswers = [];
 let selectedQuestions = [];
 
@@ -48,7 +48,7 @@ function startGame() {
   selectedQuestions = shuffleArray(quizData).slice(0, 5);
 
   unansweredQuestion = 0;
-  score = 0;
+  points = 0;
   incorrectAnswers = [];
   displayQuestion();
 }
@@ -126,7 +126,7 @@ function checkAnswer() {
     const correctAnswerText = selectedQuestions[unansweredQuestion].choices[selectedQuestions[unansweredQuestion].correctAnswer];
 
     if (answer === correctAnswerText) {
-      score++;
+      points++;
     } else {
       incorrectAnswers.push({
         question: selectedQuestions[unansweredQuestion].question,
@@ -148,7 +148,7 @@ function checkAnswer() {
 
 /**
  * Function to show results container and make retry/showSolution button visible
- * Use count variable score to display final score
+ * Use count variable named points to display final points achieved
 */
 
 function displayResult() {
@@ -157,20 +157,20 @@ function displayResult() {
   restartButton.style.display = 'inline-block';
   showSolutionButton.style.display = 'inline-block';
 
-  resultDisplay.innerHTML = `<p class="smiley-text">${getSmiley(score)}</p>
+  resultDisplay.innerHTML = `<p class="smiley-text">${getSmiley(points)}</p>
   </p>
   <br>
-  <p class="final-score-text"><br>You scored ${score} out of ${selectedQuestions.length}!</p>`;
+  <p class="final-score-text"><br>You scored ${points} out of ${selectedQuestions.length}!</p>`;
 }
 
 /**
- * Function retry sets current question + score back to ZERO
+ * Function retry sets current question + count of points back to ZERO
  * New set of questions picked from questions-Array
 */
 
 function retryQuiz() {
   unansweredQuestion = 0;
-  score = 0;
+  points = 0;
   incorrectAnswers = [];
   selectedQuestions = shuffleArray([...quizData]).slice(0, 5);
   quizWrapper.style.display = 'block';
@@ -212,12 +212,12 @@ function showSolution() {
 
 /**
  * switch case to display feedback on quiz achievement depending on
- * score in counter variable score case 8 and case 9 are combination,
+ * points in counter variable named points. Case 8 and case 9 are combination,
  * case 6 and case 7 are combination, each yielding same outcome
 */
 
-function getSmiley(score) {
-  switch (score) {
+function getSmiley(points) {
+  switch (points) {
     case 10:
       return 'Seems you are a Javscript Wizard';
     case 8:
@@ -227,6 +227,6 @@ function getSmiley(score) {
     case 7:
       return 'Good knowledge but more is yet to come';
     default:
-      return 'Try again to improve your score';
+      return 'Try again to improve your points';
   }
 }
