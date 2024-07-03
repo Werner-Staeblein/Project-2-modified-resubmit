@@ -58,17 +58,17 @@ const quizData = [
       correctAnswer: 1,
     },
 
-    // {
-    //   question: "What does the event.preventDefault() method do in JavaScript?",
-    //   choices: [
-    //     "Prevents the default behavior of an event from occurring",
-    //     "Returns the data type of an expression",
-    //     "Executes a function after a specified number of milliseconds",
-    //     "Inserts content at the beginning of an element"
-    //   ],
-    //   correctAnswer: 0
-    // },
-    
+    {
+      "question": "What does the `addEventListener()` method do in JavaScript?",
+      "choices": [
+        "It creates a new HTML element.",
+        "It adds a new CSS rule to the stylesheet.",
+        "It attaches an event handler to a specified element.",
+        "It modifies the text content of an element."
+      ],
+      "correctAnswer": 2
+    },
+  
     {
       question: "How do you pick a document element based on the value of its id attribute?",
       choices: [
@@ -80,16 +80,16 @@ const quizData = [
       correctAnswer: 2,
     },
   
-    // {
-    //   question: "What is the output of the following code: var x = [1, 2, 3]; <br> console.log(x.length);",
-    //   choices: [
-    //     "1",
-    //     "2",
-    //     "3",
-    //     "4",
-    //   ],
-    //   correctAnswer: 2,
-    // },
+    {
+      "question": "Which of the following is a correct way to define a function in JavaScript?",
+      "choices": [
+        "function myFunction() {}",
+        "def myFunction() {}",
+        "func myFunction() {}",
+        "function:myFunction() {}"
+      ],
+      "correctAnswer": 0
+    },
     
     {
       question: "What does the forEach method do in JavaScript?",
@@ -113,16 +113,16 @@ const quizData = [
       correctAnswer: 2,
     },
 
-    // {
-    //   question: "What is the output of the following code: console.log(Math.random());",
-    //   choices: [
-    //     "0",
-    //     "0.5",
-    //     "1",
-    //     "A random number between 0 and 1",
-    //   ],
-    //   correctAnswer: 3,
-    // },
+    {
+      "question": "Which of the following is used to iterate over the properties of an object?",
+      "choices": [
+        "for loop",
+        "while loop",
+        "for...in loop",
+        "for...of loop"
+      ],
+      "correctAnswer": 2
+    },
     
     {
       question: "Which of the following is not a data type in JavaScript?",
@@ -136,7 +136,7 @@ const quizData = [
     },
     
     {
-      question: "What is the output of the following code: <br> console.log('5' + 5);",
+      question: "What is the output of the following code: console.log('5' + 5);",
       choices: [
         "'10'",
         "10",
@@ -157,18 +157,17 @@ const quizData = [
       correctAnswer: 3,
     },
     
-    
-    //  {
-    //    question: "What is the output of the following code: console.log('Hello'.charAt(1));",
-    //    choices: [
-    //      "'H'",
-    //      "'e'",
-    //      "'l'",
-    //      "'o'",
-    //    ],
-    //    correctAnswer: 1,
-    //  },
-    
+    {
+      "question": "What is the purpose of the `Promise` object in JavaScript?",
+      "choices": [
+        "To handle synchronous operations.",
+        "To manage asynchronous operations.",
+        "To create new HTML elements dynamically.",
+        "To perform arithmetic operations."
+      ],
+      "correctAnswer": 1
+    },
+
     {
       question: "Arrays in JavaScript are defined by which of the following statements?",
       choices: [
@@ -434,4 +433,5 @@ const quizData = [
    
   ];
   
+  console.log(quizData.length);
   export default quizData;  
