@@ -59,7 +59,7 @@ const quizData = [
     },
 
     {
-      "question": "What does the <br> `addEventListener()` <br> method do in JavaScript?",
+      "question": "What is the addEventListener() method in JavaScript?",
       "choices": [
         "It creates a new HTML element.",
         "It adds a new CSS rule to the stylesheet.",
@@ -81,12 +81,12 @@ const quizData = [
     },
   
     {
-      "question": "Which of the following is a correct way to define a function in JavaScript?",
+      "question": "Which method is used to combine two or more arrays in JavaScript?",
       "choices": [
-        "function myFunction() {}",
-        "def myFunction() {}",
-        "func myFunction() {}",
-        "function:myFunction() {}"
+        "concat()",
+        "combine()",
+        "merge()",
+        "join()"
       ],
       "correctAnswer": 0
     },
@@ -334,16 +334,16 @@ const quizData = [
     },
   
     {
-      question: "What is the purpose of the 'addEventListener()' method in JavaScript?",
+      question: "Which of the following is the correct way to declare a JavaScript object?",
       choices: [
-        "To create a new HTML element",
-        "To remove an HTML element",
-        "To add an event listener to an HTML element",
-        "To modify the style of an HTML element",
+        "var obj = {};",
+        "var obj = [];",
+        "var obj = ();",
+        "var obj = <>;"
       ],
-      correctAnswer: 2,
+      correctAnswer: 0
     },
-  
+    
     {
       question: "Which keyword is used to declare a constant in JavaScript?",
       choices: [
