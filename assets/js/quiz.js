@@ -171,7 +171,7 @@ function retryQuiz() {
   currentQuestion = 0;
   score = 0;
   incorrectAnswers = [];
-  selectedQuestions = shuffleArray([...quizData]).slice(0, 60);
+  selectedQuestions = shuffleArray([...quizData]).slice(0, 5);
   quizWrapper.style.display = 'block';
   displayQuestion();
 }
