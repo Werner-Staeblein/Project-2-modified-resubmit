@@ -166,8 +166,22 @@ function answerCheck() {
         document.getElementById('nextQuestion').style.display = 'inline-block';
         actionButton.style.display = 'none';
       }
+      calculateAnswerStatistics()
   }
 }
+
+function calculateAnswerStatistics() {
+  let correctAnswerCount = 0;
+  let wrongAnswerCount = 0;
+
+  for (let answered of wrongAnswers) {
+    console.log(answered.question);
+    console.log(answered.userAnswer);
+    console.log(answered.correctAnswer);
+    console.log(answered.isCorrect);  
+  }
+}
+
 
 /**
  * Function to show results container and make retry/showSolution button visible
