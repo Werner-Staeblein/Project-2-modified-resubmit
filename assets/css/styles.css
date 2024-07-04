@@ -181,14 +181,16 @@ header h1{
     font-weight: bold;
 }
 
-.correct-answers {
+.correct-answers-count {
     text-align: left;
     margin-left: 6%;
+    font-size: 1.6rem;
 }
 
-.wrong-answers {
+.wrong-answers-count {
     text-align: right;
     margin-right: 6%;
+    font-size: 1.6rem;
 }
 
 /*--------------------------------------------------------------------
@@ -250,6 +252,14 @@ header h1{
     padding: 0.7rem 1.3rem;
     border-bottom: 2px solid var(--background2);
     margin-bottom: 1.5rem;
+}
+
+.correct-answers{
+    text-align: left;
+}
+
+.wrong-answers{
+    text-align: right;
 }
 
 .correct-heading{
