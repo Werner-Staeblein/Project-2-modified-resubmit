@@ -174,6 +174,10 @@ function calculateAnswerStatistics() {
   let correctAnswerCount = 0;
   let wrongAnswerCount = 0;
 
+// Note: the wrongAnswers array already collects BOTH wrong and correct answers
+// Note: I DO ALREADY have the correct answers in wrongAnswers array with the isCorrect boolean assigned if answer == correctAnswerText is true
+// Logically, looping through wrongAnswers and pick isCorrect and else statement?
+
   for (let answered of wrongAnswers) {
     console.log(answered.question);
     console.log(answered.userAnswer);
