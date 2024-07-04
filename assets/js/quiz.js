@@ -181,9 +181,9 @@ function calculateAnswerStatistics() {
       wrongAnswerCount++
     }
   }
-
-  console.log("Correct Answer Count", correctAnswerCount);
-  console.log("Wrong Answer Count", wrongAnswerCount);
+  
+  document.getElementById('correctCount').textContent = correctAnswerCount;
+  document.getElementById('wrongCount').textContent = wrongAnswerCount;
 }
 
 /**
