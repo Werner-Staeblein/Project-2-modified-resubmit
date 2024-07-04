@@ -34,7 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     submitActionBtn.addEventListener('click', answerCheck)
-    actionButton.addEventListener('click', answerCheck);
+    nextQuestionBtn.addEventListener('click', function() {
+      displayQuestion();
+    });
+
     restartButton.addEventListener('click', retryQuiz);
     showSolutionButton.addEventListener('click', showSolution);
 });
@@ -112,7 +115,6 @@ function displayQuestion() {
       document.getElementById('nextQuestion').classList.add('hide');
     }
 }
-
 
 /**
  * Function to compare selected answer with correctAnswer from
