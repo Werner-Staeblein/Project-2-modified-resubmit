@@ -90,30 +90,42 @@ function displayQuestion() {
     const optionsElement = document.createElement('div');
         optionsElement.className = 'options';
 
-        for (let i = 0; i < questionData.choices.length; i++) {
-          const option = document.createElement('label');
-          option.className = 'option';
-          option.id = 'choice-' + i;
+      for (let i = 0; i < questionData.choices.length; i++) {
+        const option = document.createElement('label');
+        option.className = 'option';
+        option.id = 'choice-' + i;
 
-          const radio = document.createElement('input');
-          radio.type = 'radio';
-          radio.name = 'quiz';
-          radio.value = questionData.choices[i];
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = 'quiz';
+        radio.value = questionData.choices[i];
 
-          const optionText = document.createTextNode(questionData.choices[i]);
+        const optionText = document.createTextNode(questionData.choices[i]);
 
-          option.appendChild(radio);
-          option.appendChild(optionText);
-          optionsElement.appendChild(option);
+        option.appendChild(radio);
+        option.appendChild(optionText);
+        optionsElement.appendChild(option);
       }
 
-      quizWrapper.innerHTML = '';
-      quizWrapper.appendChild(questionElement);
-      quizWrapper.appendChild(optionsElement);
+    quizWrapper.innerHTML = '';
+    quizWrapper.appendChild(questionElement);
+    quizWrapper.appendChild(optionsElement);
+    
+    actionButton.classList.remove('hide');
 
-      actionButton.classList.remove('hide');
-      document.getElementById('nextQuestion').classList.add('hide');
-    }
+    document.getElementById('nextQuestion').classList.add('hide');
+
+    restartButton.classList.add('hide');
+    showSolutionButton.classList.add('hide');
+
+  }
+
+  else{
+    displayResult();
+    actionButton.classList.add('hide');
+    restartButton.classList.remove('hide');
+    showSolutionButton.classList.remove('hide');  
+  }
 }
 
 /**
