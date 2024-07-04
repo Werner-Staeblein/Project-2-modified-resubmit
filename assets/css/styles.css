@@ -31,7 +31,7 @@ header{
     justify-content: center;
     align-items: center;
     width: 60vw;
-    margin: 5vh auto;
+    margin: 2vh auto;
     border-bottom: 0.2rem solid var(--background2);
     padding: 1rem;  
 }
@@ -177,7 +177,7 @@ header h1{
 #answerStatistics {
     display: flex;
     justify-content: space-between;
-    margin-top: 3.5rem;
+    margin-top: 2rem;
     font-weight: bold;
 }
 
@@ -283,7 +283,7 @@ header h1{
   }
   
 .resultDisplay-container {
-    padding: 20px;
+    padding: 0 1.1rem;
 }
 
 .results {
@@ -293,15 +293,15 @@ header h1{
 }
 
 .final-score-text{
-    font-size: 1.7rem;
+    font-size: 2.1rem;
     color: white;
     font-weight: bold;
-    text-shadow: 0.2rem -0.4rem 0.4rem var(--color1); 
+    text-shadow: 0.2rem -0.4rem 0.4rem var(--color1);
 }
 
 .result-text{
-    font-size: 1.7rem;
-    margin-top: 4rem;
+    font-size: 2.1rem;
+    margin-top: 3rem;
     color: white;
     font-weight: bold;
     text-shadow: 0.2rem -0.4rem 0.4rem var(--color1);
