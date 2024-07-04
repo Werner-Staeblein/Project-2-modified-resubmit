@@ -195,6 +195,7 @@ function retryQuiz() {
   points = 0;
   wrongAnswers = [];
   selectedQuestions = randomQuestionPick([...quizData]).slice(0, 5);
+  resultDisplay.innerHTML = '';
   quizWrapper.style.display = 'block';
   displayQuestion();
 }
