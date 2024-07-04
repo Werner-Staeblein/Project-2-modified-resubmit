@@ -120,9 +120,9 @@ function displayQuestion() {
 */
 
 function answerCheck() {
-  const selectedOption = document.querySelector('input[name="quiz"]:checked');
-  if (selectedOption) {
-    const answer = selectedOption.value;
+  const clickedAnswer = document.querySelector('input[name="quiz"]:checked');
+  if (clickedAnswer) {
+    const answer = clickedAnswer.value;
     const correctAnswerText = selectedQuestions[unansweredQuestion].choices[selectedQuestions[unansweredQuestion].correctAnswer];
 
     if (answer === correctAnswerText) {
@@ -143,7 +143,7 @@ function answerCheck() {
     }
 
     unansweredQuestion++;
-    selectedOption.checked = false;
+    clickedAnswer.checked = false;
     if (unansweredQuestion < selectedQuestions.length) {
       displayQuestion();
     } else {
