@@ -219,7 +219,7 @@ header h1{
 .correct-answers .results,
 .wrong-answers .results {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .correct-answer,
@@ -233,8 +233,23 @@ header h1{
 
 .results {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
+}
+
+.final-score-text{
+    font-size: 1.7rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0.2rem -0.4rem 0.4rem var(--color1); 
+}
+
+.result-text{
+    font-size: 1.7rem;
+    margin-top: 4rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0.2rem -0.4rem 0.4rem var(--color1);
 }
 
 /*-----------------------------------------------------------------------------------
