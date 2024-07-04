@@ -149,7 +149,7 @@ the quiz.
 
 ### User feedback on scores achieved
 
-<span style="color: red; font-weight: bold;">More explanations on IMMEDIATE user feedback provided during the trivia round</span>
+<span style="color: red; font-weight: bold;">More explanations on IMMEDIATE user feedback provided during the trivia round such as Green when answered correctly and NO red color for wrong answer as answer was correct in the first place or GREEN and RED with Green for the right answer and RED for the wrong answer clicked / the radio button clicked by the user remains visible with the same color, no matter whether the answer clicked was correct or wrong</span>
 
 
 ![User Feedback](readme_assets/interaction_and_user_feedback.png)
