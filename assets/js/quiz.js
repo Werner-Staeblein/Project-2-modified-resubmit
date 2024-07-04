@@ -14,7 +14,6 @@ let points = 0;
 let wrongAnswers = [];
 let selectedQuestions = [];
 
-
 /**
  * EventListeners for the functions and ensure that quiz only
  * runs when page (DOM) is loaded
@@ -24,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const startQuizBtn = document.getElementById('startQuizBtn');
     const instructionsDiv = document.getElementById('instructions');
     const quizWrapper = document.querySelector('.container');
+    const submitActionBtn = document.getElementById('submitAction');
+    const nextQuestionBtn = document.getElementById('nextQuestion');
 
     startQuizBtn.addEventListener('click', function () {
       startQuizBtn.style.display = 'none';
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       startGame();
     });
 
+    submitActionBtn.addEventListener('click', answerCheck)
     actionButton.addEventListener('click', answerCheck);
     restartButton.addEventListener('click', retryQuiz);
     showSolutionButton.addEventListener('click', showSolution);
@@ -52,7 +54,6 @@ function startGame() {
   wrongAnswers = [];
   displayQuestion();
 }
-
 
 /**
  * Function to randomize the questions. This function picks a random element from the original array of questions included in 
@@ -75,7 +76,6 @@ function randomQuestionPick(array) {
  * Function taken from Stackoverflow
 */
 
-
 function displayQuestion() {
   if (unansweredQuestion < selectedQuestions.length) {
     const questionData = selectedQuestions[unansweredQuestion];
@@ -85,33 +85,34 @@ function displayQuestion() {
     questionElement.innerHTML = `<p class="question-counter">Question: ${unansweredQuestion + 1}/${selectedQuestions.length}</p>${questionData.question}`;
 
     const optionsElement = document.createElement('div');
-    optionsElement.className = 'options';
+        optionsElement.className = 'options';
 
-    for (let i = 0; i < questionData.choices.length; i++) {
-      const option = document.createElement('label');
-      option.className = 'option';
+        for (let i = 0; i < questionData.choices.length; i++) {
+          const option = document.createElement('label');
+          option.className = 'option';
+          option.id = 'choice-' + i;
 
-      const radio = document.createElement('input');
-      radio.type = 'radio';
-      radio.name = 'quiz';
-      radio.value = questionData.choices[i];
-      const optionText = document.createTextNode(questionData.choices[i]);
+          const radio = document.createElement('input');
+          radio.type = 'radio';
+          radio.name = 'quiz';
+          radio.value = questionData.choices[i];
 
-      option.appendChild(radio);
-      option.appendChild(optionText);
-      optionsElement.appendChild(option);
+          const optionText = document.createTextNode(questionData.choices[i]);
+
+          option.appendChild(radio);
+          option.appendChild(optionText);
+          optionsElement.appendChild(option);
+      }
+
+      quizWrapper.innerHTML = '';
+      quizWrapper.appendChild(questionElement);
+      quizWrapper.appendChild(optionsElement);
+
+      actionButton.classList.remove('hide');
+      document.getElementById('nextQuestion').classList.add('hide');
     }
-    
-    quizWrapper.innerHTML = '';
-    quizWrapper.appendChild(questionElement);
-    quizWrapper.appendChild(optionsElement);
-
-    resultDisplay.style.display = 'none';
-    restartButton.style.display = 'none';
-    showSolutionButton.style.display = 'none';
-    actionButton.style.display = 'inline-block';
-  }
 }
+
 
 /**
  * Function to compare selected answer with correctAnswer from
@@ -122,36 +123,36 @@ function displayQuestion() {
 function answerCheck() {
   const clickedAnswer = document.querySelector('input[name="quiz"]:checked');
   if (clickedAnswer) {
-    const answer = clickedAnswer.value;
-    const correctAnswerText = selectedQuestions[unansweredQuestion].choices[selectedQuestions[unansweredQuestion].correctAnswer];
+      const answer = clickedAnswer.value;
+      const correctAnswerIndex = selectedQuestions[unansweredQuestion].correctAnswer;
+      const correctAnswerText = selectedQuestions[unansweredQuestion].choices[correctAnswerIndex];
 
-    if (answer === correctAnswerText) {
-      points++;
-      wrongAnswers.push({
-        question: selectedQuestions[unansweredQuestion].question,
-        userAnswer: answer,
-        correctAnswer: correctAnswerText,
-        isCorrect: true
-      });
-    } else {
-      wrongAnswers.push({
-        question: selectedQuestions[unansweredQuestion].question,
-        userAnswer: answer,
-        correctAnswer: correctAnswerText,
-        isCorrect: false
-      });
-    }
+      if (answer === correctAnswerText) {
+          points++;
+          clickedAnswer.parentNode.classList.add('correct');
+      } else {
+          clickedAnswer.parentNode.classList.add('wrong');
+          document.getElementById('choice-' + correctAnswerIndex).classList.add('correct');
+      }
 
-    unansweredQuestion++;
-    clickedAnswer.checked = false;
-    if (unansweredQuestion < selectedQuestions.length) {
-      displayQuestion();
-    } else {
-      displayResult();
-      actionButton.style.display = 'none';
-    }
+      wrongAnswers.push({
+          question: selectedQuestions[unansweredQuestion].question,
+          userAnswer: answer,
+          correctAnswer: correctAnswerText,
+          isCorrect: answer === correctAnswerText
+      });
+
+      unansweredQuestion++;
+      document.querySelectorAll('input[name="quiz"]').forEach(input => input.disabled = true);
+      document.getElementById('nextQuestion').classList.remove('hide');
+      actionButton.classList.add('hide');
+
+      if (unansweredQuestion >= selectedQuestions.length) {
+          displayResult();
+          document.getElementById('nextQuestion').classList.add('hide');
+      }
   }
-}
+}  
 
 /**
  * Function to show results container and make retry/showSolution button visible
@@ -222,8 +223,6 @@ function showSolution() {
 
   resultDisplay.classList.add('resultDisplay-container');
 }
-
-
 
 /**
  * switch case to display feedback on quiz achievement depending on
