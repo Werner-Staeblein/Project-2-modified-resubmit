@@ -170,6 +170,13 @@ function answerCheck() {
   }
 }
 
+/**
+ * Function that iterates through array of all answers. This array contains all answers, either
+ * right OR wrong. Don't be confused by Name of array of wrongAnswers. Interate and collect by 
+ * correctAnswers and remainder (not correct = wrong) and display the counter variables inside the
+ * HTML <span> tag dynamically
+*/
+
 function calculateAnswerStatistics() {
   let correctAnswerCount = 0;
   let wrongAnswerCount = 0;
