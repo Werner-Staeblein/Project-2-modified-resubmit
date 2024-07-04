@@ -137,6 +137,9 @@ Once clicked, the user will automatically move forward to the next quiz question
 
 - Change in background color on :hover on the start button
 
+<span style="color: red; font-weight: bold;">Visual effects of changing colors upon submission of answers to questions in radio buttons</span>
+
+
 ### Customized radio buttons for answer choices
 
 Radio buttons to select answer were customized in CSS to support overall appeal and coherent color experience while playing
@@ -145,6 +148,9 @@ the quiz.
 ![Radio Buttons](readme_assets/customized_radio_button_styling_js_quiz.png)
 
 ### User feedback on scores achieved
+
+<span style="color: red; font-weight: bold;">More explanations on IMMEDIATE user feedback provided during the trivia round</span>
+
 
 ![User Feedback](readme_assets/interaction_and_user_feedback.png)
 
@@ -232,6 +238,8 @@ Various testings on different screen sizes with different types of devices (mobi
 - in the manual responsiveness testing, font-sizes were adapted
 
 - In my questions.js I had difficulties to use text that includes questions with consoloe.log(). It was difficult to make line breaks on theses questions so that the text does not overflow. Therefore, I replace questions where a space between characters can not be used with questions that do have a good line break on smaller screen sizes
+
+- For the functionality of starting a new trivia round, I had difficulties with the sequencing of appearance/disappearance of buttons such as appearance of the Retry button and ShowAnswers button only at the end while these two buttons shall be display: none for a new trivia round. I have drawn a flowchart on a piece of paper to better grasp the sequencing of steps to be included in the respective functions, notably the restart function(). I also used some granular comments inside the restart-function to better check the different steps involved in this function. Lesson learned was: draw a flowchart of event first before trying to code the result.
 
 **Issues not resolved**
 
