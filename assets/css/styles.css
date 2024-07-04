@@ -171,7 +171,28 @@ header h1{
 }
 
 /*--------------------------------------------------------------------
-                      Custom styling of radio buttons
+        Styling of Answer Statics inside trvia container
+---------------------------------------------------------------------*/
+
+#answerStatistics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.5rem;
+    font-weight: bold;
+}
+
+.correct-answers {
+    text-align: left;
+    margin-left: 6%;
+}
+
+.wrong-answers {
+    text-align: right;
+    margin-right: 6%;
+}
+
+/*--------------------------------------------------------------------
+        Custom styling of radio buttons
 ---------------------------------------------------------------------*/
 
 /*https://moderncss.dev/pure-css-custom-styled-radio-buttons/ was used for this*/
