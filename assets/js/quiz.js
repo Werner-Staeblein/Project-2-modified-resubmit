@@ -20,36 +20,35 @@ let selectedQuestions = [];
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const startQuizBtn = document.getElementById('startQuizBtn');
-    const instructionsDiv = document.getElementById('instructions');
-    const quizWrapper = document.querySelector('.container');
-    const submitActionBtn = document.getElementById('submitAction');
-    const nextQuestionBtn = document.getElementById('nextQuestion');
-    const restartButton = document.getElementById('tryAgain');
-    const showSolutionButton = document.getElementById('displayAnswers');
+  const startQuizBtn = document.getElementById('startQuizBtn');
+  const instructionsDiv = document.getElementById('instructions');
+  const quizWrapper = document.querySelector('.container');
+  const submitActionBtn = document.getElementById('submitAction');
+  const nextQuestionBtn = document.getElementById('nextQuestion');
+  const restartButton = document.getElementById('tryAgain');
+  const showSolutionButton = document.getElementById('displayAnswers');
 
-    startQuizBtn.addEventListener('click', function () {
-      startQuizBtn.style.display = 'none';
-      instructionsDiv.style.display = 'none';
-      quizWrapper.style.display = 'block';
-      startGame();
-    });
+  startQuizBtn.addEventListener('click', function () {
+    startQuizBtn.style.display = 'none';
+    instructionsDiv.style.display = 'none';
+    quizWrapper.style.display = 'block';
+    startGame();
+  });
 
-    submitActionBtn.addEventListener('click', answerCheck);
-    nextQuestionBtn.addEventListener('click', function() {
-        displayQuestion();
-        actionButton.style.display = 'inline-block';
-        nextQuestionBtn.style.display = 'none';
-    });
+  submitActionBtn.addEventListener('click', answerCheck);
+  nextQuestionBtn.addEventListener('click', function() {
+  displayQuestion();
+  actionButton.style.display = 'inline-block';
+  nextQuestionBtn.style.display = 'none';
+  });
 
-    restartButton.addEventListener('click', retryQuiz);
-    showSolutionButton.addEventListener('click', showSolution);
-
+  restartButton.addEventListener('click', retryQuiz);
+  showSolutionButton.addEventListener('click', showSolution);
     
-    restartButton.style.display = 'none';
-    showSolutionButton.style.display = 'none';
-    submitActionBtn.style.display = 'inline-block';
-    nextQuestionBtn.style.display = 'none';
+  restartButton.style.display = 'none';
+  showSolutionButton.style.display = 'none';
+  submitActionBtn.style.display = 'inline-block';
+  nextQuestionBtn.style.display = 'none';
 });
 
 /**
@@ -117,18 +116,15 @@ function displayQuestion() {
         optionsElement.appendChild(option);
       }
 
-    quizWrapper.innerHTML = '';
-      quizWrapper.appendChild(questionElement);
-      quizWrapper.appendChild(optionsElement);
-
-      actionButton.style.display = 'inline-block';
-      document.getElementById('nextQuestion').style.display = 'none';
-      restartButton.style.display = 'none';
-        showSolutionButton.style.display = 'none';
-    } else {
-   
-        displayResult();
-  }
+        quizWrapper.innerHTML = '';
+        quizWrapper.appendChild(questionElement);
+        quizWrapper.appendChild(optionsElement);
+      
+        actionButton.classList.remove('hide');
+        document.getElementById('nextQuestion').classList.add('hide');
+  } else {
+      displayResult();
+    }
 }
 
 /**
@@ -162,11 +158,13 @@ function answerCheck() {
     unansweredQuestion++;
       document.querySelectorAll('input[name="quiz"]').forEach(input => input.disabled = true);
 
-      if (unansweredQuestion < selectedQuestions.length) {
-        document.getElementById('nextQuestion').style.display = 'inline-block';
+      if (unansweredQuestion >= selectedQuestions.length) {
+        displayResult();
+        document.getElementById('nextQuestion').classList.add('hide');
         actionButton.style.display = 'none';
       } else {
-        displayResult();
+        document.getElementById('nextQuestion').style.display = 'inline-block';
+        actionButton.style.display = 'none';
       }
   }
 }
@@ -215,7 +213,8 @@ function retryQuiz() {
   quizWrapper.style.display = 'block';
 
   // Step 6: The first question of a new trivia round must show up once a new round is started
-    displayQuestion();
+  displayQuestion();
+
 }
 
 function showSolution() {

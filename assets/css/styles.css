@@ -205,19 +205,19 @@ header h1{
                       Styling of immediate user feedback
 ------------------------------------------------------------------------------------*/
 
-
 .correct{ 
-    color: green; 
+    color: green;
+    font-weight: bold;
 }
 
 .wrong{
     color: red;
+    font-weight: bold;
 }
 
 .hide{ 
     display: none; 
 }
-
 
 /*-----------------------------------------------------------------------------------
                       Styling of resultDisplay container
