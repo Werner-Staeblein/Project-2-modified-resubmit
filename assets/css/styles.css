@@ -233,6 +233,7 @@ header h1{
 
 .correct-heading{
     color: green;
+    font-size: 5rem;
 }
 
 .wrong-heading{
@@ -242,7 +243,7 @@ header h1{
 .correct-answers .results,
 .wrong-answers .results {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 2.5rem;
 }
 
 .correct-answer,
