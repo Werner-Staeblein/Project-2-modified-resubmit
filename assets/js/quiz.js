@@ -164,7 +164,7 @@ function displayResult() {
   restartButton.style.display = 'inline-block';
   showSolutionButton.style.display = 'inline-block';
 
-  resultDisplay.innerHTML = `<p class="smiley-text">${getSmiley(points)}</p>
+  resultDisplay.innerHTML = `<p class="result-text">${getResults(points)}</p>
   </p>
   <br>
   <p class="final-score-text"><br>You scored ${points} out of ${selectedQuestions.length}!</p>`;
@@ -231,7 +231,7 @@ function showSolution() {
  * case 6 and case 7 are combination, each yielding same outcome
 */
 
-function getSmiley(points) {
+function getResults(points) {
   switch (points) {
     case 10:
       return 'Seems you are a Javscript Wizard';
