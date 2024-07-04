@@ -109,6 +109,11 @@ header h1{
             Styling of submitAction, tryAgain, displayAnswer button
 ----------------------------------------------------------------------*/
 
+#tryAgain,
+#displayAnswers{
+    display: none;
+}
+
 #submitAction,
 #tryAgain,
 #displayAnswers,
@@ -122,7 +127,7 @@ header h1{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  box-shadow: 0.4rem -0.4rem 1rem var(--color1);
+    box-shadow: 0.4rem -0.4rem 1rem var(--color1);
 }
 
 /*----------------------------------------------------------

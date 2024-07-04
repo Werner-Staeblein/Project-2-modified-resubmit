@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const quizWrapper = document.querySelector('.container');
     const submitActionBtn = document.getElementById('submitAction');
     const nextQuestionBtn = document.getElementById('nextQuestion');
+    const restartButton = document.getElementById('tryAgain');
+    const showSolutionButton = document.getElementById('displayAnswers');
 
     startQuizBtn.addEventListener('click', function () {
       startQuizBtn.style.display = 'none';
@@ -33,13 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
       startGame();
     });
 
-    submitActionBtn.addEventListener('click', answerCheck)
+    submitActionBtn.addEventListener('click', answerCheck);
     nextQuestionBtn.addEventListener('click', function() {
-      displayQuestion();
+        displayQuestion();
+        actionButton.style.display = 'inline-block';
+        nextQuestionBtn.style.display = 'none';
     });
 
     restartButton.addEventListener('click', retryQuiz);
     showSolutionButton.addEventListener('click', showSolution);
+
+    
+    restartButton.style.display = 'none';
+    showSolutionButton.style.display = 'none';
+    submitActionBtn.style.display = 'inline-block';
+    nextQuestionBtn.style.display = 'none';
 });
 
 /**
@@ -50,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = randomQuestionPick(quizData).slice(0, 5);
+  selectedQuestions = randomQuestionPick(quizData).slice(0, 3);
 
   unansweredQuestion = 0;
   points = 0;
@@ -108,23 +118,16 @@ function displayQuestion() {
       }
 
     quizWrapper.innerHTML = '';
-    quizWrapper.appendChild(questionElement);
-    quizWrapper.appendChild(optionsElement);
-    
-    actionButton.classList.remove('hide');
+      quizWrapper.appendChild(questionElement);
+      quizWrapper.appendChild(optionsElement);
 
-    document.getElementById('nextQuestion').classList.add('hide');
-
-    restartButton.classList.add('hide');
-    showSolutionButton.classList.add('hide');
-
-  }
-
-  else{
-    displayResult();
-    actionButton.classList.add('hide');
-    restartButton.classList.remove('hide');
-    showSolutionButton.classList.remove('hide');  
+      actionButton.style.display = 'inline-block';
+      document.getElementById('nextQuestion').style.display = 'none';
+      restartButton.style.display = 'none';
+        showSolutionButton.style.display = 'none';
+    } else {
+   
+        displayResult();
   }
 }
 
@@ -137,36 +140,36 @@ function displayQuestion() {
 function answerCheck() {
   const clickedAnswer = document.querySelector('input[name="quiz"]:checked');
   if (clickedAnswer) {
-      const answer = clickedAnswer.value;
-      const correctAnswerIndex = selectedQuestions[unansweredQuestion].correctAnswer;
-      const correctAnswerText = selectedQuestions[unansweredQuestion].choices[correctAnswerIndex];
+    const answer = clickedAnswer.value;
+    const correctAnswerIndex = selectedQuestions[unansweredQuestion].correctAnswer;
+    const correctAnswerText = selectedQuestions[unansweredQuestion].choices[correctAnswerIndex];
 
-      if (answer === correctAnswerText) {
-          points++;
-          clickedAnswer.parentNode.classList.add('correct');
-      } else {
-          clickedAnswer.parentNode.classList.add('wrong');
-          document.getElementById('choice-' + correctAnswerIndex).classList.add('correct');
-      }
+    if (answer === correctAnswerText) {
+      points++;
+      clickedAnswer.parentNode.classList.add('correct');
+    } else {
+      clickedAnswer.parentNode.classList.add('wrong');
+      document.getElementById('choice-' + correctAnswerIndex).classList.add('correct');
+    }
 
-      wrongAnswers.push({
-          question: selectedQuestions[unansweredQuestion].question,
-          userAnswer: answer,
-          correctAnswer: correctAnswerText,
-          isCorrect: answer === correctAnswerText
-      });
+    wrongAnswers.push({
+      question: selectedQuestions[unansweredQuestion].question,
+      userAnswer: answer,
+      correctAnswer: correctAnswerText,
+      isCorrect: answer === correctAnswerText
+    });
 
-      unansweredQuestion++;
+    unansweredQuestion++;
       document.querySelectorAll('input[name="quiz"]').forEach(input => input.disabled = true);
-      document.getElementById('nextQuestion').classList.remove('hide');
-      actionButton.classList.add('hide');
 
-      if (unansweredQuestion >= selectedQuestions.length) {
-          displayResult();
-          document.getElementById('nextQuestion').classList.add('hide');
+      if (unansweredQuestion < selectedQuestions.length) {
+        document.getElementById('nextQuestion').style.display = 'inline-block';
+        actionButton.style.display = 'none';
+      } else {
+        displayResult();
       }
   }
-}  
+}
 
 /**
  * Function to show results container and make retry/showSolution button visible
@@ -194,10 +197,25 @@ function retryQuiz() {
   unansweredQuestion = 0;
   points = 0;
   wrongAnswers = [];
-  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 5);
+
+  // Step 1: Once a new round starts, a new set of trivia questions must be selected
+  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 3);
+    
+  // Step 2: The results of a previous round are cleared from display as otherwise these continue show up
   resultDisplay.innerHTML = '';
+
+  // Step 3: The TryAgain button and ShowAnswers button must be switched to display none for a new round
+  restartButton.style.display = 'none';
+  showSolutionButton.style.display = 'none';
+
+  // Step 4: With a new round, the Submit button must become visible again. This button went to display none when solution() function was called
+  actionButton.style.display = 'inline-block';
+
+  // Step 5: The quizWrapper went to display 'none' when solution()-function was called. Now the quiz questions must show up again
   quizWrapper.style.display = 'block';
-  displayQuestion();
+
+  // Step 6: The first question of a new trivia round must show up once a new round is started
+    displayQuestion();
 }
 
 function showSolution() {
