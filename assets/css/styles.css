@@ -404,4 +404,10 @@ body{
     margin-left: 2%;
     font-size: 1.4rem;
 }
+
+.correct-answer,
+.wrong-answer{
+    font-size: 1.5rem;
+}
+
 }

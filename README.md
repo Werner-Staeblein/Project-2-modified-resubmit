@@ -287,6 +287,9 @@ display of content)
 
 ### 3. Responsiveness
 
+<span style="color: red; font-weight: bold;"></span>
+
+
 |    Device tested                  |  vw-width                 |  Rendered as expected      |
 | :----------------:                | :--------------------:    | :------------------------: |
 |       iPhone 5SE                  |          320px            |            Good            |
@@ -295,6 +298,11 @@ display of content)
 |       iPaid Mini                  |          768px            |            Good            |
 |       IPadAir                     |          820px            |            Good            |
 |      iPad Pro                     |         1.024px           |            Good            |
+
+
+
+
+
 
 ### 4. Accessibility
 
