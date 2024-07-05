@@ -312,89 +312,85 @@ header h1{
 ------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 1200px){
-    .container{
-        width: 70vw;
-        margin-bottom: 20vh;
-    }
-   
-    .options .option {
-        font-size: 1.5rem;
-        display: flex;
-        align-items: center;
-    }
-   
-    .option input[type="radio"] {
-        vertical-align: middle;
-        margin-right: 0.5rem;
-        padding-left: 0.5rem;  
-    }
-   
-   body{
-        height: 100vh;
-    }
+.container{
+    width: 70vw;
+    margin-bottom: 20vh;
 }
+
+.options .option {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.option input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    padding-left: 0.5rem;  
+}
+
+body{
+    height: 100vh;
+}}
     
 @media screen and (max-width: 768px){
-   .container{
-       width: 85vw;
-    }
-     
-   .options .option {
-       font-size: 1.4rem;
-    }
-    
-    header{
-       flex-direction: column;
-       width: 85vw;   
-    }
-   
-    header h1{
-       text-align: center;
-       font-size: 2.5rem;
-    }
-   
-    header img{
-       width: 10rem;
-    }
-   
-    .container{
-       margin-bottom: 30vh;
-    }
-   
-    #startQuizBtn {
-       display: block;
-       margin: 4rem auto 2rem auto;
-    }
-   
-    body{
-        height: 100%;
-    }
+.container{
+    width: 85vw;
 }
+    
+.options .option {
+    font-size: 1.4rem;
+}
+
+header{
+    flex-direction: column;
+    width: 85vw;   
+}
+
+header h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+header img{
+    width: 10rem;
+}
+
+.container{
+    margin-bottom: 30vh;
+}
+
+#startQuizBtn {
+    display: block;
+    margin: 4rem auto 2rem auto;
+}
+
+body{
+    height: 100%;
+}}
 
 @media screen and (max-width: 480px){
-    .container{
-        margin-bottom: 70vh;
-    }
-    
-    body{
-        height: 100%;
-    }
+.container{
+    margin-bottom: 70vh;
 }
 
+body{
+    height: 100%;
+}}
+
 @media screen and (max-width: 400px){
-    .options .option {
-        font-size: 1.5rem;
-        display: flex;
-        align-items: center;
-    }
-     
-    .option input[type="radio"] {
-        vertical-align: middle;
-        margin-right: 0.5rem;
-        margin-left: -1rem;
-    }
-      
-    .container{
-        margin-bottom: 20vh;
-    }
-}    
+.options .option {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+    
+.option input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    margin-left: -1rem;
+}
+    
+.container{
+    margin-bottom: 20vh;
+}}
