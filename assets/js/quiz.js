@@ -6,9 +6,6 @@ const showSolutionButton = document.getElementById('displayAnswers');
 
 import quizData from './questions.js';
 
-const logo = document.getElementById("logo");
-logo.addEventListener('click', retryQuiz);
-
 let unansweredQuestion = 0;
 let points = 0;
 let wrongAnswers = [];
@@ -56,6 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
   showSolutionButton.style.display = 'none';
   submitActionBtn.style.display = 'inline-block';
   nextQuestionBtn.style.display = 'none';
+
+  const logo = document.getElementById("logo");
+  logo.addEventListener('click', retryQuiz);
+
 });
 
 /**

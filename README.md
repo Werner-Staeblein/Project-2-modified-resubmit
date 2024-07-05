@@ -48,6 +48,9 @@ The user has the option to either
 - (i) see the correct answers for those questions where the user incorrectly answered a quiz question or 
 - (ii) restart the quiz 
 
+<span style="color: red; font-weight: bold;">Better describe the immediate user feedback with colors and audio and counter of right/wrong answers</span>
+
+
 If user decides to see the correct answers for quiz questions answered incorrectly, the user still maintains the option to restart the quiz again. 
 
 Regardless of the user option to restart the quiz at the end of the quiz with the retry-Button, the user can always start a new quiz round by clicking on the JS logo.
@@ -63,6 +66,8 @@ Interim points achieved for discontinued quiz rounds are not stored.
 The opening page provides a logo, clear headline what the page is about "Javscript Quiz", and instructions for the user to play the quiz combined with the start button for the quiz
 
 ![Instructions Page](readme_assets/instructions_page_js_quiz.png)
+
+<span style="color: red; font-weight: bold;">Reminder: Opening page has changed</span>
 
 ### Trivia Page
 
@@ -117,6 +122,8 @@ On hover, a tooltip is display with information that the quiz can be restarted w
 
 ### Start Page quiz instructions page
 
+<span style="color: red; font-weight: bold;">Reminder: opening page changed / new image needed</span>
+
 On the start page the instructions for the quiz are provided. 
 
 The user is informed that questions are  randomly drawn from a set of questions.
@@ -126,12 +133,15 @@ The button named start is prominently placed so that user can easily navigate to
 
 ### Quiz Questions
 
-Quiz section are 10 questions for the user to answer. While answering the questions, the user is shown a progress indicator on the number of questions answered.
+Quiz section are 10 questions for the user to answer. While answering the questions, the user is provided immediate feedback on with a progress indicator on the number of questions already answered.
 
-Every questions has four radio buttons to choose from. A user can change the radio button/answer for as long as the submit button is not clicked. User actions
-are confirmed through change in color of radio button. Feedback is given to user once an answer to a questions with radio button was selected.
+Every questions has four radio buttons to choose from. A user can change the radio button/answer for as long as the submit button is not clicked. User actions provide immediate feedback 
+through the change in color of the radio button clicked. 
 
-Once clicked, the user will automatically move forward to the next quiz question until question no. 10 is reached. While answering the quiz questions, the user is not provided feedback on the correctness of the answers clicked. Decision was to provide feedback to user at the end of the quiz. The incorect answers are displayed at the end of the quiz including a solution to the correct answer.
+<span style="color: red; font-weight: bold;">Describe better the effects upon click of a questions with color changes and audio effects and count of correct/incorrect answers</span>
+
+
+ While answering the quiz questions, the user is not provided feedback on the correctness of the answers clicked. Decision was to provide feedback to user at the end of the quiz. The incorect answers are displayed at the end of the quiz including a solution to the correct answer.
 
 ### Visual Effects
 
