@@ -28,6 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const restartButton = document.getElementById('tryAgain');
   const showSolutionButton = document.getElementById('displayAnswers');
 
+  const applauseSound = document.getElementById('applauseSound');
+  const buzzerSound = document.getElementById('buzzerSound');
+
+  // Here, I set the "start" of the audio to zero so that audio always starts from the "beginning"
+  applauseSound.currentTime = 0;
+  buzzerSound.currentTime = 0;
+
   startQuizBtn.addEventListener('click', function () {
     startQuizBtn.style.display = 'none';
     instructionsDiv.style.display = 'none';
@@ -131,6 +138,7 @@ function displayQuestion() {
  * Function to compare selected answer with correctAnswer from
  * questions.js array labels and radio (input) buttons.
  * Increase of count variable for correct answers
+ * Mentiond audio effect with applause and buzzer sound
 */
 
 function answerCheck() {
@@ -143,9 +151,11 @@ function answerCheck() {
     if (answer === correctAnswerText) {
       points++;
       clickedAnswer.parentNode.classList.add('correct');
+      applauseSound.play(); 
     } else {
       clickedAnswer.parentNode.classList.add('wrong');
       document.getElementById('choice-' + correctAnswerIndex).classList.add('correct');
+      buzzerSound.play();
     }
 
     wrongAnswers.push({
@@ -166,7 +176,7 @@ function answerCheck() {
         document.getElementById('nextQuestion').style.display = 'inline-block';
         actionButton.style.display = 'none';
       }
-      calculateAnswerStatistics()
+      calculateAnswerStatistics();
   }
 }
 
