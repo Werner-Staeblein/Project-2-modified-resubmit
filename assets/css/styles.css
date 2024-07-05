@@ -68,6 +68,7 @@ header h1{
 #instructions p{
     margin-bottom: 1rem;
     font-size: 1.6rem;
+    text-align: center;
 }
 
 #startQuizBtn {
@@ -86,6 +87,11 @@ header h1{
   
 #startQuizBtn:hover {
     background-color: var(--background3);
+}
+
+.warning{
+    font-weight: bold;
+    color: red;
 }
 
 /*----------------------------------------------------------

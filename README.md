@@ -287,7 +287,7 @@ display of content)
 
 ### 3. Responsiveness
 
-<span style="color: red; font-weight: bold;"></span>
+<span style="color: red; font-weight: bold;">Reminder note (to be deleted in final/final) All 40 questions tested on iPhone 5SE on July 5, 2024 including responsiveness of all questions and display of results with correct/wrong answers</span>
 
 
 |    Device tested                  |  vw-width                 |  Rendered as expected      |
