@@ -219,6 +219,8 @@ the next quiz round but user can learn from the questions answered incorrectly.
 
 - **[www.color-hex.com](https://www.color-hex.com)** - to generate the color palette for the site
 
+- **[Pixabay](https://pixabay.com)** - to download the two free of license sounds of applause and buzzer for the audio effects of immediate feedback to users
+
 - A template provided by Code Institute for the workspace of the project
 
 # Testing
@@ -360,6 +362,13 @@ For the logic of the quiz and interactivity coding with Javascript, I likewise u
 
 For the randomized shuffling of questions.js array the Fisher-Yates from this source was used **[Stackoverflow Fisher-Yates Randomization](
 https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)**
+
+
+For the implementation of the sound effects (applause/buzzer) in the code I was reading the article 
+**[Coding-sound-with-JS-for-beginners](https://www.learningguild.com/articles/coding-sound-with-javascript-beginner-s-guide/)** No code was taken from this source. It was an instruction on the "how-to-structure" markup and Javascript to include the sound effects.
+
+I used **[W3-schools](https://www.w3schools.com/tags/av_prop_currenttime.asp)** to learn more about the reset of audio files as I was not sure whether the sound effects always start from "zero" once invokded. The currentTime property sets the starting position of my two audio files.
+
 
 ### Javascript quiz questions
 
