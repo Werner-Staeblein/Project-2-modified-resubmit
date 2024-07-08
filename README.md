@@ -3,7 +3,7 @@
 Javscript Quiz is an interactive quiz for users to answer questions on their knowledge of Javascript. 
 Questions created are stored in a separate Array. 
 
-The Quiz randomly picks 10 of those questions to be answered and provides the user the choose among four different answers of which only one is correct.
+The Quiz randomly picks 10 of those questions to be answered and provides the user the choice among four different answers of which only one is correct.
 
 The color palette is harmoniously coordinated with the logo, allowing for a coherent and calm image with its bright and warm colors.
 
@@ -11,7 +11,7 @@ The color palette is harmoniously coordinated with the logo, allowing for a cohe
 
 ![Responsive Design](readme_assets/instructions_page_js_quiz.png)
 
-The live project can be viewed here under this link **[FinalProject](https://github.com/Werner-Staeblein/Project-2-modified-resubmit)**
+The live project can be viewed here under this link **[FinalProject](https://werner-staeblein.github.io/Project-2-modified-resubmit/)**
 
 # User Experience (UX)
 
@@ -19,17 +19,17 @@ The live project can be viewed here under this link **[FinalProject](https://git
 
 ### As a first time user
 
-- As a first time website visitor I want to receive instructions what the quiz is about
+- As a first-time website visitor I want to receive instructions on what the quiz is about
 - I want to easily and intuitively navigate through the quiz
 - I want to know where to start the quiz indicated by a 'Start JS Quiz' button
-- I want want to know the number of questions already answered (progress indication/bar) during the trivia round
+- I want to know the number of questions already answered (progress indication/bar) during the trivia round
 - I want to receive immediate feedback whether I have clicked an answer or not yet clicked and answer
-- I want to have the immediate feedback in the form of color, audio feedback if I wanto to, and feedaback whether I have correctly clicked an answer
+- I want to have immediate feedback in the form of color, audio feedback if I want to, and feedback on whether I have correctly clicked an answer
 - I want to see the progress of correct and incorrect answers clicked during my trivia round
 - I want to see the points achieved at the end of the trivia round in addition to the progress tracking of correct and incorrect answers during the trivia round
 - I want to restart the quiz either while I am taking the quiz or at the end of the quiz (user control)
 - I want to see different questions each time that I am running the quiz for the app to be more entertaining
-- I want to see all trivia questions including their respective answers at the end of a round. This is in addition to the immediate feedback provided during the trivia round where user feedback is already provided when an answer was chosen
+- I want to see all trivia questions including their respective answers at the end of a round. This is in addition to the immediate feedback provided during the trivia round where user feedback is already provided when an answer is chosen
 
 ### As a returning user
 
@@ -44,12 +44,16 @@ Once the quiz is started with the "Start JS Quiz" button, the user receives a se
 
 The ten questions are randomly drawn from a catalog of quiz questions to ensure each quiz round provides a different set of questions.
 
-During any given trivia round, the user receives immediate feedback on four dimensions:
+During any given trivia round, the user receives immediate feedback on five dimensions:
 
-(i) First, a change of color of the radio button for the answer chosen by the user. 
-(ii) Second, highlight the correct answer in green and, if the user clicks a wrong answer, the user is shown in red color that the chosen answer was wrong while the correct answer is shown in green color. 
-(iii) Third, the user receives continuous feedback on the number of correct answers already made versus the incorrect answers made during the quiz round. 
+(i) First, a change of color of the radio button for the answer chosen by the user.
+
+(ii) Second, highlight the correct answer in green and, if the user clicks a wrong answer, the user is shown in red color that the chosen answer was wrong while the correct answer is shown in green color.
+
+(iii) Third, the user receives continuous feedback on the number of correct answers already made versus the incorrect answers made during the quiz round.
+
 (iv) Fourth, the user is provided immediate feedback by changing the "Submit" button "NextQuestion" button once an answer is submitted. The change of name of the button happens simultaneously with the immediate feedback provided with green/red colors for the answer provided by the user.
+
 (v) Fifth, upon user choice, the user can see all answers clicked during the trivia round split by correct and wrong answers provided by the user supplemented with the respective correct answer to each quiz question.
 
 After opening a quiz with the 'Start JS Quiz' button, the user can decide to restart the quiz by clicking on the logo on the top left of the website. This will take the user back to the start of the quiz. When the user decides to click the JS logo to start a new quiz round, the scoring of results starts again at zero and no interim points achieved for discontinued quiz rounds are stored.
@@ -68,7 +72,7 @@ The opening page provides a logo, clear headline what the page is about "Javscri
 
 The trivia page continues to show the logo and title of the website. Once the start button was clicked, the instructions page is no longer visible and is now replaced with the trivia question box. 
 
-The radio buttons for the questions provide options to the user to click one possible answer. Radio buttons are custom-styled to support overall design and appearance of question section.
+The radio buttons for the questions provide options for the user to click one possible answer. Radio buttons are custom-styled to support the overall design and appearance of the question section.
 
 Once the user submits a choice on the radio button, the next quiz question automatically appears
 (automatic user feedback).
@@ -79,17 +83,17 @@ Once the user submits a choice on the radio button, the next quiz question autom
 
 The results page is an extension of the trivia page.
 
-After finishing 10 quiz questions, the user is provided the points achieved in the quiz round with optionality to view correct answers and questions answered incorrectly. For both cases, the user is provided the correct answer even if answered correctly as the user may have guessed an answer from the four answer options.
+After finishing 10 quiz questions, the user receives the points achieved in the quiz round with optionality to view correct answers and questions answered incorrectly. For both cases, the user receives the correct answer even if answered correctly as the user may have guessed an answer from the four answer options.
 
 ![Results Page](readme_assets/interaction_and_user_feedback.png)
 
 # Design
 
-Design was based on the key colors in the Javascript logo. Using the colors included in the JS logo, a color palette was generated with coolors. This ensures conistent feel for user.
+The design was based on the key colors in the Javascript logo. Using the colors included in the JS logo, a color palette was generated with coolors. This ensures a conistent feel for the user.
 
-User activity such as buttons highlighted with box-shadows to make overall design more appealing.
+User activity such as buttons highlighted with box shadows makes the overall design more appealing.
 
-A linear gradient using the color scheme was used for the background of the quiz. Different linear gradient used for the quiz box to ensure appealing color design aligned to the base color scheme of the Javascript logo.
+A linear gradient using the color scheme was used for the background of the quiz. Different linear gradients were used for the quiz box to ensure an appealing color design aligned with the base color scheme of the Javascript logo.
 
 ### Color Palette
 
@@ -111,7 +115,7 @@ The Javascript icon was downloaded from **[Icons8.com](https://icons8.com/icons/
 
 ![Logo](assets/icons/icons8-javascript-240.png)
 
-The logo is shown on all pages of the website. The logo likewise is a hpyerlink to restart the trivia if the user either wants to restart a new round of questions while already having started on a round of questions. The logo can likewise be clicked by the user to play another trivia round (user control) once a trivia round has been completed. If a trivia round is NOT started, the functionality of "restarting" a quiz round is NOT working simply because no trivia round has been started. Because no trivia round was started, the functionality of "restart" does not work on the opening screen where the trivia is explained. This behavior of the clickable logo is as intended.
+The logo is shown on all pages of the website. The logo likewise is a hyperlink to restart the trivia if the user either wants to restart a new round of questions while already having started on a round of questions. The logo can likewise be clicked by the user to play another trivia round (user control) once a trivia round has been completed. If a trivia round is NOT started, the functionality of "restarting" a quiz round is NOT working simply because no trivia round has been started. Because no trivia round was started, the functionality of "restart" does not work on the opening screen where the trivia is explained. This behavior of the clickable logo is as intended.
 
 On hover, a tooltip is displayed with information that the quiz can be restarted with a click on the logo.
 
@@ -119,10 +123,10 @@ On hover, a tooltip is displayed with information that the quiz can be restarted
 
 <span style="color: red; font-weight: bold;">Reminder: opening page changed / new image needed</span>
 
-On the start page the instructions for the quiz are provided. The user is informed that questions are randomly drawn from a set of questions.
+On the start page, the instructions for the quiz are provided. The user is informed that questions are randomly drawn from a set of questions.
 The button named 'Start JS Quiz' is prominently placed so that a user can easily navigate to the start of the quiz.
 
-The user is likewise informed prominently with red colored text that the trivia app provides user feedback with audio sound. The user is free to turn off sound effects on the device used for the application.
+The user is likewise informed prominently with red-colored text that the trivia app provides user feedback with audio sound. The user is free to turn off sound effects on the device used for the application.
 
 
 <span style="color: red; font-weight: bold;">Reminder: opening page changed / new image needed</span>
@@ -131,15 +135,15 @@ The user is likewise informed prominently with red colored text that the trivia 
 
 ### Quiz Questions
 
-Quiz section are 10 questions for the user to answer. While answering the questions, the user is provided immediate feedback on with a progress indicator on the number of questions already answered.
+The quiz section has 10 questions for the user to answer. While answering the questions, the user is provided immediate feedback on with a progress indicator on the number of questions already answered.
 
-Every questions has four radio buttons to choose from. A user can change the radio button/answer for as long as the submit button is not clicked. User actions provide immediate feedback 
+Every question has four radio buttons to choose from. A user can change the radio button/answer for as long as the submit button is not clicked. User actions provide immediate feedback 
 through the change in color of the radio button clicked. 
 
 <span style="color: red; font-weight: bold;">Describe better the effects upon click of a questions with color changes and audio effects and count of correct/incorrect answers</span>
 
 
- While answering the quiz questions, the user is not provided feedback on the correctness of the answers clicked. Decision was to provide feedback to user at the end of the quiz. The incorect answers are displayed at the end of the quiz including a solution to the correct answer.
+ While answering the quiz questions, the user is not provided feedback on the correctness of the answers clicked. The decision was to provide feedback to the user at the end of the quiz. The incorrect answers are displayed at the end of the quiz including a solution to the correct answer.
 
 ### Visual Effects
 
