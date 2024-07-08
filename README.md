@@ -120,6 +120,7 @@ The logo is shown on all pages of the website. The logo likewise is a hpyerlink 
 
 On hover, a tooltip is display with information that the quiz can be restarted with click on the logo.
 
+
 ### Start Page quiz instructions page
 
 <span style="color: red; font-weight: bold;">Reminder: opening page changed / new image needed</span>
