@@ -263,6 +263,12 @@ Various tests on different screen sizes and types of devices (mobile phones, tab
 
 ### 1. Feature Testing
 
+
+<span style="color: red; font-weight: bold;">Reminder: Describe testing that user CAN NOT click a different answers once one of the four answer buttons was clicked. Automatic switch of button name from "Submit" to "NextQuestion"</span>
+
+
+
+
 Features of the site were tested manually in several test runs to ensure that sie performs intended functionality on all of the key features.
 
 | Feature                   | Test Case                                 | Outcome |

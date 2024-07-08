@@ -84,7 +84,7 @@ header h1{
     cursor: pointer;
     box-shadow: 0.4rem -0.4rem 1rem var(--color1);
 }
-  
+
 #startQuizBtn:hover {
     background-color: var(--background3);
 }
@@ -145,7 +145,6 @@ header h1{
     font-weight: bold;
     font-size: 1.8rem;
 }
-
 
 .question{
     font-size: 1.5rem;
@@ -414,6 +413,4 @@ body{
 .correct-answer,
 .wrong-answer{
     font-size: 1.5rem;
-}
-
-}
+}}
