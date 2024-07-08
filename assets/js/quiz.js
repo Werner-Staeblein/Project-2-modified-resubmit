@@ -82,12 +82,12 @@ function startGame() {
  * Function taken from Stackoverflow
 */
 
-function randomQuestionPick(array) {
-  for (let i = array.length - 1; i > 0; i--) {
+function randomQuestionPick(triviaarray) {
+  for (let i = triviaarray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    [triviaarray[i], triviaarray[j]] = [triviaarray[j], triviaarray[i]];
   }
-  return array;
+  return triviaarray;
 }
 
 /**
