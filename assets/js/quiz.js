@@ -105,8 +105,8 @@ function showQuestion() {
     divForEachQuestion.className = 'question';
     divForEachQuestion.innerHTML = `<p class="question-counter">Question: ${unansweredQuestion + 1}/${selectedQuestions.length}</p>${questionData.question}`;
 
-    const optionsElement = document.createElement('div');
-        optionsElement.className = 'options';
+    const divForAnswerOptions = document.createElement('div');
+        divForAnswerOptions.className = 'options';
 
       for (let i = 0; i < questionData.choices.length; i++) {
         const option = document.createElement('label');
@@ -122,12 +122,12 @@ function showQuestion() {
 
         option.appendChild(radio);
         option.appendChild(optionText);
-        optionsElement.appendChild(option);
+        divForAnswerOptions.appendChild(option);
       }
 
         quizWrapper.innerHTML = '';
         quizWrapper.appendChild(divForEachQuestion);
-        quizWrapper.appendChild(optionsElement);
+        quizWrapper.appendChild(divForAnswerOptions);
       
         actionButton.classList.remove('hide');
         document.getElementById('nextQuestion').classList.add('hide');
