@@ -109,20 +109,20 @@ function showQuestion() {
         divForAnswerOptions.className = 'options';
 
       for (let i = 0; i < questionData.choices.length; i++) {
-        const option = document.createElement('label');
-        option.className = 'option';
-        option.id = 'choice-' + i;
+        const answerChoice = document.createElement('label');
+        answerChoice.className = 'option';
+        answerChoice.id = 'choice-' + i;
 
-        const radio = document.createElement('input');
-        radio.type = 'radio';
-        radio.name = 'quiz';
-        radio.value = questionData.choices[i];
+        const userChoice = document.createElement('input');
+        userChoice.type = 'radio';
+        userChoice.name = 'quiz';
+        userChoice.value = questionData.choices[i];
 
         const optionText = document.createTextNode(questionData.choices[i]);
 
-        option.appendChild(radio);
-        option.appendChild(optionText);
-        divForAnswerOptions.appendChild(option);
+        answerChoice.appendChild(userChoice);
+        answerChoice.appendChild(optionText);
+        divForAnswerOptions.appendChild(answerChoice);
       }
 
         quizWrapper.innerHTML = '';
