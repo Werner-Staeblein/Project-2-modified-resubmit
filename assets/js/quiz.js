@@ -100,9 +100,10 @@ function showQuestion() {
   if (unansweredQuestion < selectedQuestions.length) {
     const questionData = selectedQuestions[unansweredQuestion];
 
-    const questionElement = document.createElement('div');
-    questionElement.className = 'question';
-    questionElement.innerHTML = `<p class="question-counter">Question: ${unansweredQuestion + 1}/${selectedQuestions.length}</p>${questionData.question}`;
+    const divForEachQuestion = document.createElement('div');
+
+    divForEachQuestion.className = 'question';
+    divForEachQuestion.innerHTML = `<p class="question-counter">Question: ${unansweredQuestion + 1}/${selectedQuestions.length}</p>${questionData.question}`;
 
     const optionsElement = document.createElement('div');
         optionsElement.className = 'options';
@@ -125,7 +126,7 @@ function showQuestion() {
       }
 
         quizWrapper.innerHTML = '';
-        quizWrapper.appendChild(questionElement);
+        quizWrapper.appendChild(divForEachQuestion);
         quizWrapper.appendChild(optionsElement);
       
         actionButton.classList.remove('hide');
