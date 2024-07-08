@@ -116,7 +116,7 @@ The Javascript icon was downloaded from **[Icons8.com](https://icons8.com/icons/
 
 ![Logo](assets/icons/icons8-javascript-240.png)
 
-The logo is shown on all pages of the website. The logo likewise is a hpyerlink to restart the quiz if the user either wants to restart a quiz while having started a quiz or once a quiz round is completed and the user decides to play another quiz round (user control)
+The logo is shown on all pages of the website. The logo likewise is a hpyerlink to restart the trivia if the user either wants to restart a new round of questions while already having started on a round of questions. The logo can likewise be clicked by the user to play another trivia round (user control) once a trivia round has been completed. 
 
 On hover, a tooltip is display with information that the quiz can be restarted with click on the logo.
 
