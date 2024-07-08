@@ -205,6 +205,7 @@ function calculateAnswerStatistics() {
   document.getElementById('wrongCount').textContent = wrongAnswerCount;
 }
 
+
 /**
  * Function to show results container and make retry/showSolution button visible
  * Use count variable named points to display final points achieved
