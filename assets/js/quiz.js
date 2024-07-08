@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   nextQuestionBtn.style.display = 'none';
   });
 
-  restartButton.addEventListener('click', retryQuiz);
+  restartButton.addEventListener('click', retakeQuiz);
   showSolutionButton.addEventListener('click', showSolution);
     
   restartButton.style.display = 'none';
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   nextQuestionBtn.style.display = 'none';
 
   const logo = document.getElementById("logo");
-  logo.addEventListener('click', retryQuiz);
+  logo.addEventListener('click', retakeQuiz);
 
 });
 
@@ -227,7 +227,7 @@ function showEntireTriviaOutcome() {
  * New set of questions picked from questions-Array
 */
 
-function retryQuiz() {
+function retakeQuiz() {
   unansweredQuestion = 0;
   points = 0;
   wrongAnswers = [];
