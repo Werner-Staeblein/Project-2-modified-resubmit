@@ -211,6 +211,7 @@ function calculateAnswerStatistics() {
  * Use count variable named points to display final points achieved
 */
 
+
 function showEntireTriviaOutcome() {
 
   resultDisplay.style.display = 'block';
