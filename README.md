@@ -21,12 +21,15 @@ The live project can be viewed here under this link **[FinalProject](https://git
 
 - As a first time website visitor I want to receive instructions what the quiz is about
 - I want to easily and intuitively navigate through the quiz
-- I want to know where to start the quiz indicated by a start button
-- I want to see the points achieved at the end of the quiz
-- I want want to know the number of questions already answered (progress indication/bar)
+- I want to know where to start the quiz indicated by a 'Start JS Quiz' button
+- I want want to know the number of questions already answered (progress indication/bar) during the trivia round
+- I want to receive immediate feedback whether I have clicked an answer or not yet clicked and answer
+- I want to have the immediate feedback in the form of color, audio feedback if I wanto to, and feedaback whether I have correctly clicked an answer
+- I want to see the progress of correct and incorrect answers clicked during my trivia round
+- I want to see the points achieved at the end of the trivia round in addition to the progress tracking of correct and incorrect answers during the trivia round
 - I want to restart the quiz either while I am taking the quiz or at the end of the quiz (user control)
 - I want to see different questions each time that I am running the quiz for the app to be more entertaining
-- I want to see all trivia questions answered when I either have answered correctly (even if I guessed the answer) and all questions that I have answered incorrectly included the right answer thereto
+- I want to see all trivia questions including their respective answers at the end of a round. This is in addition to the immediate feedback provided during the trivia round where user feedback is already provided when an answer was chosen
 
 ### As a returning user
 
@@ -35,31 +38,23 @@ The live project can be viewed here under this link **[FinalProject](https://git
 
 # Structure
 
-The website provides instructions for the quiz on the opening page and allows user to press the button "Start JS Quiz" for the quiz.
+The website provides instructions for the quiz on the opening page and allows a user to press the button "Start JS Quiz" for the quiz.
 
-Once the quiz is started with start button, the user receives a sequence of ten questions related to Javscript. 
+Once the quiz is started with the "Start JS Quiz" button, the user receives a sequence of ten questions related to Javascript. 
 
-The 10 questions are randomly drawn from a catalogue of quiz questions to ensure that each quiz round provides different set of questions.
+The ten questions are randomly drawn from a catalog of quiz questions to ensure each quiz round provides a different set of questions.
 
-Once the quiz is completed with 10 questions answered, the user is automatically shown the results page including the score of correct answers.
+During any given trivia round, the user receives immediate feedback on four dimensions:
 
-The user has the option to either
+(i) First, a change of color of the radio button for the answer chosen by the user. 
+(ii) Second, highlight the correct answer in green and, if the user clicks a wrong answer, the user is shown in red color that the chosen answer was wrong while the correct answer is shown in green color. 
+(iii) Third, the user receives continuous feedback on the number of correct answers already made versus the incorrect answers made during the quiz round. 
+(iv) Fourth, the user is provided immediate feedback by changing the "Submit" button "NextQuestion" button once an answer is submitted. The change of name of the button happens simultaneously with the immediate feedback provided with green/red colors for the answer provided by the user.
+(v) Fifth, upon user choice, the user can see all answers clicked during the trivia round split by correct and wrong answers provided by the user supplemented with the respective correct answer to each quiz question.
 
-- (i) see the correct answers for those questions where the user incorrectly answered a quiz question or 
-- (ii) restart the quiz 
+After opening a quiz with the 'Start JS Quiz' button, the user can decide to restart the quiz by clicking on the logo on the top left of the website. This will take the user back to the start of the quiz. When the user decides to click the JS logo to start a new quiz round, the scoring of results starts again at zero and no interim points achieved for discontinued quiz rounds are stored.
 
-<span style="color: red; font-weight: bold;">Better describe the immediate user feedback with colors and audio and counter of right/wrong answers</span>
-
-
-If user decides to see the correct answers for quiz questions answered incorrectly, the user still maintains the option to restart the quiz again. 
-
-Regardless of the user option to restart the quiz at the end of the quiz with the retry-Button, the user can always start a new quiz round by clicking on the JS logo.
-
-After opening a quiz with the start button, the user can decide to restart the quiz by clicking on the logo on the top left of the website. This will take the user back to the start of the quiz. 
-
-User does not have to finish a quiz round to be able to start a new quiz round. There is no score, however,  shown when user starts a new quiz round while the round was not completed with 10 questions answered. 
-
-Interim points achieved for discontinued quiz rounds are not stored.
+In addition to the functionality of the JS logo, the user can restart a new quiz round at the end of the quiz by clicking the "Retry" button.
 
 ### Opening Page | Instructions page
 
@@ -116,19 +111,21 @@ The Javascript icon was downloaded from **[Icons8.com](https://icons8.com/icons/
 
 ![Logo](assets/icons/icons8-javascript-240.png)
 
-The logo is shown on all pages of the website. The logo likewise is a hpyerlink to restart the trivia if the user either wants to restart a new round of questions while already having started on a round of questions. The logo can likewise be clicked by the user to play another trivia round (user control) once a trivia round has been completed. 
+The logo is shown on all pages of the website. The logo likewise is a hpyerlink to restart the trivia if the user either wants to restart a new round of questions while already having started on a round of questions. The logo can likewise be clicked by the user to play another trivia round (user control) once a trivia round has been completed. If a trivia round is NOT started, the functionality of "restarting" a quiz round is NOT working simply because no trivia round has been started. Because no trivia round was started, the functionality of "restart" does not work on the opening screen where the trivia is explained. This behavior of the clickable logo is as intended.
 
-On hover, a tooltip is display with information that the quiz can be restarted with click on the logo.
-
+On hover, a tooltip is displayed with information that the quiz can be restarted with a click on the logo.
 
 ### Start Page quiz instructions page
 
 <span style="color: red; font-weight: bold;">Reminder: opening page changed / new image needed</span>
 
-On the start page the instructions for the quiz are provided. 
+On the start page the instructions for the quiz are provided. The user is informed that questions are randomly drawn from a set of questions.
+The button named 'Start JS Quiz' is prominently placed so that a user can easily navigate to the start of the quiz.
 
-The user is informed that questions are  randomly drawn from a set of questions.
-The button named start is prominently placed so that user can easily navigate to the start of the quiz.
+The user is likewise informed prominently with red colored text that the trivia app provides user feedback with audio sound. The user is free to turn off sound effects on the device used for the application.
+
+
+<span style="color: red; font-weight: bold;">Reminder: opening page changed / new image needed</span>
 
 ![Start Page](readme_assets/start_page_instructions.png)
 
