@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     startGame();
   });
 
-  submitActionBtn.addEventListener('click', answerCheck);
+  submitActionBtn.addEventListener('click', validateAnswer);
   nextQuestionBtn.addEventListener('click', function() {
   showQuestion();
   actionButton.style.display = 'inline-block';
@@ -136,8 +136,6 @@ function showQuestion() {
     }
 }
 
-
-
 /**
  * Function to compare selected answer with correctAnswer from
  * questions.js array labels and radio (input) buttons.
@@ -145,7 +143,7 @@ function showQuestion() {
  * Mentiond audio effect with applause and buzzer sound
 */
 
-function answerCheck() {
+function validateAnswer() {
   const clickedAnswer = document.querySelector('input[name="quiz"]:checked');
   if (clickedAnswer) {
     const answer = clickedAnswer.value;
