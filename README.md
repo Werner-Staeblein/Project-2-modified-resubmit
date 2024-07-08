@@ -148,13 +148,14 @@ through the change in color of the radio button clicked.
 ### Visual Effects
 
 - Change in background color on :hover on the start button
+  
+- Radio buttons to select answers were customized in CSS to support overall appeal and coherent color experience while playing the quiz but likewise to provide immediate feedback to user that an answer is chosen,
 
-<span style="color: red; font-weight: bold;">Visual effects of changing colors upon submission of answers to questions in radio buttons</span>
-
+- Correct answers are shown in green color to user. Wrong answers are shown in red color to the user while the correct answer to the question is shown in green. The latter supports immediate feedaback to user while the user is playing the game.
 
 ### Customized radio buttons for answer choices
 
-Radio buttons to select answer were customized in CSS to support overall appeal and coherent color experience while playing
+Radio buttons to select answers were customized in CSS to support overall appeal and coherent color experience while playing
 the quiz.
 
 ![Radio Buttons](readme_assets/customized_radio_button_styling_js_quiz.png)
@@ -168,39 +169,39 @@ the quiz.
 
 ### Results Page
 
-Results page is last question plus information about result achieved.
-Final score out of 10 is displayed.
+The results page is the last question plus information about the result achieved.
+The final score out of 10 is displayed.
 
 Depending on the score achieved, a message is shown.
 
-- if number of points achieved is equal to 10, user is shown "Seems you are a Javascript wizard"
-- if number of points is higher than or equal to 8 but less than 10, user is shown "Nearing the gold medal"
-- if number of points is higher than or equal to 6 but less than 8, user is shown "Good knowledge but more is yet to come"
-- if number of points lower than 6, user is shown "Try again to improve your score"
+- if the number of points achieved is equal to 10, a user is shown "Seems you are a Javascript wizard"
+- if the number of points is higher than or equal to 8 but less than 10, a user is shown "Nearing the gold medal"
+- if number of points is higher than or equal to 6 but less than 8, a user is shown "Good knowledge but more is yet to come"
+- if the number of points is lower than 6, a user is shown "Try again to improve your score"
 
-The results page also provides option for user to start new quiz. This will take the user to the beginning of the website with the trivia starting at the first question.
+The results page also provides an option for the user to start a new quiz. This will take the user to the beginning of the website with the trivia starting at the first question.
 
 ### Show Answer
-Once the ShowAnswer button in the results page is clicked, the user is shown the incorrect answers
-including the underlying question, the user's answer in the quiz and the correct answer to the 
+Once the ShowAnswer button on the results page is clicked, the user is shown the incorrect answers
+including the underlying question, the user's answer in the quiz, and the correct answer to the 
 question. 
 
-As questions are drawn randomly from a auiz array, the user may not face the same question again in
-the next quiz round but user can learn from the questions answered incorrectly.
+As questions are drawn randomly from a questions array, the user can not face the same question again in
+the next quiz round but the user can learn from the questions answered incorrectly.
 
 ![Incorrect Answer Box](readme_assets/screenshot_incorrect_answerbox.png)
 
 ### Possible Future Features
 
-- a timer feature could be added to so that the amount of time for each question or the entire set of ten questions for the user is limited
+- a timer feature could be added to so that the amount of time for each question or the entire set of ten questions for the user is limited,
 
-- a highscore feature could be added for users repeating the quiz multiple times
+- a highscore feature could be added for users repeating the quiz multiple times,
 
-- an additional feature of more explanatory notes for each answer could be provided in the showAnswer section so that user is not only shown the correct answer but likewise some additional explanation why the answer is the correct one
+- an additional feature of more explanatory notes for each answer could be provided in the showSolution section so that a user is not only shown the correct answer but likewise some additional explanation as to why the answer is the correct one,
 
-- Enlarge the underlying selection of quiz questions beyond 40 and, possibly, classify questions into categories such "starter/intermediate/advanced"
+- Enlarge the underlying selection of quiz questions beyond 40 and, possibly, classify questions such as "starter/intermediate/advanced",
 
-- allow user to pre-select knowledge status and take quiz questions based on categorical organisation of quiz questions into buckets of "starter/intermediate/advanced"
+- allow the user to pre-select knowledge status and take quiz questions based on the categorical organization of quiz questions into buckets of "starter/intermediate/advanced".
 
 
 # Technologies
@@ -225,7 +226,7 @@ the next quiz round but user can learn from the questions answered incorrectly.
 
 - **[Visual Code Studios](https://code.visualstudio.com/)** - IDE used to draft the webiste and make working progress remarks in the README.md including placehoders to check for final polishing
 
-- **[Google Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools)**- To check responsiveness of page, debug code, and important lighthouse checks for performance, accessibility, best practices, SEO
+- **[Google Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools)**- to check responsiveness of page, debug code, and important lighthouse checks for performance, accessibility, best practices, SEO
 
 - **[Techsini](https://techsini.com/multi-mockup/index.php)** - to generate multi-device image with different screen-sizes and devices possibly used by user
 
@@ -237,27 +238,27 @@ the next quiz round but user can learn from the questions answered incorrectly.
 
 # Testing
 
-Testing was done incrementally with every change in functionality of code (Javascript) using console.log.
+Testing was done incrementally with every change in the functionality of code (Javascript) using console.log.
 
-Only once there were no error messages shown, the development process continued and thus resolving issues along the development process.
+Only once there were no error messages shown, the development process continued thus resolving issues along the development process.
 
 Only once the manual functionality testing was completed, the visual testing started with additions of CSS.
 
-Various testings on different screen sizes with different types of devices (mobile phones, tablets) to check the responsiveness of the trivia container and the results container verifying that none of the content overflows beyond the limits of the device tested.
+Various tests on different screen sizes and types of devices (mobile phones, tablets) were done to check the responsiveness of the trivia container and the results container. This was done to  verify that none of the content overflows beyond the limits of the device tested
 
 **Issues resolved**
 
-- ./questions.js not loaded into quiz.js with error message "does not provide export named 'default'. Solution via Stackoverflow search. Found out that 'export default' in questions.js is needed for question.js to be IMPORTED into quiz.js
+- ./questions.js not loaded into quiz.js with error message "does not provide export named 'default'. Solution via Stackoverflow search. Found out that 'export default' in questions.js is needed for question.js to be IMPORTED into quiz.js.
 
-- in the manual responsiveness testing, font-sizes were adapted
+- in the manual responsiveness testing, font sizes were adapted.
 
-- In my questions.js I had difficulties to use text that includes questions with consoloe.log(). It was difficult to make line breaks on theses questions so that the text does not overflow. Therefore, I replace questions where a space between characters can not be used with questions that do have a good line break on smaller screen sizes
+- In my questions.js I had difficulties to use text that includes questions with consoloe.log(). It was difficult to make line breaks on these questions so that the text does not overflow. Therefore, I replace questions where a space between characters can not be used with questions that do have a good line break on smaller screen sizes.
 
-- For the functionality of starting a new trivia round, I had difficulties with the sequencing of appearance/disappearance of buttons such as appearance of the Retry button and ShowAnswers button only at the end while these two buttons shall be display: none for a new trivia round. I have drawn a flowchart on a piece of paper to better grasp the sequencing of steps to be included in the respective functions, notably the restart function(). I also used some granular comments inside the restart-function to better check the different steps involved in this function. Lesson learned was: draw a flowchart of event first before trying to code the result.
+- For the functionality of starting a new trivia round, I had difficulties with the sequencing of the appearance/disappearance of buttons such as appearance of the 'Retry' button and 'Show Answers' button only at the end while these two buttons shall be on display: none for a new trivia round. I have drawn a flowchart on paper to better grasp the sequencing of steps to be included in the respective functions, notably the restart function(). I also used some granular comments inside the 'retry'-function to better check the different steps involved in this function. The lesson learned was: to draw a flowchart of events first before trying to code the result.
 
 **Issues not resolved**
 
-- jslint.com indicates error of "unable to finish unexpected let" in the function shuffleArray(array). Removing the let in the for-loop makes the question options disappear. Unable to resolve. Other JS validator **[Beautifytools](https://beautifytools.com/javascript-validator.php)** interestingly does NOT show this to be an error
+- jslint.com indicates an error of "unable to finish unexpected let" in the function shuffleArray(array). Removing the let in the for-loop makes the question options disappear. Unable to resolve. Other JS validator **[Beautifytools](https://beautifytools.com/javascript-validator.php)** interestingly does NOT show this to be an error.
 
 
 ### 1. Feature Testing
@@ -308,9 +309,9 @@ display of content)
 
 ### 4. Accessibility
 
-- alternative text/labels used to enable screen readers providing information
-- contrasting used to have best possible visibility for the user
-- Accessibility for visually impaired (color blindness) was tested with Google Lighthouse
+- alternative text/labels used to enable screen readers to provide information
+- contrasting is used to have the best possible visibility for the user
+- Accessibility for the visually impaired (color blindness) was tested with Google Lighthouse
 
 ### Automated Testing (Code Validation and Lighthouse testing)
 
@@ -361,10 +362,10 @@ to use double quotes and not single quotes
 
 This project is deployed to GitHub pages. The deployment steps are as follows:
 
-1. Log in to Github und www.github.com
-2. Find repository of this project named (Werner-Staeblein/Project-2)
-3. In the headings of the repository find "settings". The settings are on outer right hand side next to "insight" and "security" in the repository sub-heading. Click "settings" here 
-4. In settings, a navigation on the left-hand side is shown. This navigation has the first heading "General". In this column that starts with "General" and undder "code and automation" click the link named "Pages". This link named "Pages" is directly on top of the submenu "Security". What matters here is that "Pages" is clicked.
+1. Log in to Github on www.github.com
+2. Find the repository of this project named (https://github.com/Werner-Staeblein/Project-2-modified-resubmit)
+3. In the headings of the repository find "settings". The settings are on the outer right-hand side next to "insight" and "security" in the repository sub-heading. Click "settings" here 
+4. In settings, a navigation on the left-hand side is shown. This navigation has the first heading "General". In this column that starts with "General" and under "code and automation" click the link named "Pages". This link named "Pages" is directly on top of the submenu "Security". What matters here is that "Pages" is clicked.
 5. You will now see a heading named "GitHub Pages". In the GitHub Pages, go to "build and deployment". In the heading "Branch" choose the options "main" and "/root"
 6. Click Save
 7. The project from the GitHub site will be deployed at the URL displayed under "Deployments". This heading "Deployments" can be found on the starting page of the GitHub Project. This starting page of the GitHub project can be found here
@@ -380,14 +381,14 @@ I used a guide to create to quiz app written by Faraz **[Step-by-step-guide-for-
 
 For the logic of the quiz and interactivity coding with Javascript, I likewise used the book "Programmieren Lernen mit Javascript" authored by Stephan Elter
 
-For the randomized shuffling of questions.js array the Fisher-Yates logic was used. This function to shuffle the array of question randomly was included in the code that I used as a starting guide for may project. I did check the code my referenced learning code against this posting on Stackoverflow to better understand the shuffling process. The shuffling of array questions works as follows: A question is picked from the array of 40 questions located in the file named questions.js. Once a question is picked from this array with 40 questions, the next pick for the trivia questions for a total of ten questions for each trivia round does no longer consider the one question that was already picked in the first shuffle. As a result, no question from the array of questions located in the file named questions.js can be picked twice for any trivia round of ten questions. I was only able to change the function name and parameter name. If I had changed the content for the function expression, the shuffling math would not have worked as planned. Therefore, I was unable to customize the mathematical logic inside the function expression as this would have required to create a new mathematical logic that creates the same outcome (drawing a card/question without replacement)**[Stackoverflow Fisher-Yates Randomization](
+For the randomized shuffling of the questions.js array the Fisher-Yates logic was used. This function to randomly shuffle the array of questions was included in the code that I used as a starting guide for my project. I did check the code my referenced learning code against this posting on Stackoverflow to better understand the shuffling process. The shuffling of array questions works as follows: A question is picked from the array of 40 questions located in the file named questions.js. Once a question is picked from this array with 40 questions, the next pick for the trivia questions for a total of 10 questions for each trivia round does no longer consider the one question that was already picked in the first shuffle. As a result, no question from the array of questions located in the file named questions.js can be picked twice for any trivia round of ten questions. I was only able to change the function name and parameter name. If I had changed the content for the function expression, the shuffling math would not have worked as planned. Therefore, I was unable to customize the mathematical logic inside the function expression as this would have required to create a new mathematical logic that creates the same outcome (drawing a card/question without replacement)**[Stackoverflow Fisher-Yates Randomization](
 https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)**
 
 
-For the implementation of the sound effects (applause/buzzer) in the code I was reading the article 
+For the implementation of the sound effects (applause/buzzer) in the code I read the article 
 **[Coding-sound-with-JS-for-beginners](https://www.learningguild.com/articles/coding-sound-with-javascript-beginner-s-guide/)** No code was taken from this source. It was an instruction on the "how-to-structure" markup and Javascript to include the sound effects.
 
-I used **[W3-schools](https://www.w3schools.com/tags/av_prop_currenttime.asp)** to learn more about the reset of audio files as I was not sure whether the sound effects always start from "zero" once invokded. The currentTime property sets the starting position of my two audio files.
+I used **[W3-schools](https://www.w3schools.com/tags/av_prop_currenttime.asp)** to learn more about the reset of audio files as I was not sure whether the sound effects always start from "zero" once invoked. The currentTime property sets the starting position of my two audio files.
 
 
 ### Javascript quiz questions
@@ -401,7 +402,7 @@ I used the blog of Stephanie Eckles **[Custom radio buttons](https://moderncss.d
 
 # Content
 
-The content for this website has been written by Werner Stäblein and the authors mentioned above in credits for the Javscript questions.
+The content for this website has been written by Werner Stäblein and the authors mentioned above in credits for the Javascript questions.
 
 Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)**. 
 
@@ -412,6 +413,6 @@ I also reviewed a variety of different Readme.md prepared and included in the re
 
 # Acknowledgements
 
-Special thanks to my mentor David Bowers. Incredible to see how much value I was able to add with his ideas and instructions. All advice provided by David for project 1 was feeding into project 2 and thanks to his guidance, the development process including documentation has become much more efficient.
+Special thanks to my mentor David Bowers. Incredible to see how much value I was able to add with his ideas and instructions. All advice provided by David for Project 1 was fed into Project 2 and thanks to his guidance, the development process including documentation has become much more efficient.
 
-My fellow students at CI have helped a lot with their various postings, questions, answers with myself being able to pick up ideas, avoid mistakes and stay motivated
+My fellow students at CI have helped a lot with their various postings, questions, and answers with myself being able to pick up ideas, avoid mistakes, and stay motivated.
