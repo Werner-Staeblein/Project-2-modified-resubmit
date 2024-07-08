@@ -132,7 +132,7 @@ function showQuestion() {
         actionButton.classList.remove('hide');
         document.getElementById('nextQuestion').classList.add('hide');
   } else {
-      displayResult();
+      showEntireTriviaOutcome();
     }
 }
 
@@ -171,7 +171,7 @@ function validateAnswer() {
       document.querySelectorAll('input[name="quiz"]').forEach(input => input.disabled = true);
 
       if (unansweredQuestion >= selectedQuestions.length) {
-        displayResult();
+        showEntireTriviaOutcome();
         document.getElementById('nextQuestion').classList.add('hide');
         actionButton.style.display = 'none';
       } else {
@@ -210,7 +210,7 @@ function calculateAnswerStatistics() {
  * Use count variable named points to display final points achieved
 */
 
-function displayResult() {
+function showEntireTriviaOutcome() {
 
   resultDisplay.style.display = 'block';
   restartButton.style.display = 'inline-block';
