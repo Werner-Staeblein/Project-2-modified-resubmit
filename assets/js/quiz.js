@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   submitActionBtn.addEventListener('click', answerCheck);
   nextQuestionBtn.addEventListener('click', function() {
-  displayQuestion();
+  showQuestion();
   actionButton.style.display = 'inline-block';
   nextQuestionBtn.style.display = 'none';
   });
@@ -67,12 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = randomQuestionPick(quizData).slice(0, 40);
+  selectedQuestions = randomQuestionPick(quizData).slice(0, 3);
 
   unansweredQuestion = 0;
   points = 0;
   wrongAnswers = [];
-  displayQuestion();
+  showQuestion();
 }
 
 /**
@@ -96,7 +96,7 @@ function randomQuestionPick(triviaarray) {
  * Function taken from Stackoverflow
 */
 
-function displayQuestion() {
+function showQuestion() {
   if (unansweredQuestion < selectedQuestions.length) {
     const questionData = selectedQuestions[unansweredQuestion];
 
@@ -232,7 +232,7 @@ function retryQuiz() {
   wrongAnswers = [];
 
   // Step 1: Once a new round starts, a new set of trivia questions must be selected
-  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 40);
+  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 3);
     
   // Step 2: The results of a previous round are cleared from display as otherwise these continue show up
   resultDisplay.innerHTML = '';
@@ -248,7 +248,7 @@ function retryQuiz() {
   quizWrapper.style.display = 'block';
 
   // Step 6: The first question of a new trivia round must show up once a new round is started
-  displayQuestion();
+  showQuestion();
 
 }
 
