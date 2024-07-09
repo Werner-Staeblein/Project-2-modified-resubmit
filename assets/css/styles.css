@@ -267,6 +267,14 @@ header h1{
     text-align: right;
 }
 
+.correct-answers-count {
+    color: green;
+}
+
+.wrong-answers-count {
+    color: red;
+}
+
 .correct-heading{
     color: green;
     font-size: 5rem;
