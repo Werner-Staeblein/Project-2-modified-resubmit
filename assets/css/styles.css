@@ -422,13 +422,13 @@ body{
 
 .correct-answers-count {
     margin-left: 2%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: green;
 }
 
 .wrong-answers-count {
     margin-left: 2%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: red;
 }
 
