@@ -372,6 +372,14 @@ header img{
 
 body{
     height: 100%;
+}
+
+.correct-answers-count {
+    color: green;
+}
+
+.wrong-answers-count {
+    color: red;
 }}
 
 @media screen and (max-width: 480px){
