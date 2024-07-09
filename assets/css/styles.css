@@ -383,6 +383,26 @@ body{
     height: 100%;
 }}
 
+
+@media screen and (max-width: 430px){
+.correct-answers-count {
+    margin-left: 2%;
+    font-size: 1.4rem;
+    color: green;
+}
+
+.wrong-answers-count {
+    margin-left: 2%;
+    font-size: 1.4rem;
+    color: red;
+}
+
+.correct-answer,
+.wrong-answer{
+    font-size: 1.5rem;
+}}
+
+
 @media screen and (max-width: 400px){
 .options .option {
     font-size: 1.5rem;
@@ -403,11 +423,13 @@ body{
 .correct-answers-count {
     margin-left: 2%;
     font-size: 1.4rem;
+    color: green;
 }
 
 .wrong-answers-count {
     margin-left: 2%;
     font-size: 1.4rem;
+    color: red;
 }
 
 .correct-answer,
