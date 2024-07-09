@@ -298,21 +298,20 @@ display of content)
 
 ### 3. Responsiveness
 
-<span style="color: red; font-weight: bold;">Reminder note (to be deleted in final/final) All 40 questions tested on iPhone 5SE on July 5, 2024 including responsiveness of all questions and display of results with correct/wrong answers</span>
+Responsiveness of the application was tested across a wide variety of devices with different screen sizes. I did not sample the testing to ten questions but tested all 40 questions from the question.js array on each device. The goal was to ensure that none of the questions exceeded the screen size in terms of width. All devices tested have passed the test. With each test run using a different device all questions are rendered as expected. There is no overflow of text on either side of the tested screen.
 
-
-|    Device tested                  |  vw-width                 |  Rendered as expected      |
-| :----------------:                | :--------------------:    | :------------------------: |
-|       iPhone 5SE                  |          320px            |            Good            |
-|       Samsung Galaxy 8+           |          360px            |            Good            |
-|       Samsung Galaxy S20 Ulrtra   |          412px            |            Good            |
-|       iPaid Mini                  |          768px            |            Good            |
-|       IPadAir                     |          820px            |            Good            |
-|      iPad Pro                     |         1.024px           |            Good            |
-
-
-
-
+| Device tested                          | Width    | Test scope         | Result             |
+|----------------------------------------|----------|--------------------|--------------------|
+| iPhone 5SE                             | 320px    | all 40 questions   | RENDERED AS EXPECTED |
+| Samsung Galaxy S10/S10+ Android 11     | 360px    | all 40 questions   | RENDERED AS EXPECTED |
+| Microsoft Lumina 550 Windows Phone 10.0| 360px    | all 40 questions   | RENDERED AS EXPECTED |
+| Galaxy Note 20 Android 11              | 412px    | all 40 questions   | RENDERED AS EXPECTED |
+| iPhone 12/13 Pro Max iOS 14.6          | 428px    | all 40 questions   | RENDERED AS EXPECTED |
+| iPad Mini iPadOS 14.7.1                | 768px    | all 40 questions   | RENDERED AS EXPECTED |
+| Kindle Fire HDX Linux                  | 800px    | all 40 questions   | RENDERED AS EXPECTED |
+| iPad Air iPadOS 14.7.1                 | 820px    | all 40 questions   | RENDERED AS EXPECTED |
+| iPad Pro (11-inch) iPadOS 14.7.1       | 834px    | all 40 questions   | RENDERED AS EXPECTED |
+| iPad Pro (12.9 inch) iPadOS 14.7.1     | 1024px   | all 40 questions   | RENDERED AS EXPECTED |
 
 
 ### 4. Accessibility
