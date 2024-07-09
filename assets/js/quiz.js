@@ -9,6 +9,7 @@ import quizData from './questions.js';
 let unansweredQuestion = 0;
 let points = 0;
 let wrongAnswers = [];
+let correctAnswers = [];
 let selectedQuestions = [];
 
 /**
@@ -67,11 +68,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = randomQuestionPick(quizData).slice(0, 40);
+  selectedQuestions = randomQuestionPick(quizData).slice(0, 3);
 
   unansweredQuestion = 0;
   points = 0;
   wrongAnswers = [];
+  correctAnswers = [];
   showQuestion();
 }
 
@@ -194,13 +196,16 @@ function calculateAnswerStatistics() {
   let wrongAnswerCount = 0;
 
   for (let answered of wrongAnswers) {
-    if(answered.isCorrect){
+    if (answered.isCorrect) {
       correctAnswerCount++;
-    } else{
-      wrongAnswerCount++
+    } else {
+      wrongAnswerCount++;
     }
   }
-  
+
+  console.log("Correct Answers Count:", correctAnswerCount);
+  console.log("Wrong Answers Count:", wrongAnswerCount);
+
   document.getElementById('correctCount').textContent = correctAnswerCount;
   document.getElementById('wrongCount').textContent = wrongAnswerCount;
 }
@@ -233,12 +238,15 @@ function retakeQuiz() {
   unansweredQuestion = 0;
   points = 0;
   wrongAnswers = [];
-
+  correctAnswers = [];
+ 
   // Step 1: Once a new round starts, a new set of trivia questions must be selected
-  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 40);
+  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 3);
     
   // Step 2: The results of a previous round are cleared from display as otherwise these continue show up
   resultDisplay.innerHTML = '';
+  document.getElementById('correctCount').textContent = '0';
+  document.getElementById('wrongCount').textContent = '0';
 
   // Step 3: The TryAgain button and ShowAnswers button must be switched to display none for a new round
   restartButton.style.display = 'none';
@@ -256,7 +264,6 @@ function retakeQuiz() {
 }
 
 function showSolution() {
-  
   quizWrapper.style.display = 'none';
   actionButton.style.display = 'none';
   restartButton.style.display = 'inline-block';
@@ -285,7 +292,6 @@ function showSolution() {
   correctAnswersHtml += '</div>';
   wrongAnswersHtml += '</div>';
 
-  
   resultDisplay.innerHTML = `
     ${correctAnswersHtml}
     ${wrongAnswersHtml}
