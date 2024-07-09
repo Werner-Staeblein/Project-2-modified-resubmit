@@ -288,7 +288,7 @@ Features of the site were tested manually in several test runs to ensure that si
 ### 2. Browser Compatibility
 
 Primary browsers that the audience commonly uses were used to test functionality and visual consistency (layout, design, consistent
-display of content)
+display of content).
 
 |    Browser test    |  Intended appearance  |  Intended responsiveness  |
 | :----------------: | :--------------------: | :------------------------: |
