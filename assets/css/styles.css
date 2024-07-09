@@ -336,6 +336,16 @@ header h1{
 
 body{
     height: 100vh;
+}
+
+.correct-answers-count {
+    color: green;
+    font-size: 1.5rem;
+}
+
+.wrong-answers-count {
+    color: red;
+    font-size: 1.5rem;
 }}
     
 @media screen and (max-width: 810px){
