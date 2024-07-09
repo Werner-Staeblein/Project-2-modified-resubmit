@@ -338,7 +338,7 @@ body{
     height: 100vh;
 }}
     
-@media screen and (max-width: 768px){
+@media screen and (max-width: 810px){
 .container{
     width: 85vw;
 }

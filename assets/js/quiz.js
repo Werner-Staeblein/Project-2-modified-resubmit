@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function startGame() {
 
-  selectedQuestions = randomQuestionPick(quizData).slice(0, 3);
+  selectedQuestions = randomQuestionPick(quizData).slice(0, 40);
 
   unansweredQuestion = 0;
   points = 0;
@@ -241,7 +241,7 @@ function retakeQuiz() {
   correctAnswers = [];
  
   // Step 1: Once a new round starts, a new set of trivia questions must be selected
-  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 3);
+  selectedQuestions = randomQuestionPick([...quizData]).slice(0, 40);
     
   // Step 2: The results of a previous round are cleared from display as otherwise these continue show up
   resultDisplay.innerHTML = '';
