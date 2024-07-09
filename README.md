@@ -351,9 +351,11 @@ to use double quotes and not single quotes
 
 **lighthouse test desktop (scores reported by lighthouse)**
 
+With changes made to the project on resubmit, the lighthouse testing was repeated. The application scores high/perfect on lighthouse testing.
+
 | File                |  Perf.  | Access. | Best P. | SEO     |
 |---------------------|---------|---------|---------|---------|
-| index.html          | 96     | 100      | 96   | 100    |
+| index.html          | 100     | 100      | 100   | 100    |
 
 ![Lighthouse Testing Desktop](readme_assets/lighthouse_testing_desktop_screenshot.png)
 
@@ -361,7 +363,7 @@ to use double quotes and not single quotes
 
 | File                |  Perf.  | Access. | Best P. | SEO     |
 |---------------------|---------|---------|---------|---------|
-| index.html          |   95   | 100   | 96    | 100   |
+| index.html          |   99   | 100   | 100    | 100   |
 
 ![Lighthouse Testing Desktop](readme_assets/lighthouse_testing_mobile_screenshot.png)
 
