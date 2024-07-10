@@ -110,7 +110,7 @@ A linear gradient using the color scheme was used for the background of the triv
 
 ![Color Palette](readme_assets/color_palette%20_javascript_quiz.png)
 
-The color palette was created with: **[coolors](https://www.color-hex.com)**
+The color palette was created with: **[color-hex](https://www.color-hex.com)**
 
 ### Typography
 
@@ -237,9 +237,9 @@ the next quiz round but the user can learn from the questions answered incorrect
 
 - **[W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/)** - W3C Jigsaw CSS validator for validation of CSS code
 
-- **[Javascript Validator Beautfiytools](https://beautifytools.com/javascript-validator.php)** to validate the Javscript code.
+- **[Javascript Validator Beautfiytools](https://beautifytools.com/javascript-validator.php)** - to validate the Javscript code.
 
-- **[Javascript Validator JSLint](https://www.jslint.com/)** to validate the Javscript code.
+- **[Javascript Validator JSLint](https://www.jslint.com/)** - to validate the Javscript code.
 
 - **[Visual Code Studios](https://code.visualstudio.com/)** - IDE used to draft the webiste and make working progress remarks in the README.md including placehoders to check for final polishing
 
@@ -247,7 +247,7 @@ the next quiz round but the user can learn from the questions answered incorrect
 
 - **[Techsini](https://techsini.com/multi-mockup/index.php)** - to generate multi-device image with different screen-sizes and devices possibly used by user
 
-- **[www.color-hex.com](https://www.color-hex.com)** - to generate the color palette for the site
+- **[color-hex](https://www.color-hex.com)** - to generate the color palette for the site
 
 - **[Pixabay](https://pixabay.com)** - to download the two free of license sounds of applause and buzzer for the audio effects of immediate feedback to users
 
@@ -387,7 +387,7 @@ With changes made to the project on resubmit, the lighthouse testing was repeate
 This project is deployed to GitHub pages. The deployment steps are as follows:
 
 1. Log in to Github on www.github.com
-2. Find the repository of this project named (https://github.com/Werner-Staeblein/Project-2-modified-resubmit)
+2. Find the repository of this project named **https://github.com/Werner-Staeblein/Project-2-modified-resubmit**
 3. In the headings of the repository find "settings". The settings are on the outer right-hand side next to "insight" and "security" in the repository sub-heading. Click "settings" here 
 4. In settings, a navigation on the left-hand side is shown. This navigation has the first heading "General". In this column that starts with "General" and under "code and automation" click the link named "Pages". This link named "Pages" is directly on top of the submenu "Security". What matters here is that "Pages" is clicked.
 5. You will now see a heading named "GitHub Pages". In the GitHub Pages, go to "build and deployment". In the heading "Branch" choose the options "main" and "/root"
@@ -395,7 +395,7 @@ This project is deployed to GitHub pages. The deployment steps are as follows:
 7. The project from the GitHub site will be deployed at the URL displayed under "Deployments". This heading "Deployments" can be found on the starting page of the GitHub Project. This starting page of the GitHub project can be found here
 
 The link to the project is 
-**[FinalProject](https://github.com/Werner-Staeblein/Project-2-modified-resubmit)**
+**[FinalProject](https://werner-staeblein.github.io/Project-2-modified-resubmit/)**
 
 # Credits
 
