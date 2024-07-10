@@ -433,5 +433,4 @@ const quizData = [
    
   ];
   
-  console.log(quizData.length);
   export default quizData;
