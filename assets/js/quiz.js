@@ -108,7 +108,7 @@ function showQuestion() {
     divForEachQuestion.innerHTML = `<p class="question-counter">Question: ${unansweredQuestion + 1}/${selectedQuestions.length}</p>${questionData.question}`;
 
     const divForAnswerOptions = document.createElement('div');
-        divForAnswerOptions.className = 'options';
+      divForAnswerOptions.className = 'options';
 
       for (let i = 0; i < questionData.choices.length; i++) {
         const answerChoice = document.createElement('label');
@@ -207,12 +207,10 @@ function calculateAnswerStatistics() {
   document.getElementById('wrongCount').textContent = wrongAnswerCount;
 }
 
-
 /**
  * Function to show results container and make retry/showSolution button visible
  * Use count variable named points to display final points achieved
 */
-
 
 function showEntireTriviaOutcome() {
 
