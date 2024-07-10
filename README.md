@@ -19,12 +19,12 @@ The live project can be viewed here under this link **[FinalProject](https://wer
 
 ### As a first time user
 
-- As a first-time website visitor I want to receive instructions on what the quiz is about
+- As a first-time website visitor, I want to receive instructions on what the quiz is about
 - I want to easily and intuitively navigate through the quiz
 - I want to know where to start the quiz indicated by a 'Start JS Quiz' button
 - I want to know the number of questions already answered (progress indication/bar) during the trivia round
 - I want to receive immediate feedback whether I have clicked an answer or not yet clicked and answer
-- I want to have immediate feedback in the form of color, audio feedback if I want to, and feedback on whether I have correctly clicked an answer
+- I want to have immediate feedback in the form of color, audio input if I want to, and feedback on whether I have correctly clicked an answer
 - I want to see the progress of correct and incorrect answers clicked during my trivia round
 - I want to see the points achieved at the end of the trivia round in addition to the progress tracking of correct and incorrect answers during the trivia round
 - I want to restart the quiz either while I am taking the quiz or at the end of the quiz (user control)
@@ -62,11 +62,13 @@ In addition to the functionality of the JS logo, the user can restart a new quiz
 
 ### Opening Page | Instructions page
 
-The opening page provides a logo, clear headline what the page is about "Javscript Quiz", and instructions for the user to play the quiz combined with the start button for the quiz
+The opening page provides a logo, a clear headline about the page  "Javascript Quiz", and instructions for the user to play the quiz combined with the 'Start JS Quiz' button to start the knowledge game.
+
+The user is informed in red colored text that the app provides feedback with audio sound and that any such sound effects can be suppressed by turning off the sound of the device.
+
+A tooltip becomes visible once the user hovers over the Javascript logo.
 
 ![Instructions Page](readme_assets/instructions_page_js_quiz.png)
-
-<span style="color: red; font-weight: bold;">Reminder: Opening page has changed</span>
 
 ### Trivia Page
 
@@ -85,15 +87,18 @@ The results page is an extension of the trivia page.
 
 After finishing 10 quiz questions, the user receives the points achieved in the quiz round with optionality to view correct answers and questions answered incorrectly. For both cases, the user receives the correct answer even if answered correctly as the user may have guessed an answer from the four answer options.
 
+<span style="color: red; font-weight: bold;">Reminder: Trvia page has changed / new image needed in final README</span>
+
+
 ![Results Page](readme_assets/interaction_and_user_feedback.png)
 
 # Design
 
-The design was based on the key colors in the Javascript logo. Using the colors included in the JS logo, a color palette was generated with coolors. This ensures a conistent feel for the user.
+The design is based on the key colors in the Javascript logo. Using the colors included in the JS logo. A color palette was generated with coolors. This ensures a consistent feel for the user.
 
-User activity such as buttons highlighted with box shadows makes the overall design more appealing.
+User activity such as click of buttons is supported by box shadows to make the overall design more appealing.
 
-A linear gradient using the color scheme was used for the background of the quiz. Different linear gradients were used for the quiz box to ensure an appealing color design aligned with the base color scheme of the Javascript logo.
+A linear gradient using the color scheme was used for the background of the trivia. Different linear gradients were used for the quiz box to ensure an appealing color design aligned with the base color scheme of the Javascript logo.
 
 ### Color Palette
 
@@ -103,7 +108,7 @@ The color palette was created with: **[coolors](https://www.color-hex.com)**
 
 ### Typography
 
-Standard fonts available were used with Arial, Helvetica for reasons of legibility. As a backup to these two font-types/font-family, a sans-serif backup font was used.
+Standard fonts available were used with Arial and Helvetica for reasons of legibility. As a backup to these two font types/font family, a sans-serif backup font was used.
 
 ### Images
 
@@ -115,21 +120,20 @@ The Javascript icon was downloaded from **[Icons8.com](https://icons8.com/icons/
 
 ![Logo](assets/icons/icons8-javascript-240.png)
 
-The logo is shown on all pages of the website. The logo likewise is a hyperlink to restart the trivia if the user either wants to restart a new round of questions while already having started on a round of questions. The logo can likewise be clicked by the user to play another trivia round (user control) once a trivia round has been completed. If a trivia round is NOT started, the functionality of "restarting" a quiz round is NOT working simply because no trivia round has been started. Because no trivia round was started, the functionality of "restart" does not work on the opening screen where the trivia is explained. This behavior of the clickable logo is as intended.
+The logo is shown on all pages of the website. The logo likewise is a hyperlink to restart the trivia if the user wants to restart a new round of questions while already having started on a round of questions. 
+
+The logo can likewise be clicked by the user to play another trivia round (user control) once a trivia round has been completed. 
+
+If a trivia round is NOT started, the functionality of "restarting" a quiz round is NOT working simply because no trivia round has been started. Because no trivia round was started, the functionality of "Retry" does not work on the opening screen where the trivia is explained. This behavior of the clickable logo is as an intended feature.
 
 On hover, a tooltip is displayed with information that the quiz can be restarted with a click on the logo.
 
 ### Start Page quiz instructions page
 
-<span style="color: red; font-weight: bold;">Reminder: opening page changed / new image needed</span>
-
 On the start page, the instructions for the quiz are provided. The user is informed that questions are randomly drawn from a set of questions.
 The button named 'Start JS Quiz' is prominently placed so that a user can easily navigate to the start of the quiz.
 
 The user is likewise informed prominently with red-colored text that the trivia app provides user feedback with audio sound. The user is free to turn off sound effects on the device used for the application.
-
-
-<span style="color: red; font-weight: bold;">Reminder: opening page changed / new image needed</span>
 
 ![Start Page](readme_assets/start_page_instructions.png)
 
