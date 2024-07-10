@@ -20,11 +20,11 @@ let selectedQuestions = [];
 document.addEventListener("DOMContentLoaded", function () {
   const startQuizBtn = document.getElementById('startQuizBtn');
   const instructionsDiv = document.getElementById('instructions');
-  const quizWrapper = document.querySelector('.container');
+  const quizWrapperLocal = document.querySelector('.container');
   const submitActionBtn = document.getElementById('submitAction');
   const nextQuestionBtn = document.getElementById('nextQuestion');
-  const restartButton = document.getElementById('tryAgain');
-  const showSolutionButton = document.getElementById('displayAnswers');
+  const restartButtonLocal = document.getElementById('tryAgain');
+  const showSolutionButtonLocal = document.getElementById('displayAnswers');
 
   const applauseSound = document.getElementById('applauseSound');
   const buzzerSound = document.getElementById('buzzerSound');
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   startQuizBtn.addEventListener('click', function () {
     startQuizBtn.style.display = 'none';
     instructionsDiv.style.display = 'none';
-    quizWrapper.style.display = 'block';
+    quizWrapperLocal.style.display = 'block';
     startGame();
   });
 
@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
   nextQuestionBtn.style.display = 'none';
   });
 
-  restartButton.addEventListener('click', retakeQuiz);
-  showSolutionButton.addEventListener('click', showSolution);
-    
+  restartButtonLocal.addEventListener('click', retakeQuiz);
+  showSolutionButtonLocal.addEventListener('click', showSolution);
+
   restartButton.style.display = 'none';
   showSolutionButton.style.display = 'none';
   submitActionBtn.style.display = 'inline-block';
@@ -78,10 +78,10 @@ function startGame() {
 }
 
 /**
- * Function to randomize the questions. This function picks a random element from the original array of questions included in 
- * questions.js file. This randomly picked element/question is then excluded from the next draw. This ensures that no question or
- * element from the questions array is picked twice.
- * Function taken from Stackoverflow
+ * Function to randomize the questions. This function picks a random element from the original
+ * array of questions included in questions.js file. This randomly picked element/question is
+ * then excluded from the next draw. This ensures that no question or element from the questions
+ * array is picked twice. Function taken from Stackoverflow. Source documented in README
 */
 
 function randomQuestionPick(triviaarray) {
@@ -130,7 +130,7 @@ function showQuestion() {
         quizWrapper.innerHTML = '';
         quizWrapper.appendChild(divForEachQuestion);
         quizWrapper.appendChild(divForAnswerOptions);
-      
+
         actionButton.classList.remove('hide');
         document.getElementById('nextQuestion').classList.add('hide');
   } else {
@@ -155,7 +155,7 @@ function validateAnswer() {
     if (answer === correctAnswerText) {
       points++;
       clickedAnswer.parentNode.classList.add('correct');
-      applauseSound.play(); 
+      applauseSound.play();
     } else {
       clickedAnswer.parentNode.classList.add('wrong');
       document.getElementById('choice-' + correctAnswerIndex).classList.add('correct');
@@ -186,7 +186,7 @@ function validateAnswer() {
 
 /**
  * Function that iterates through array of all answers. This array contains all answers, either
- * right OR wrong. Don't be confused by Name of array of wrongAnswers. Interate and collect by 
+ * right OR wrong. Don't be confused by Name of array of wrongAnswers. Interate and collect by
  * correctAnswers and remainder (not correct = wrong) and display the counter variables inside the
  * HTML <span> tag dynamically
 */
@@ -234,26 +234,31 @@ function retakeQuiz() {
   points = 0;
   wrongAnswers = [];
   correctAnswers = [];
- 
+
   // Step 1: Once a new round starts, a new set of trivia questions must be selected
   selectedQuestions = randomQuestionPick([...quizData]).slice(0, 3);
-    
-  // Step 2: The results of a previous round are cleared from display as otherwise these continue show up
+
+  // Step 2: The results of a previous round are cleared from display as otherwise
+  // these continue show up
   resultDisplay.innerHTML = '';
   document.getElementById('correctCount').textContent = '0';
   document.getElementById('wrongCount').textContent = '0';
 
-  // Step 3: The TryAgain button and ShowAnswers button must be switched to display none for a new round
+  // Step 3: The TryAgain button and ShowAnswers button must be switched to display
+  // none for a new round
   restartButton.style.display = 'none';
   showSolutionButton.style.display = 'none';
 
-  // Step 4: With a new round, the Submit button must become visible again. This button went to display none when solution() function was called
+  // Step 4: With a new round, the Submit button must become visible again.
+  // This button went to display none when solution() function was called
   actionButton.style.display = 'inline-block';
 
-  // Step 5: The quizWrapper went to display 'none' when solution()-function was called. Now the quiz questions must show up again
+  // Step 5: The quizWrapper went to display 'none' when solution()-function
+  // was called. Now the quiz questions must show up again
   quizWrapper.style.display = 'block';
 
-  // Step 6: The first question of a new trivia round must show up once a new round is started
+  // Step 6: The first question of a new trivia round must show up once
+  // a new round is started
   showQuestion();
 
 }
@@ -263,7 +268,7 @@ function showSolution() {
   actionButton.style.display = 'none';
   restartButton.style.display = 'inline-block';
   showSolutionButton.style.display = 'none';
-  
+
   let correctAnswersHtml = '<div class="correct-answers"><p class="results correct-heading">Correct Answers:</p>';
   let wrongAnswersHtml = '<div class="wrong-answers"><p class="results wrong-heading">Wrong Answers:</p>';
 

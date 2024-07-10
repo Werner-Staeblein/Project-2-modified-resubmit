@@ -275,6 +275,8 @@ Various tests on different screen sizes and types of devices (mobile phones, tab
 
 - When a new trivia round was start with the retake-function, I had the issue that the count variables for correct/wrong answers were not reset to zero. This was despite the fact that I reset the variables to zero in the retakeQuiz()-function. The bug was fixed by setting the .textContent of the counter variable (ID in markup) to zero for each new round. So, it was not sufficient to simply clear the screen from previous rounds with .innerHTML = ''; but likewise a reset of the counter variables in the markup was necessary. This bug was spotted while doing the responsiveness testing on different devices
 
+- When running the JS validation with JS Lint, I learned that I have mistakenly declared constants twice with the same name. As a result, the global variables and local variables inside the DOMContentLoaded had to be reviewed. Now local variable names were defined as constants in the DOMContentLoaded. As a result, my JS Lint results were minimized further.
+
 **Issues not resolved**
 
 - jslint.com indicates an error of "unable to finish unexpected let" in the function shuffleArray(array). Removing the let in the for-loop makes the question options disappear. Unable to resolve. Other JS validator **[Beautifytools](https://beautifytools.com/javascript-validator.php)** interestingly does NOT show this to be an error.
@@ -337,13 +339,13 @@ Responsiveness of the application was tested across a wide variety of devices wi
 
 ### Automated Testing (Code Validation and Lighthouse testing)
 
-1. **[W3 Markup Validation](https://validator.w3.org/) - HTML Validation**
+1. **[W3C Markup Validation](https://validator.w3.org/) - HTML Validation**
 
 The website was tested with HTML validator. No error messages
 
 ![HTML Validator](readme_assets/w3c_html_validation_screenshot.png)
 
-2. **[W3 Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
+2. **[W3C Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
 
 The CSS stylesheet was tested with CSS validator. No error messages or syntactical errors.
 
@@ -358,7 +360,8 @@ The website was tested with JS valiator beautifytools. No error messages or synt
 4. **[JSlint](https://www.jslint.com/) - Javascript validation**
 
 Using JSLint validator mostly shows warnings primarily suggesting
-to use double quotes and not single quotes
+to use double quotes and not single quotes. When using the clickable option 'single' these warnings do not appear.
+Following the first round of JS Lint testing, I reduced the comments for functions in the code to less than 80 characters. For the linting itself, I used the option 'long' to allow the linter to accept JS code that goes beyond 80 characters.
 
 ![JS Lint Validator](readme_assets/JS_Lint_Screenshot.png)
 
