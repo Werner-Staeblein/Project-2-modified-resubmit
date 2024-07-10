@@ -9,6 +9,8 @@ The Quiz randomly picks 10 of those questions to be answered and provides the us
 
 The color palette is harmoniously coordinated with the logo, allowing for a coherent and calm image with its bright and warm colors.
 
+The target audience for this JavaScript quiz includes individuals starting their programming careers, students from the Code Institute looking to test their JavaScript knowledge, and people interested in web development. This quiz helps users prepare for technical exams or coding interviews, verify their JavaScript skills, and reinforce basic programming concepts.
+
 ## Live project
 
 ![Instructions Page](readme_assets/instructions_page_js_quiz.png)
