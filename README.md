@@ -279,8 +279,9 @@ Various tests on different screen sizes and types of devices (mobile phones, tab
 
 **Issues not resolved**
 
-- jslint.com indicates an error of "unable to finish unexpected let" in the function shuffleArray(array). Removing the let in the for-loop makes the question options disappear. Unable to resolve. Other JS validator **[Beautifytools](https://beautifytools.com/javascript-validator.php)** interestingly does NOT show this to be an error.
+- jslint.com indicates an error of "unable to finish unexpected let" in the function shuffleArray(array). Removing the let in the for-loop makes the question options disappear. Unable to resolve. Also, JS Lint shows warning of 'unexpected for' for the code that randomly shuffles the quiz questions array. I was unable to resolve this as I was unable to find out why the 'for' is 'unexpected' for JS Lint. Another JS validator **[Beautifytools](https://beautifytools.com/javascript-validator.php)** interestingly does NOT show either 'unable to finish unexpected let' or 'unexpecte for'.
 
+- Using **[Beautifytools](https://beautifytools.com/javascript-validator.php)** as Javascript linter, I do not receive the warnings that JS Lint provides. I do, however, receive the error that 'applauseSound' and 'buzzerSound' are not defined. This is despite the fact that both are defined as const in my DOMContentLoaded. I was not able to resolve this. If I were to redeclare the same variables again with local scope in the validateAnswer()-function, I would have declared a constant twice.
 
 ### 1. Feature Testing
 
