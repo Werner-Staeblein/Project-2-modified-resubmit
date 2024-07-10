@@ -203,9 +203,6 @@ function calculateAnswerStatistics() {
     }
   }
 
-  console.log("Correct Answers Count:", correctAnswerCount);
-  console.log("Wrong Answers Count:", wrongAnswerCount);
-
   document.getElementById('correctCount').textContent = correctAnswerCount;
   document.getElementById('wrongCount').textContent = wrongAnswerCount;
 }
