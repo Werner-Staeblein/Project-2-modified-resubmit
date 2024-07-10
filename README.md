@@ -288,17 +288,21 @@ Various tests on different screen sizes and types of devices (mobile phones, tab
 
 Features of the site were tested manually in several test runs to ensure that sie performs intended functionality on all of the key features.
 
-| Feature                   | Test Case                                 | Outcome |
-| -----------               | ----------------------------              | -----------------                         |
-| Logo                      | click of logo                             | restarts the quiz                         |
-| Logo                      | hover over logo                           | display info to                           |
-| Start Quiz button         | click of start button                     | starts the quiz                           |
-| progress bar              | click through quiz                        | progress bar counts correctly             |
-| customized radio button   | click button                              | button takes inteneded color shade        |
-| submit question button    | click of button                           | automatically forwards to next question   |
-| user feedback scores      | click through quiz numerous times         | correct user feedback shown               |
-| retry button              | click of retry button                     | starts a new quiz round                   |
-| show answers button       | click show answers button                 | displays answers answered incorrectly     |
+| Feature                           | Test Case                                   | Outcome                                                                                             | Test result                                                   |
+|-----------------------------------|---------------------------------------------|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
+| Logo                              | click of logo on instructions page          | nothing happens. Logo function to restart quiz only active once a trivia round has **started**       | PASSED |
+| Logo                              | hover over logo                             | displays tooltip                                                                                    | PASSED                                                        |
+| Start JS Quiz button              | hover over Start JS Quiz button             | Change of color                                                                                     | PASSED                                                        |
+| Progress bar (Question X/Y)       | answer one question and proceed             | Count increases by one on next question                                                             | PASSED                                                        |
+| Customized radio button           | click of radio button                       | Background color changes providing immediate user feedback                                          | PASSED                                                        |
+| User feedback on correct/wrong    | click of Submit button                      | Correct answer shown in green and wrong answer in red if wrong was chosen                           | PASSED                                                        |
+| User feedback on correct/wrong    | click of Submit button                      | Count of correct/wrong answers increases by one depending on result                                 | PASSED                                                        |
+| User feedback to proceed with trivia | click of Submit button                   | Button "Submit" changes to "Next Question" once "Submit" was clicked                                | PASSED                                                        |
+| User feedback points achieved     | click through trivia numerous times         | Shows correct message depending on points achieved                                                  | PASSED                                                        |
+| User feedback ShowAnswers         | click Show Answers button at the end        | Provides answers to both questions answered wrong and those answered correct                        | PASSED                                                        |
+| User feedback ShowAnswers         | click Show Answers button at the end        | Correct and wrong answers count provided in Show Answers                                            | PASSED                                                        |
+| Retry button                      | click Retry button in ShowAnswers           | Starts a new trivia round                                                                           | PASSED                                                        |
+| Retry button                      | click Retry button in Outcome (immediate Retry) | Starts a new trivia round                                                                          | PASSED                                                        |
 
 ### 2. Browser Compatibility
 
