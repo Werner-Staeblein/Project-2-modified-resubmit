@@ -1,5 +1,7 @@
 # Javscript Quiz App - Javascript Project: Milestone 2
 
+![Responsive Design](readme_assets/multi-device-screenshot_taken_with_techsini.png)
+
 Javscript Quiz is an interactive quiz for users to answer questions on their knowledge of Javascript. 
 Questions created are stored in a separate Array. 
 
@@ -9,7 +11,7 @@ The color palette is harmoniously coordinated with the logo, allowing for a cohe
 
 ## Live project
 
-![Responsive Design](readme_assets/instructions_page_js_quiz.png)
+![Instructions Page](readme_assets/instructions_page_js_quiz.png)
 
 The live project can be viewed here under this link **[FinalProject](https://werner-staeblein.github.io/Project-2-modified-resubmit/)**
 
@@ -71,6 +73,8 @@ A tooltip becomes visible once the user hovers over the Javascript logo.
 ![Instructions Page](readme_assets/instructions_page_js_quiz.png)
 
 ### Trivia Page
+
+<span style="color: red; font-weight: bold;">Reminder: Trvia page has changed / new image needed in final README</span>
 
 The trivia page continues to show the logo and title of the website. Once the start button was clicked, the instructions page is no longer visible and is now replaced with the trivia question box. 
 
@@ -139,23 +143,30 @@ The user is likewise informed prominently with red-colored text that the trivia 
 
 ### Quiz Questions
 
-The quiz section has 10 questions for the user to answer. While answering the questions, the user is provided immediate feedback on with a progress indicator on the number of questions already answered.
+The trivia has 10 questions for the user to answer. While answering the questions, the user is provided **immediate feedback** with a progress indicator on the number of questions already answered.
 
-Every question has four radio buttons to choose from. A user can change the radio button/answer for as long as the submit button is not clicked. User actions provide immediate feedback 
-through the change in color of the radio button clicked. 
+Every question has four radio buttons to choose from. A user can change the radio button/answer as long as the submit button is not clicked. Once a radio button is clicked, **immediate feedback** to the user is as follows:
 
-<span style="color: red; font-weight: bold;">Describe better the effects upon click of a questions with color changes and audio effects and count of correct/incorrect answers</span>
+- the color of the radio button clicked changes,
+- the number of questions already answered (count) increases by one,
+- the user is shown the correct answer in green if answered correctly,
+- the user is shown the correct answer in green and, if the wrong answer was chosen, the incorrectly clicked answer is in red color,
+- the count of "Wrong Answers" or "Correct Answers" both using the same red/green coloring to display wrong/correct answers increases by one depending on the correctness of the last answer,
+- the button 'Submit' changes to 'Next Question' indicating to the user to proceed to the next question
 
 
- While answering the quiz questions, the user is not provided feedback on the correctness of the answers clicked. The decision was to provide feedback to the user at the end of the quiz. The incorrect answers are displayed at the end of the quiz including a solution to the correct answer.
+<span style="color: red; font-weight: bold;">Describe the user feedback at the end of the quiz for displayAnswer()</span>
+
 
 ### Visual Effects
 
-- Change in background color on :hover on the start button
+- Change in background color on hover on the start button,
   
-- Radio buttons to select answers were customized in CSS to support overall appeal and coherent color experience while playing the quiz but likewise to provide immediate feedback to user that an answer is chosen,
+- Radio buttons to select answers were customized in CSS to support the overall appeal and coherent color experience while playing the quiz but likewise to provide immediate feedback on which answer the user clicked,
 
-- Correct answers are shown in green color to user. Wrong answers are shown in red color to the user while the correct answer to the question is shown in green. The latter supports immediate feedaback to user while the user is playing the game.
+- Correct answers are shown in green color to the user. Wrong answers are shown in red color to the user while the correct answer to the question is shown in green. The latter supports immediate feedback to the user while the user is playing the game,
+
+- The count of "Wrong Answers" and "Correct Answers" likewise uses the intuitive green/red coloring as a visual effect.
 
 ### Customized radio buttons for answer choices
 
