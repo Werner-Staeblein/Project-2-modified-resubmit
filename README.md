@@ -280,13 +280,7 @@ Various tests on different screen sizes and types of devices (mobile phones, tab
 
 ### 1. Feature Testing
 
-
-<span style="color: red; font-weight: bold;">Reminder: Describe testing that user CAN NOT click a different answers once one of the four answer buttons was clicked. Automatic switch of button name from "Submit" to "NextQuestion"</span>
-
-
-
-
-Features of the site were tested manually in several test runs to ensure that sie performs intended functionality on all of the key features.
+Features of the site were tested manually in several test runs to ensure that the site performs the intended functionality on all of the key features.
 
 | Feature                           | Test Case                                   | Outcome                                                                                             | Test result                                                   |
 |-----------------------------------|---------------------------------------------|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
@@ -335,9 +329,9 @@ Responsiveness of the application was tested across a wide variety of devices wi
 
 ### 4. Accessibility
 
-- alternative text/labels used to enable screen readers to provide information
-- contrasting is used to have the best possible visibility for the user
-- Accessibility for the visually impaired (color blindness) was tested with Google Lighthouse
+- alternative text/labels used to enable screen readers to provide information 
+- contrasting is used to have the best possible visibility for the user with undistracted foregrounds and legible content
+- Accessibility for the visually impaired (color blindness) was tested with Google Lighthouse. Lighthouse resulted in 100% for accessibility
 
 ### Automated Testing (Code Validation and Lighthouse testing)
 
