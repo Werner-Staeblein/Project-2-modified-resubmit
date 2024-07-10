@@ -386,16 +386,13 @@ With changes made to the project on resubmit, the lighthouse testing was repeate
 
 This project is deployed to GitHub pages. The deployment steps are as follows:
 
-1. Log in to Github on www.github.com
+1. Log in to GitHub on www.github.com
 2. Find the repository of this project named **https://github.com/Werner-Staeblein/Project-2-modified-resubmit**
-3. In the headings of the repository find "settings". The settings are on the outer right-hand side next to "insight" and "security" in the repository sub-heading. Click "settings" here 
-4. In settings, a navigation on the left-hand side is shown. This navigation has the first heading "General". In this column that starts with "General" and under "code and automation" click the link named "Pages". This link named "Pages" is directly on top of the submenu "Security". What matters here is that "Pages" is clicked.
+3. In the headings of the repository find "settings". The settings are on the outer right-hand side next to "Insight" and "Security" in the repository sub-heading. Click "settings" here
+4. In settings, a navigation on the left-hand side is shown. This navigation has the first heading "General". In this column that starts with "General" click the link named "Pages". This link named "Pages" is directly on top of the submenu "Security". What matters here is that "Pages" is clicked
 5. You will now see a heading named "GitHub Pages". In the GitHub Pages, go to "build and deployment". In the heading "Branch" choose the options "main" and "/root"
 6. Click Save
-7. The project from the GitHub site will be deployed at the URL displayed under "Deployments". This heading "Deployments" can be found on the starting page of the GitHub Project. This starting page of the GitHub project can be found here
-
-The link to the project is 
-**[FinalProject](https://werner-staeblein.github.io/Project-2-modified-resubmit/)**
+7. The project from the GitHub site will be deployed at the URL displayed under "Deployments". This heading "Deployments" can be found on the starting page of the GitHub Project. This starting page of the GitHub project can be found under the following link: **[Link-to-Github-Repository](https://werner-staeblein.github.io/Project-2-modified-resubmit/)**
 
 # Credits
 
@@ -405,15 +402,26 @@ I used a guide to create to quiz app written by Faraz **[Step-by-step-guide-for-
 
 For the logic of the quiz and interactivity coding with Javascript, I likewise used the book "Programmieren Lernen mit Javascript" authored by Stephan Elter
 
-For the randomized shuffling of the questions.js array the Fisher-Yates logic was used. This function to randomly shuffle the array of questions was included in the code that I used as a starting guide for my project. I did check the code my referenced learning code against this posting on Stackoverflow to better understand the shuffling process. The shuffling of array questions works as follows: A question is picked from the array of 40 questions located in the file named questions.js. Once a question is picked from this array with 40 questions, the next pick for the trivia questions for a total of 10 questions for each trivia round does no longer consider the one question that was already picked in the first shuffle. As a result, no question from the array of questions located in the file named questions.js can be picked twice for any trivia round of ten questions. I was only able to change the function name and parameter name. If I had changed the content for the function expression, the shuffling math would not have worked as planned. Therefore, I was unable to customize the mathematical logic inside the function expression as this would have required to create a new mathematical logic that creates the same outcome (drawing a card/question without replacement)**[Stackoverflow Fisher-Yates Randomization](
-https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)**
+For the randomized shuffling of the questions.js array the Fisher-Yates logic was used. 
 
+This function to randomly shuffle the array of questions was included in the code that I used as a starting guide for my project. I did check the code in my referenced learning code against the post on Stackoverflow (**[Stackoverflow Fisher-Yates Randomization](
+https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)**)
+to better understand the shuffling process. 
+
+The shuffling of array questions works as follows: 
+
+- A question is picked from the array of 40 questions located in the file named questions.js. 
+
+- Once a question is picked from this array with 40 questions, the next pick for the trivia questions for a total of 10 questions for each trivia round does no longer consider the one question that was already picked in the first shuffle. 
+  
+- As a result, no question from the array of questions located in the file named questions.js can be picked twice for any trivia round of ten questions. 
+ 
+I was only able to change the function name and parameter name. If I had changed the content for the function expression, the shuffling math would not have worked as planned. Therefore, I was unable to customize the mathematical logic inside the function expression as this would have required to create a new mathematical logic that creates the same outcome (drawing a card/question without replacement)
 
 For the implementation of the sound effects (applause/buzzer) in the code I read the article 
 **[Coding-sound-with-JS-for-beginners](https://www.learningguild.com/articles/coding-sound-with-javascript-beginner-s-guide/)** No code was taken from this source. It was an instruction on the "how-to-structure" markup and Javascript to include the sound effects.
 
 I used **[W3-schools](https://www.w3schools.com/tags/av_prop_currenttime.asp)** to learn more about the reset of audio files as I was not sure whether the sound effects always start from "zero" once invoked. The currentTime property sets the starting position of my two audio files.
-
 
 ### Javascript quiz questions
 
