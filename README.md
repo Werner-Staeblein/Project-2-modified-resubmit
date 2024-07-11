@@ -76,16 +76,21 @@ A tooltip becomes visible once the user hovers over the Javascript logo.
 
 ### Trivia Page
 
-<span style="color: red; font-weight: bold;">Reminder: Trvia page has changed / new image needed in final README</span>
+Once the start button is clicked, the instructions page is no longer visible and replaced with the trivia question box. The trivia page continues to show the logo and title of the website. A new quiz round can be started with a click on the JS logo.
 
-The trivia page continues to show the logo and title of the website. Once the start button was clicked, the instructions page is no longer visible and is now replaced with the trivia question box. 
+![Trivia Page](readme_assets/quiz_page_js_quiz_part1.png)
 
-The radio buttons for the questions provide options for the user to click one possible answer. Radio buttons are custom-styled to support the overall design and appearance of the question section.
+The radio buttons for the questions provide options for the user to click one possible answer. Radio buttons are custom-styled to support the overall design and appearance of the question section and to provide immediate feedback to the user that a specific answer was clicked.
 
-Once the user submits a choice on the radio button, the next quiz question automatically appears
-(automatic user feedback).
+Once the user submits a choice on the radio button, the button 'Next Question' automatically appears (automatic user feedback).
 
-![Trivia Page](readme_assets/quiz_page_js_quiz.png)
+With **immediate user feedback** the user is likewise shown the correct answer in green. The count of Correct Answers increases by one if the user clicks the correct answer providing further visual immediate feedback to the user while playing a quiz round. 
+
+If a user clicks the wrong answer among the four answer options provided, the wrong answer is highlighted with red color while the correct answer is shown in green color providing instantaneous feedback to the user that the answer clicked was incorrect. At the same time, the user receives immediate feedback by increasing the Wrong Answers count by one.
+
+Feedback to the user is supported by audio elements. If a user clicks the correct answer, an 'applause' sound is played while wrong answers trigger the sound of a 'buzzer'. Prior to starting the game, the user was informed that audio effects can be handled by the user by turning the sound off on the user's device.
+
+![Trivia Page](readme_assets/quiz_page_js_quiz_part2.png)
  
 ### Results Page
 
