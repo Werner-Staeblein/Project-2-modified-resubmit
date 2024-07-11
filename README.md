@@ -96,12 +96,13 @@ Feedback to the user is supported by audio elements. If a user clicks the correc
 
 The results page is an extension of the trivia page.
 
-After finishing 10 quiz questions, the user receives the points achieved in the quiz round with optionality to view correct answers and questions answered incorrectly. For both cases, the user receives the correct answer even if answered correctly as the user may have guessed an answer from the four answer options.
+After finishing 10 quiz questions, the user can still see the points achieved in the quiz round with optionality to view the answers to the quiz questions. The user received immediate feedback during the quiz round with a change of color to red (wrong) or green (correct) once an answer was clicked. On the results page, the user can optionally click the 'Show Answers' button to receive a summary of correct and wrong answers.
 
-<span style="color: red; font-weight: bold;">Reminder: Trvia page has changed / new image needed in final README</span>
+Feedback is provided to the user depending on the points achieved with messages such as "Nearing the gold medal" or "Good knowledge but more is yet to come" as defined in the function getResults(points).
 
+On the results page, the user has two options to retake the quiz. First by a click on the 'Retry' button and second by a click on the JS logo. In both cases, the user is not shown the summary of wrong and correct answers of the quiz round. This summary is only displayed if the user clicks the 'Show Answers' button.
 
-![Results Page](readme_assets/interaction_and_user_feedback.png)
+![Results Page](readme_assets/quiz_results_page.png)
 
 # Design
 
