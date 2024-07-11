@@ -3,7 +3,7 @@
 ![Responsive Design](readme_assets/multi-device-screenshot_taken_with_techsini.png)
 
 Javscript Quiz is an interactive quiz for users to answer questions on their knowledge of Javascript. 
-Questions created are stored in a separate Array. 
+Questions created are stored in a separate Array.
 
 The Quiz randomly picks 10 of those questions to be answered and provides the user the choice among four different answers of which only one is correct.
 
