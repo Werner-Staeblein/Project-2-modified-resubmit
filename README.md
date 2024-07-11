@@ -104,11 +104,14 @@ On the results page, the user has two options to retake the quiz. First by a cli
 
 ![Results Page](readme_assets/quiz_results_page.png)
 
+
+<span style="color: red; font-weight: bold;">Reminder: insert screenshot of ShowAnswers and explain user feedback following click on ShowAnser</span>
+
 # Design
 
-The design is based on the key colors in the Javascript logo. Using the colors included in the JS logo. A color palette was generated with coolors. This ensures a consistent feel for the user.
+The design is based on the key colors in the Javascript logo. Using the colors included in the JS logo. A color palette was generated with color-hex. This ensures a consistent feel for the user.
 
-User activity such as click of buttons is supported by box shadows to make the overall design more appealing.
+User activity such as the click of buttons is supported by box shadows to make the overall design more appealing.
 
 A linear gradient using the color scheme was used for the background of the trivia. Different linear gradients were used for the quiz box to ensure an appealing color design aligned with the base color scheme of the Javascript logo.
 
@@ -120,7 +123,7 @@ The color palette was created with: **[color-hex](https://www.color-hex.com)**
 
 ### Typography
 
-Standard fonts available were used with Arial and Helvetica for reasons of legibility. As a backup to these two font types/font family, a sans-serif backup font was used.
+Standard fonts available were used with Arial and Helvetica for reasons of legibility. As a backup to these two font types/font families, a sans-serif backup font was used.
 
 ### Images
 
@@ -136,7 +139,7 @@ The logo is shown on all pages of the website. The logo likewise is a hyperlink 
 
 The logo can likewise be clicked by the user to play another trivia round (user control) once a trivia round has been completed. 
 
-If a trivia round is NOT started, the functionality of "restarting" a quiz round is NOT working simply because no trivia round has been started. Because no trivia round was started, the functionality of "Retry" does not work on the opening screen where the trivia is explained. This behavior of the clickable logo is as an intended feature.
+If a trivia round is NOT started, the functionality of "restarting" a quiz round is NOT working simply because no trivia round has been started. Because no trivia round was started, the functionality of "Retry" does not work on the opening screen where the trivia is explained. This behavior of the clickable logo is an intended feature.
 
 On hover, a tooltip is displayed with information that the quiz can be restarted with a click on the logo.
 
@@ -176,6 +179,10 @@ Every question has four radio buttons to choose from. A user can change the radi
 
 - The count of "Wrong Answers" and "Correct Answers" likewise uses the intuitive green/red coloring as a visual effect.
 
+### Audio Effects
+
+<span style="color: red; font-weight: bold;">Reminder: Further explain the immediate user feedback through audio effects</span>
+
 ### Customized radio buttons for answer choices
 
 Radio buttons to select answers were customized in CSS to support overall appeal and coherent color experience while playing
@@ -199,7 +206,7 @@ Depending on the score achieved, a message is shown.
 
 - if the number of points achieved is equal to 10, a user is shown "Seems you are a Javascript wizard"
 - if the number of points is higher than or equal to 8 but less than 10, a user is shown "Nearing the gold medal"
-- if number of points is higher than or equal to 6 but less than 8, a user is shown "Good knowledge but more is yet to come"
+- if the number of points is higher than or equal to 6 but less than 8, a user is shown "Good knowledge but more is yet to come"
 - if the number of points is lower than 6, a user is shown "Try again to improve your score"
 
 The results page also provides an option for the user to start a new quiz. This will take the user to the beginning of the website with the trivia starting at the first question.
@@ -216,11 +223,11 @@ the next quiz round but the user can learn from the questions answered incorrect
 
 ### Possible Future Features
 
-- a timer feature could be added to so that the amount of time for each question or the entire set of ten questions for the user is limited,
+- a timer feature could be added so that the amount of time for each question or the entire set of ten questions for the user is limited,
 
-- a highscore feature could be added for users repeating the quiz multiple times,
+- a feature for highest scores achieved could be added for users repeating the quiz multiple times,
 
-- an additional feature of more explanatory notes for each answer could be provided in the showSolution section so that a user is not only shown the correct answer but likewise some additional explanation as to why the answer is the correct one,
+- an additional feature of more explanatory notes for each answer could be provided in the section and function showSolution() so that a user is not only shown the correct answer but likewise some additional explanation as to why the answer is the correct one,
 
 - Enlarge the underlying selection of quiz questions beyond 40 and, possibly, classify questions such as "starter/intermediate/advanced",
 
@@ -265,29 +272,29 @@ Testing was done incrementally with every change in the functionality of code (J
 
 Only once there were no error messages shown, the development process continued thus resolving issues along the development process.
 
-Only once the manual functionality testing was completed, the visual testing started with additions of CSS.
+Only once the manual functionality testing was completed, the visual testing was started with additions of CSS.
 
 Various tests on different screen sizes and types of devices (mobile phones, tablets) were done to check the responsiveness of the trivia container and the results container. This was done to  verify that none of the content overflows beyond the limits of the device tested
 
 **Issues resolved**
 
-- ./questions.js not loaded into quiz.js with error message "does not provide export named 'default'. Solution via Stackoverflow search. Found out that 'export default' in questions.js is needed for question.js to be IMPORTED into quiz.js.
+- ./questions.js not loaded into quiz.js with error message "does not provide export named 'default'. Solution via Stackoverflow search. I found out that 'export default' in questions.js is needed for question.js to be IMPORTED into quiz.js.
 
 - in the manual responsiveness testing, font sizes were adapted.
 
-- In my questions.js I had difficulties to use text that includes questions with consoloe.log(). It was difficult to make line breaks on these questions so that the text does not overflow. Therefore, I replace questions where a space between characters can not be used with questions that do have a good line break on smaller screen sizes.
+- In my questions.js I had difficulties using text that includes questions with consoloe.log(). It was difficult to make line breaks on these questions so that the text does not overflow. Therefore, I replace questions where a space between characters can not be used with questions that do have a good line break on smaller screen sizes.
 
-- For the functionality of starting a new trivia round, I had difficulties with the sequencing of the appearance/disappearance of buttons such as appearance of the 'Retry' button and 'Show Answers' button only at the end while these two buttons shall be on display: none for a new trivia round. I have drawn a flowchart on paper to better grasp the sequencing of steps to be included in the respective functions, notably the restart function(). I also used some granular comments inside the 'retry'-function to better check the different steps involved in this function. The lesson learned was: to draw a flowchart of events first before trying to code the result.
+- For the functionality of starting a new trivia round, I had difficulties with the sequencing of the appearance/disappearance of buttons such as the appearance of the 'Retry' button and 'Show Answers' button only at the end while these two buttons shall be on display: none for a new trivia round. I have drawn a flowchart on paper to better grasp the sequencing of steps to be included in the respective functions, notably the restart function(). I also used some granular comments inside the 'retry'-function to better check the different steps involved in this function. The lesson learned was: to draw a flowchart of events first before trying to code the result.
 
-- When a new trivia round was start with the retake-function, I had the issue that the count variables for correct/wrong answers were not reset to zero. This was despite the fact that I reset the variables to zero in the retakeQuiz()-function. The bug was fixed by setting the .textContent of the counter variable (ID in markup) to zero for each new round. So, it was not sufficient to simply clear the screen from previous rounds with .innerHTML = ''; but likewise a reset of the counter variables in the markup was necessary. This bug was spotted while doing the responsiveness testing on different devices
+- When a new trivia round was started with the function retake(), I had the issue that the count variables for correct/wrong answers were not reset to zero. This was even though I reset the variables to zero in the retakeQuiz()-function. The bug was fixed by setting the .textContent of the counter variable (ID in markup) to zero for each new round. So, it was not sufficient to simply clear the screen from previous rounds with .innerHTML = ''; but likewise a reset of the counter variables in the markup was necessary. This bug was spotted while doing the responsiveness testing on different devices
 
 - When running the JS validation with JS Lint, I learned that I have mistakenly declared constants twice with the same name. As a result, the global variables and local variables inside the DOMContentLoaded had to be reviewed. Now local variable names were defined as constants in the DOMContentLoaded. As a result, my JS Lint results were minimized further.
 
 **Issues not resolved**
 
-- jslint.com indicates an error of "unable to finish unexpected let" in the function shuffleArray(array). Removing the let in the for-loop makes the question options disappear. Unable to resolve. Also, JS Lint shows warning of 'unexpected for' for the code that randomly shuffles the quiz questions array. I was unable to resolve this as I was unable to find out why the 'for' is 'unexpected' for JS Lint. Another JS validator **[Beautifytools](https://beautifytools.com/javascript-validator.php)** interestingly does NOT show either 'unable to finish unexpected let' or 'unexpecte for'.
+- jslint.com indicates an error of "unable to finish unexpected let" in the function shuffleArray(array). Removing the let in the for-loop makes the question options disappear. Unable to resolve. Also, JS Lint shows a warning of 'unexpected for' for the code that randomly shuffles the quiz questions array. I was unable to resolve this as I did not find out why the 'for' is 'unexpected' for JS Lint. Another JS validator **[Beautifytools](https://beautifytools.com/javascript-validator.php)** interestingly does NOT show either 'unable to finish unexpected let' or 'unexpected for'.
 
-- Using **[Beautifytools](https://beautifytools.com/javascript-validator.php)** as Javascript linter, I do not receive the warnings that JS Lint provides. I do, however, receive the error that 'applauseSound' and 'buzzerSound' are not defined. This is despite the fact that both are defined as const in my DOMContentLoaded. I was not able to resolve this. If I were to redeclare the same variables again with local scope in the validateAnswer()-function, I would have declared a constant twice.
+- Using **[Beautifytools](https://beautifytools.com/javascript-validator.php)** as a Javascript linter, I do not receive the warnings that JS Lint provides. I do, however, receive the error that 'applauseSound' and 'buzzerSound' are not defined. This is even though both are defined as const in my DOMContentLoaded. I was not able to resolve this. If I were to redeclare the same variables again with local scope in the validateAnswer()-function, I would have declared a constant twice.
 
 ### 1. Feature Testing
 
