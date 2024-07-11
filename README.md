@@ -211,16 +211,13 @@ Depending on the score achieved, a message is shown.
 The results page also provides an option for the user to start a new quiz. This will take the user to the beginning of the website with the trivia starting at the first question.
 
 ### Show Answer
-Once the button 'Show Answers' on the results page is clicked, the user is shown the incorrect answers
-including the underlying question, the user's answer in the quiz, and the correct answer to the 
-question. 
+Once the button 'Show Answers' on the results page is clicked, the user is shown the questions answered and the user's answer in the trivia round. This is for both questions answered incorrectly by the user and those answered correctly by the user. The Correct Answers and Wrong Answers are separated from one another.
 
-As questions are drawn randomly from a questions array, the user can not face the same question again in
-the next quiz round but the user can learn from the questions answered incorrectly.
+While the user has been provided immediate feedback during the trivia round already with highlights of green and red for correct and wrong answers, the user can now review all of the questions, either answered correctly or not, for the respective correct answer.
 
+In the Show Answer section, the user continues to be provided the points of Correct Answers and points of Wrong Answers.
 
-
-
+The user can decide to retake the quiz with the 'Retry' button at the end of the results page. As questions are drawn randomly from a questions array, the user will unlikely face all of the same questions again in the next quiz round.
 
 ![Incorrect Answer Box](readme_assets/show_answer_section_screenshot.png)
 
