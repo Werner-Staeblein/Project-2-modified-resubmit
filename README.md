@@ -364,7 +364,7 @@ Using JSLint validator mostly shows warnings primarily suggesting
 to use double quotes and not single quotes. When using the clickable option 'single' these warnings do not appear.
 Following the first round of JS Lint testing, I reduced the comments for functions in the code to less than 80 characters. For the linting itself, I used the option 'long' to allow the linter to accept JS code that goes beyond 80 characters.
 
-![JS Lint Validator](readme_assets/JS_Lint_Screenshot.png)
+![JS Lint Validator](readme_assets/js_lint_validation_screenshot.png)
 
 5. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
 
