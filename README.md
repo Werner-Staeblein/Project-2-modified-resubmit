@@ -158,16 +158,14 @@ The trivia has 10 questions for the user to answer. While answering the question
 
 Every question has four radio buttons to choose from. A user can change the radio button/answer as long as the submit button is not clicked. Once a radio button is clicked, **immediate feedback** to the user is as follows:
 
-- the color of the radio button clicked changes,
-- the number of questions already answered (count) increases by one,
+- the color of the radio button changes,
+- the number of questions already answered (count with Question X/Y) increases by one,
 - the user is shown the correct answer in green if answered correctly,
 - the user is shown the correct answer in green and, if the wrong answer was chosen, the incorrectly clicked answer is in red color,
 - the count of "Wrong Answers" or "Correct Answers" both using the same red/green coloring to display wrong/correct answers increases by one depending on the correctness of the last answer,
 - the button 'Submit' changes to 'Next Question' indicating to the user to proceed to the next question
 
-
-<span style="color: red; font-weight: bold;">Describe the user feedback at the end of the quiz for displayAnswer()</span>
-
+![Trivia Page](readme_assets/quiz_page_js_quiz_part2.png)
 
 ### Visual Effects
 
@@ -181,7 +179,9 @@ Every question has four radio buttons to choose from. A user can change the radi
 
 ### Audio Effects
 
-<span style="color: red; font-weight: bold;">Reminder: Further explain the immediate user feedback through audio effects</span>
+- the user receives audio feedback once an answer is clicked. If the answer clicked was correct, an 'applause' sound is played while the sound of a 'buzzer' is played when the answer to any of the quiz questions was incorrect,
+  
+- the user is informed on the audio effects before start a trivia round so that the user can decide use/not use audio effects.
 
 ### Customized radio buttons for answer choices
 
@@ -268,7 +268,7 @@ the next quiz round but the user can learn from the questions answered incorrect
 
 # Testing
 
-Testing was done incrementally with every change in the functionality of code (Javascript) using console.log.
+The working functionality was tested incrementally with every change in the functionality of code (Javascript) using console.log.
 
 Only once there were no error messages shown, the development process continued thus resolving issues along the development process.
 
@@ -298,7 +298,7 @@ Various tests on different screen sizes and types of devices (mobile phones, tab
 
 ### 1. Feature Testing
 
-Features of the site were tested manually in several test runs to ensure that the site performs the intended functionality on all of the key features.
+The working functionalities of the features of the site were tested manually in several test runs.
 
 | Feature                           | Test Case                                   | Outcome                                                                                             | Test result                                                   |
 |-----------------------------------|---------------------------------------------|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
@@ -417,9 +417,9 @@ This project is deployed to GitHub pages. The deployment steps are as follows:
 
 I used a guide to create to quiz app written by Faraz **[Step-by-step-guide-for-quiz-app](https://www.codewithfaraz.com/content/161/build-a-quiz-application-with-html-css-and-javascript-step-by-step-guide#javascript-code)**
 
-For the logic of the quiz and interactivity coding with Javascript, I likewise used the book "Programmieren Lernen mit Javascript" authored by Stephan Elter
+For the logic of the quiz and interactivity coding with Javascript, I likewise used the book "Programmieren Lernen mit Javascript" authored by Stephan Elter.
 
-For the randomized shuffling of the questions.js array the Fisher-Yates logic was used. 
+For the randomized shuffling of the questions.js array the Fisher-Yates logic was used.
 
 This function to randomly shuffle the array of questions was included in the code that I used as a starting guide for my project. I did check the code in my referenced learning code against the post on Stackoverflow (**[Stackoverflow Fisher-Yates Randomization](
 https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)**)
@@ -427,16 +427,16 @@ to better understand the shuffling process.
 
 The shuffling of array questions works as follows: 
 
-- A question is picked from the array of 40 questions located in the file named questions.js. 
+- A question is picked from the array of 40 questions located in the file named questions.js,
 
-- Once a question is picked from this array with 40 questions, the next pick for the trivia questions for a total of 10 questions for each trivia round does no longer consider the one question that was already picked in the first shuffle. 
+- Once a question is picked from this array with 40 questions, the next pick for the trivia questions for a total of 10 questions for each trivia round does no longer consider the one question that was already picked in the first shuffle,
   
-- As a result, no question from the array of questions located in the file named questions.js can be picked twice for any trivia round of ten questions. 
+- As a result, no question from the array of questions located in the file named questions.js can be picked twice for any trivia round of ten questions.
  
-I was only able to change the function name and parameter name. If I had changed the content for the function expression, the shuffling math would not have worked as planned. Therefore, I was unable to customize the mathematical logic inside the function expression as this would have required to create a new mathematical logic that creates the same outcome (drawing a card/question without replacement)
+I was only able to change the function name and parameter name. If I had changed the content for the function expression, the shuffling math would not have worked as planned. Therefore, I was unable to customize the mathematical logic inside the function expression as this would have required to create a new mathematical logic that creates the same outcome (drawing a card/question without replacement).
 
 For the implementation of the sound effects (applause/buzzer) in the code I read the article 
-**[Coding-sound-with-JS-for-beginners](https://www.learningguild.com/articles/coding-sound-with-javascript-beginner-s-guide/)** No code was taken from this source. It was an instruction on the "how-to-structure" markup and Javascript to include the sound effects.
+**[Coding-sound-with-JS-for-beginners](https://www.learningguild.com/articles/coding-sound-with-javascript-beginner-s-guide/)**. No code was taken from this source. It was an instruction on the "how-to-structure" markup and Javascript to include the sound effects.
 
 I used **[W3-schools](https://www.w3schools.com/tags/av_prop_currenttime.asp)** to learn more about the reset of audio files as I was not sure whether the sound effects always start from "zero" once invoked. The currentTime property sets the starting position of my two audio files.
 
@@ -453,10 +453,9 @@ I used the blog of Stephanie Eckles **[Custom radio buttons](https://moderncss.d
 
 The content for this website has been written by Werner Stäblein and the authors mentioned above in credits for the Javascript questions.
 
-Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)**. 
+The Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)** but my total content of the README is substantially exceeding the template and example provided by CI.
 
-The video titled "README.md - Manual Testing Write Up Overview" **[Manual Testing Write Up](https://www.youtube.com/watch?v=Q66HZgkDSOo)** by Kasia Bogucka made it easy
-to structure the README section on testing.
+The video titled "README.md - Manual Testing Write Up Overview" **[Manual Testing Write Up](https://www.youtube.com/watch?v=Q66HZgkDSOo)** by Kasia Bogucka made it easy to structure the README section on manual and automated testing.
 
 I also reviewed a variety of different Readme.md prepared and included in the respective GitHub profiles of Code Institute students. I tried to pick the best of all ideas and suggestions.
 
