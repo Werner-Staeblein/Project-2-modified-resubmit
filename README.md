@@ -190,12 +190,11 @@ the quiz.
 
 ![Radio Buttons](readme_assets/customized_radio_button_styling_js_quiz.png)
 
-### User feedback on scores achieved
+### User feedback on points achieved
 
-<span style="color: red; font-weight: bold;">More explanations on IMMEDIATE user feedback provided during the trivia round such as Green when answered correctly and NO red color for wrong answer as answer was correct in the first place or GREEN and RED with Green for the right answer and RED for the wrong answer clicked / the radio button clicked by the user remains visible with the same color, no matter whether the answer clicked was correct or wrong</span>
+The user receives an ongoing feedback on the points achieved with the counters 'Correct Answers' and 'Wrong Answers'. This count of points is maintained to the last trivia question and is likewise shown in the final results section (results page).
 
-
-![User Feedback](readme_assets/interaction_and_user_feedback.png)
+![User Feedback](readme_assets/user_feedback_on_points_achieved.png)
 
 ### Results Page
 
@@ -212,14 +211,18 @@ Depending on the score achieved, a message is shown.
 The results page also provides an option for the user to start a new quiz. This will take the user to the beginning of the website with the trivia starting at the first question.
 
 ### Show Answer
-Once the ShowAnswer button on the results page is clicked, the user is shown the incorrect answers
+Once the button 'Show Answers' on the results page is clicked, the user is shown the incorrect answers
 including the underlying question, the user's answer in the quiz, and the correct answer to the 
 question. 
 
 As questions are drawn randomly from a questions array, the user can not face the same question again in
 the next quiz round but the user can learn from the questions answered incorrectly.
 
-![Incorrect Answer Box](readme_assets/screenshot_incorrect_answerbox.png)
+
+
+
+
+![Incorrect Answer Box](readme_assets/show_answer_section_screenshot.png)
 
 ### Possible Future Features
 
