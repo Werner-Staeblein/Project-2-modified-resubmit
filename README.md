@@ -17,6 +17,21 @@ The target audience for this JavaScript quiz includes individuals starting their
 
 The live project can be viewed here under this link **[FinalProject](https://werner-staeblein.github.io/Project-2-modified-resubmit/)**
 
+# Table of contents
+
+# Table of Contents
+
+1. [User Experience (UX)](#user-experience-ux)
+2. [Structure](#structure)
+3. [Design](#design)
+4. [Features](#features)
+5. [Technologies](#technologies)
+6. [Testing](#testing)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+9. [Content](#content)
+10. [Acknowledgements](#acknowledgements)
+
 # User Experience (UX)
 
 ## User stories
@@ -103,7 +118,6 @@ Feedback is provided to the user depending on the points achieved with messages 
 On the results page, the user has two options to retake the quiz. First by a click on the 'Retry' button and second by a click on the JS logo. In both cases, the user is not shown the summary of wrong and correct answers of the quiz round. This summary is only displayed if the user clicks the 'Show Answers' button.
 
 ![Results Page](readme_assets/quiz_results_page.png)
-
 
 <span style="color: red; font-weight: bold;">Reminder: insert screenshot of ShowAnswers and explain user feedback following click on ShowAnser</span>
 
@@ -233,7 +247,6 @@ The user can decide to retake the quiz with the 'Retry' button at the end of the
 
 - allow the user to pre-select knowledge status and take quiz questions based on the categorical organization of quiz questions into buckets of "starter/intermediate/advanced".
 
-
 # Technologies
 
 - Languages: HTML, CSS, JavaScript
@@ -343,7 +356,6 @@ Responsiveness of the application was tested across a wide variety of devices wi
 | iPad Air iPadOS 14.7.1                 | 820px    | all 40 questions   | RENDERED AS EXPECTED |
 | iPad Pro (11-inch) iPadOS 14.7.1       | 834px    | all 40 questions   | RENDERED AS EXPECTED |
 | iPad Pro (12.9 inch) iPadOS 14.7.1     | 1024px   | all 40 questions   | RENDERED AS EXPECTED |
-
 
 ### 4. Accessibility
 
