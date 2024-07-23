@@ -265,9 +265,12 @@ function retakeQuiz() {
 }
 
 /**
- * THIS FUNCTION NEEDS DESCRIPTION
- * xxx
- * xxx
+ * Hide quiz questions and related user actions.
+ * Make div to store the correct and incorrect answers
+ * Loop through stored answer data and allocate to 
+ * correct or incorrect
+ * show result in divs that store correct and incorrect
+ * answers
  * */
 
 function showSolution() {
