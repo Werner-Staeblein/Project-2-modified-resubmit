@@ -2,12 +2,12 @@
 
 ![Responsive Design](readme_assets/multi-device-screenshot_taken_with_techsini.png)
 
-Javscript Quiz is an interactive quiz for users to answer questions on their knowledge of Javascript. 
+Javascript Quiz is an interactive quiz for users to answer questions on their knowledge of Javascript. 
 Questions created are stored in a separate Array.
 
-The Quiz randomly picks 10 of those questions to be answered and provides the user the choice among four different answers of which only one is correct.
+The quiz randomly picks 10 questions to be answered and provides the user the choice among four different answers of which only one is correct.
 
-The color palette is harmoniously coordinated with the logo, allowing for a coherent and calm image with its bright and warm colors.
+The color palette harmoniously coordinates with the logo, allowing for a coherent and calm image with its bright and warm colors.
 
 The target audience for this JavaScript quiz includes individuals starting their programming careers, students from the Code Institute looking to test their JavaScript knowledge, and people interested in web development. This quiz helps users prepare for technical exams or coding interviews, verify their JavaScript skills, and reinforce basic programming concepts.
 
