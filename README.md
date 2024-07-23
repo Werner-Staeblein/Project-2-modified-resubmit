@@ -279,7 +279,7 @@ The user can decide to retake the quiz with the 'Retry' button at the end of the
 
 The working functionality was tested incrementally with every change in the functionality of code (Javascript) using console.log.
 
-Only once there were no error messages shown, the development process continued thus resolving issues along the development process.
+Only once there was no error messages shown the development process continued. Therefore, issues were resolved along the development process.
 
 Only once the manual functionality testing was completed, the visual testing was started with additions of CSS.
 
@@ -297,7 +297,7 @@ Various tests on different screen sizes and types of devices (mobile phones, tab
 
 - When a new trivia round was started with the function retake(), I had the issue that the count variables for correct/wrong answers were not reset to zero. This was even though I reset the variables to zero in the retakeQuiz()-function. The bug was fixed by setting the .textContent of the counter variable (ID in markup) to zero for each new round. So, it was not sufficient to simply clear the screen from previous rounds with .innerHTML = ''; but likewise a reset of the counter variables in the markup was necessary. This bug was spotted while doing the responsiveness testing on different devices
 
-- When running the JS validation with JS Lint, I learned that I have mistakenly declared constants twice with the same name. As a result, the global variables and local variables inside the DOMContentLoaded had to be reviewed. Now local variable names were defined as constants in the DOMContentLoaded. As a result, my JS Lint results were minimized further.
+- When running the JS validation with JS Lint, I learned that I had mistakenly declared constants twice with the same name. As a result, the global variables and local variables inside the DOMContentLoaded had to be reviewed. Now local variable names were defined as constants in the DOMContentLoaded. As a result, my JS Lint results were minimized further.
 
 **Issues not resolved**
 
@@ -425,15 +425,22 @@ This project is deployed to GitHub pages. The deployment steps are as follows:
 
 I used a guide to create to quiz app written by Faraz **[Step-by-step-guide-for-quiz-app](https://www.codewithfaraz.com/content/161/build-a-quiz-application-with-html-css-and-javascript-step-by-step-guide#javascript-code)**
 
+The guide quoted is referenced as "learning material", "training code", "learning example" or "learning code". In an EXCEL spreadsheet, I collected an audit trail and proof of evidence that my code deviates from the learning code. The proof of evidence of customization of my code and audit trail that I have used my code that is distinctly different from the learning material can be viewed here:
+
+[Audit Trail and Proof of Evidence of own Code](readme_assets/proof_of_evidence_audit_trail_own_code.pdf)
+
+The PDF benchmarks the learning material code versus my code and provides checkmarks for detailed verification for my code to be distinctly different from the learning material.
+In total, I spent ten hours of effort to provide proof that that I spent sufficient effort to avoid any perception that the code provided is not my own code or insufficiently distinct from learning code.
+
 For the logic of the quiz and interactivity coding with Javascript, I likewise used the book "Programmieren Lernen mit Javascript" authored by Stephan Elter.
 
-For the randomized shuffling of the questions.js array the Fisher-Yates logic was used.
+For the randomized shuffling of the questions.js array, the Fisher-Yates logic was used.
 
 This function to randomly shuffle the array of questions was included in the code that I used as a starting guide for my project. I did check the code in my referenced learning code against the post on Stackoverflow (**[Stackoverflow Fisher-Yates Randomization](
 https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)**)
 to better understand the shuffling process. 
 
-The shuffling of array questions works as follows: 
+The shuffling of the array questions works as follows: 
 
 - A question is picked from the array of 40 questions located in the file named questions.js,
 
@@ -441,7 +448,7 @@ The shuffling of array questions works as follows:
   
 - As a result, no question from the array of questions located in the file named questions.js can be picked twice for any trivia round of ten questions.
  
-I was only able to change the function name and parameter name. If I had changed the content for the function expression, the shuffling math would not have worked as planned. Therefore, I was unable to customize the mathematical logic inside the function expression as this would have required to create a new mathematical logic that creates the same outcome (drawing a card/question without replacement).
+I was only able to change the function name and parameter name. If I had changed the content for the function expression, the shuffling math would not have worked as planned. Therefore, I was unable to customize the mathematical logic inside the function expression as this would have required the creation of a new mathematical logic that yields the same outcome (drawing a card/question without replacement).
 
 For the implementation of the sound effects (applause/buzzer) in the code I read the article 
 **[Coding-sound-with-JS-for-beginners](https://www.learningguild.com/articles/coding-sound-with-javascript-beginner-s-guide/)**. No code was taken from this source. It was an instruction on the "how-to-structure" markup and Javascript to include the sound effects.
