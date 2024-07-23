@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /**
  * Function to startGame. Shuffles the questions.js array and picks
- * 10 out of 40 questions in the questions.js array.
- * Function shuffleArray to randomize questions taken from Stackoverflow
+ * 10 questions in the questions.js array.
+ * Function randomQuestionPick see documentation in README
 */
 
 function startGame() {
@@ -78,10 +78,10 @@ function startGame() {
 }
 
 /**
- * Function to randomize the questions. This function picks a random element from the original
+ * Function to randomize the questions. This function picks a random element from
  * array of questions included in questions.js file. This randomly picked element/question is
  * then excluded from the next draw. This ensures that no question or element from the questions
- * array is picked twice. Function taken from Stackoverflow. Source documented in README
+ * array is picked twice. Source documented in README
 */
 
 function randomQuestionPick(triviaarray) {
@@ -93,9 +93,8 @@ function randomQuestionPick(triviaarray) {
 }
 
 /**
- * Function to show questions including creation of questions container
+ * Function to show questions including creation of questions container, 
  * labels and radio (input) buttons.
- * Function taken from Stackoverflow
 */
 
 function showQuestion() {
@@ -139,10 +138,11 @@ function showQuestion() {
 }
 
 /**
- * Function to compare selected answer with correctAnswer from
+ * Function to compare clicked answer with correctAnswer from
  * questions.js array labels and radio (input) buttons.
  * Increase of count variable for correct answers
- * Mentiond audio effect with applause and buzzer sound
+ * audio effect with applause and buzzer sound for correct and
+ * incorrect answers by user (immediate audio feedback)
 */
 
 function validateAnswer() {
@@ -209,7 +209,7 @@ function calculateAnswerStatistics() {
 
 /**
  * Function to show results container and make retry/showSolution button visible
- * Use count variable named points to display final points achieved
+ * Use count variable named 'points' to display final points achieved
 */
 
 function showEntireTriviaOutcome() {
@@ -225,8 +225,10 @@ function showEntireTriviaOutcome() {
 }
 
 /**
- * Function retry sets current question + count of points back to ZERO
- * New set of questions picked from questions-Array
+ * Function retakeQuiz sets current question AND count of points back to ZERO
+ * New set of questions picked from questions-Array. Every single step documented
+ * because this function was difficult to implement without every step explained
+ * in detail
 */
 
 function retakeQuiz() {
@@ -235,17 +237,17 @@ function retakeQuiz() {
   wrongAnswers = [];
   correctAnswers = [];
 
-  // Step 1: Once a new round starts, a new set of trivia questions must be selected
+  // Step 1: Once a new round starts, a new set of trivia questions is selected
   selectedQuestions = randomQuestionPick([...quizData]).slice(0, 10);
 
-  // Step 2: The results of a previous round are cleared from display as otherwise
-  // these continue show up
+  // Step 2: The results of a previous round are cleared from the display as otherwise
+  // these results from a previous round continue to show up
   resultDisplay.innerHTML = '';
   document.getElementById('correctCount').textContent = '0';
   document.getElementById('wrongCount').textContent = '0';
 
   // Step 3: The TryAgain button and ShowAnswers button must be switched to display
-  // none for a new round
+  // of 'none' for a new round
   restartButton.style.display = 'none';
   showSolutionButton.style.display = 'none';
 
@@ -254,14 +256,19 @@ function retakeQuiz() {
   actionButton.style.display = 'inline-block';
 
   // Step 5: The quizWrapper went to display 'none' when solution()-function
-  // was called. Now the quiz questions must show up again
+  // was called. Now the quiz questions must be shown again
   quizWrapper.style.display = 'block';
 
   // Step 6: The first question of a new trivia round must show up once
   // a new round is started
   showQuestion();
-
 }
+
+/**
+ * THIS FUNCTION NEEDS DESCRIPTION
+ * xxx
+ * xxx
+ * */
 
 function showSolution() {
   quizWrapper.style.display = 'none';
@@ -303,7 +310,7 @@ function showSolution() {
 /**
  * switch case to display feedback on quiz achievement depending on
  * points in counter variable named points. Case 8 and case 9 are combination,
- * case 6 and case 7 are combination, each yielding same outcome
+ * case 6 and case 7 are combination, each showing the same outcome
 */
 
 function getResults(points) {
