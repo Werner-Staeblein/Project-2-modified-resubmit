@@ -17,8 +17,6 @@ The target audience for this JavaScript quiz includes individuals starting their
 
 The live project can be viewed here under this link **[FinalProject](https://werner-staeblein.github.io/Project-2-modified-resubmit/)**
 
-# Table of contents
-
 # Table of Contents
 
 1. [User Experience (UX)](#user-experience-ux)
@@ -38,7 +36,7 @@ The live project can be viewed here under this link **[FinalProject](https://wer
 
 ### As a first time user
 
-- As a first-time website visitor, I want to receive instructions on what the quiz is about
+- I want to receive instructions on what the quiz is about
 - I want to easily and intuitively navigate through the quiz
 - I want to know where to start the quiz indicated by a 'Start JS Quiz' button
 - I want to know the number of questions already answered (progress indication/bar) during the trivia round
@@ -48,12 +46,12 @@ The live project can be viewed here under this link **[FinalProject](https://wer
 - I want to see the points achieved at the end of the trivia round in addition to the progress tracking of correct and incorrect answers during the trivia round
 - I want to restart the quiz either while I am taking the quiz or at the end of the quiz (user control)
 - I want to see different questions each time that I am running the quiz for the app to be more entertaining
-- I want to see all trivia questions including their respective answers at the end of a round. This is in addition to the immediate feedback provided during the trivia round where user feedback is already provided when an answer is chosen
+- I want to see all trivia questions and their respective answers at the end of a round. This is in addition to the immediate feedback provided during the trivia round where user feedback is already provided when an answer is chosen
 
 ### As a returning user
 
 - I want to answer different questions so that I do not see the same questions again
-- I want to play the game as many times that I would want to
+- I want to play the game as many times as I would want to
 
 # Structure
 
@@ -83,7 +81,7 @@ In addition to the functionality of the JS logo, the user can restart a new quiz
 
 The opening page provides a logo, a clear headline about the page  "Javascript Quiz", and instructions for the user to play the quiz combined with the 'Start JS Quiz' button to start the knowledge game.
 
-The user is informed in red colored text that the app provides feedback with audio sound and that any such sound effects can be suppressed by turning off the sound of the device.
+The user is informed in the red colored text that the app provides feedback with audio sound and that any such sound effects can be suppressed by turning off the device sound.
 
 A tooltip becomes visible once the user hovers over the Javascript logo.
 
@@ -103,7 +101,7 @@ With **immediate user feedback** the user is likewise shown the correct answer i
 
 If a user clicks the wrong answer among the four answer options provided, the wrong answer is highlighted with red color while the correct answer is shown in green color providing instantaneous feedback to the user that the answer clicked was incorrect. At the same time, the user receives immediate feedback by increasing the Wrong Answers count by one.
 
-Feedback to the user is supported by audio elements. If a user clicks the correct answer, an 'applause' sound is played while wrong answers trigger the sound of a 'buzzer'. Prior to starting the game, the user was informed that audio effects can be handled by the user by turning the sound off on the user's device.
+Feedback to the user is supported by audio elements. If a user clicks the correct answer, an 'applause' sound is played while wrong answers trigger the sound of a 'buzzer'. Before starting the game, the user was informed that audio effects can be handled by the user by turning the sound off on the user's device.
 
 ![Trivia Page](readme_assets/quiz_page_js_quiz_part2.png)
  
@@ -115,11 +113,9 @@ After finishing 10 quiz questions, the user can still see the points achieved in
 
 Feedback is provided to the user depending on the points achieved with messages such as "Nearing the gold medal" or "Good knowledge but more is yet to come" as defined in the function getResults(points).
 
-On the results page, the user has two options to retake the quiz. First by a click on the 'Retry' button and second by a click on the JS logo. In both cases, the user is not shown the summary of wrong and correct answers of the quiz round. This summary is only displayed if the user clicks the 'Show Answers' button.
+On the results page, the user has two options to retake the quiz. First by a click on the 'Retry' button and second by a click on the JS logo. In both cases, the user is not shown the summary of wrong and correct answers to the quiz round. This summary is only displayed if the user clicks the 'Show Answers' button.
 
 ![Results Page](readme_assets/quiz_results_page.png)
-
-<span style="color: red; font-weight: bold;">Reminder: insert screenshot of ShowAnswers and explain user feedback following click on ShowAnser</span>
 
 # Design
 
@@ -170,12 +166,12 @@ The user is likewise informed prominently with red-colored text that the trivia 
 
 The trivia has 10 questions for the user to answer. While answering the questions, the user is provided **immediate feedback** with a progress indicator on the number of questions already answered.
 
-Every question has four radio buttons to choose from. A user can change the radio button/answer as long as the submit button is not clicked. Once a radio button is clicked, **immediate feedback** to the user is as follows:
+Every question has four radio buttons to choose from. A user can change the radio button/answer for as long as the submit button is **not** clicked. Once a radio button is clicked, **immediate feedback** to the user is as follows:
 
 - the color of the radio button changes,
 - the number of questions already answered (count with Question X/Y) increases by one,
 - the user is shown the correct answer in green if answered correctly,
-- the user is shown the correct answer in green and, if the wrong answer was chosen, the incorrectly clicked answer is in red color,
+- the user is shown the correct answer in green and, if the wrong answer was chosen, the incorrectly clicked answer is in red,
 - the count of "Wrong Answers" or "Correct Answers" both using the same red/green coloring to display wrong/correct answers increases by one depending on the correctness of the last answer,
 - the button 'Submit' changes to 'Next Question' indicating to the user to proceed to the next question
 
@@ -187,26 +183,26 @@ Every question has four radio buttons to choose from. A user can change the radi
   
 - Radio buttons to select answers were customized in CSS to support the overall appeal and coherent color experience while playing the quiz but likewise to provide immediate feedback on which answer the user clicked,
 
-- Correct answers are shown in green color to the user. Wrong answers are shown in red color to the user while the correct answer to the question is shown in green. The latter supports immediate feedback to the user while the user is playing the game,
+- Correct answers are shown in green to the user. Wrong answers are shown in red to the user while the correct answer to the question clicked by the is shown in green. The latter supports immediate feedback to the user while the user is playing the game,
 
 - The count of "Wrong Answers" and "Correct Answers" likewise uses the intuitive green/red coloring as a visual effect.
 
 ### Audio Effects
 
-- the user receives audio feedback once an answer is clicked. If the answer clicked was correct, an 'applause' sound is played while the sound of a 'buzzer' is played when the answer to any of the quiz questions was incorrect,
+- the user receives audio feedback once an answer was clicked. If the answer clicked is correct, an 'applause' sound is played while the sound of a 'buzzer' is played when the answer to any of the quiz questions is incorrect,
   
-- the user is informed on the audio effects before start a trivia round so that the user can decide use/not use audio effects.
+- the user is informed about the audio effects before starting a trivia round so that the user can decide to use/not to use audio effects.
 
 ### Customized radio buttons for answer choices
 
-Radio buttons to select answers were customized in CSS to support overall appeal and coherent color experience while playing
+Radio buttons to select answers were customized in CSS to support the overall appeal and coherent color experience while playing
 the quiz.
 
 ![Radio Buttons](readme_assets/customized_radio_button_styling_js_quiz.png)
 
 ### User feedback on points achieved
 
-The user receives an ongoing feedback on the points achieved with the counters 'Correct Answers' and 'Wrong Answers'. This count of points is maintained to the last trivia question and is likewise shown in the final results section (results page).
+The user receives ongoing feedback on the points achieved with the counters 'Correct Answers' and 'Wrong Answers'. This count of points is maintained to the last trivia question and is likewise shown in the final results section (results page).
 
 ![User Feedback](readme_assets/user_feedback_on_points_achieved.png)
 
@@ -239,7 +235,7 @@ The user can decide to retake the quiz with the 'Retry' button at the end of the
 
 - a timer feature could be added so that the amount of time for each question or the entire set of ten questions for the user is limited,
 
-- a feature for highest scores achieved could be added for users repeating the quiz multiple times,
+- a feature for the highest scores achieved could be added for users repeating the quiz multiple times,
 
 - an additional feature of more explanatory notes for each answer could be provided in the section and function showSolution() so that a user is not only shown the correct answer but likewise some additional explanation as to why the answer is the correct one,
 
