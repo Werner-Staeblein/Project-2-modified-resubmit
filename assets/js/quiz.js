@@ -93,7 +93,7 @@ function randomQuestionPick(triviaarray) {
 }
 
 /**
- * Function to show questions including creation of questions container, 
+ * Function to show questions including creation of questions container,
  * labels and radio (input) buttons.
 */
 
@@ -267,7 +267,7 @@ function retakeQuiz() {
 /**
  * Hide quiz questions and related user actions.
  * Make div to store the correct and incorrect answers
- * Loop through stored answer data and allocate to 
+ * Loop through stored answer data and allocate to
  * correct or incorrect
  * show result in divs that store correct and incorrect
  * answers
