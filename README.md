@@ -470,7 +470,7 @@ I used the blog of Stephanie Eckles **[Custom radio buttons](https://moderncss.d
 
 The content for this website has been written by Werner Stäblein and the authors mentioned above in credits for the Javascript questions.
 
-The Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)** but my total content of the README is substantially exceeding the template and example provided by CI.
+The Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)** but my total content of the README substantially exceeds the template and example provided by CI.
 
 The video titled "README.md - Manual Testing Write Up Overview" **[Manual Testing Write Up](https://www.youtube.com/watch?v=Q66HZgkDSOo)** by Kasia Bogucka made it easy to structure the README section on manual and automated testing.
 
@@ -478,6 +478,6 @@ I also reviewed a variety of different Readme.md prepared and included in the re
 
 # Acknowledgements
 
-Special thanks to my mentor David Bowers. Incredible to see how much value I was able to add with his ideas and instructions. All advice provided by David for Project 1 was fed into Project 2 and thanks to his guidance, the development process including documentation has become much more efficient.
+Special thanks to my mentor David Bowers. Incredible to see how much value I was able to add to the project with his ideas and instructions. All advice provided by David for Project 1 was fed into Project 2 and thanks to his guidance, the development process including documentation has become much more efficient.
 
 My fellow students at CI have helped a lot with their various postings, questions, and answers with myself being able to pick up ideas, avoid mistakes, and stay motivated.
