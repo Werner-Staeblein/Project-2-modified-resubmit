@@ -427,7 +427,7 @@ I used a guide to create to quiz app written by Faraz **[Step-by-step-guide-for-
 
 The guide quoted is referenced as "learning material", "training code", "learning example" or "learning code". In an EXCEL spreadsheet, I collected an audit trail and proof of evidence that my code deviates from the learning code. The proof of evidence of customization of my code and audit trail that I have used my code that is distinctly different from the learning material can be viewed here:
 
-[Audit Trail and Proof of Evidence of own Code](readme_assets/proof_of_evidence_audit_trail_own_code.pdf).
+**[Audit Trail and Proof of Evidence of own Code](readme_assets/proof_of_evidence_audit_trail_own_code.pdf).**
 
 To be able to read this PDF, an extension such as vscode-pdf may need to be installed on your computer.
 
