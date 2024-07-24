@@ -29,11 +29,15 @@ const quizData = [
     },
 
     {
-      question:
-        "Which of the following is a method used to iterate over the elements of an array in JavaScript?",
-      choices: ["for loop", "while loop", "foreach loop", "map function"],
-      correctAnswer: 2,
-    },
+      question: "What does the 'this' keyword refer to in JavaScript?",
+      choices: [
+        "The global object",
+        "The object from which it was called",
+        "The previous function called",
+        "The parent object"
+      ],
+      correctAnswer: 1,
+    },   
     
     {
       question:
