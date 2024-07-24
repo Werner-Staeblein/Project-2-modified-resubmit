@@ -434,7 +434,7 @@ This project is deployed to GitHub pages. The deployment steps are as follows:
 4. In settings, a navigation on the left-hand side is shown. This navigation has the first heading "General". In this column that starts with "General" click the link named "Pages". This link named "Pages" is directly on top of the submenu "Security". What matters here is that "Pages" is clicked
 5. You will now see a heading named "GitHub Pages". In the GitHub Pages, go to "build and deployment". In the heading "Branch" choose the options "main" and "/root"
 6. Click Save
-7. The project from the GitHub site will be deployed at the URL displayed under "Deployments". This heading "Deployments" can be found on the starting page of the GitHub Project. This starting page of the GitHub project can be found under the following link: **[Link-to-Github-Repository](https://werner-staeblein.github.io/Project-2-modified-resubmit/)**
+7. The project from the GitHub site will be deployed at the URL displayed under "Deployments". This heading "Deployments" can be found on the starting page of the GitHub Project. This starting page of the GitHub project can be found under the following link: **[Link-to-Github-Repository](https://github.com/Werner-Staeblein/Project-2-modified-resubmit)**
 
 # Credits
 
