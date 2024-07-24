@@ -239,14 +239,14 @@ const quizData = [
     },
   
     {
-      question: "What is the purpose of the 'let' keyword in JavaScript?",
+      question: "What is the difference between 'let' and 'var' in JavaScript?",
       choices: [
-        "Declares a constant variable",
-        "Declares a block-scoped variable",
-        "Declares a global variable",
-        "Declares a variable with function scope",
+        "'let' has block scope, 'var' has function scope",
+        "'var' has block scope, 'let' has function scope",
+        "They are interchangeable",
+        "'let' is used for constants, 'var' is used for variables",
       ],
-      correctAnswer: 1,
+      correctAnswer: 0,
     },
   
     {
