@@ -514,7 +514,15 @@ header h1{
     font-size: 1rem;
     color: red;
 }
-    
+
+p.correct-heading {
+    font-size: 1.5rem !important;   
+}
+
+p.wrong-heading {
+    font-size: 1.5rem !important;   
+}
+
 .correct-answer,
 .wrong-answer{
     font-size: 1.2rem;
