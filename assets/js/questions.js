@@ -372,7 +372,7 @@ const quizData = [
         "submit",
         "submitForm",
         "formSubmit",
-        "formSubmitEvent",
+        "formEvent",
       ],
       correctAnswer: 0,
     },

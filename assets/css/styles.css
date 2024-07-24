@@ -460,3 +460,54 @@ body{
 .wrong-answer{
     font-size: 1.5rem;
 }}
+
+
+@media screen and (max-width: 300px){
+
+#instructions h2{
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+      
+#instructions p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+    
+#startQuizBtn {
+    margin: 2rem auto 0 auto;
+    padding: 1.1rem;
+    font-size: 1rem;
+    border: none; 
+}
+
+#nextQuestion{
+    margin: 2rem 0 0 2rem;
+}
+
+.options .option {
+    font-size: 1rem;
+    }
+            
+.option input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 0.4rem;
+    margin-left: -0.1rem;
+}        
+ 
+.correct-answers-count {
+    margin-left: 2%;
+    font-size: 1rem;
+    color: green;
+}
+    
+.wrong-answers-count {
+    margin-left: 2%;
+    font-size: 1rem;
+    color: red;
+}
+    
+.correct-answer,
+.wrong-answer{
+    font-size: 1.2rem;
+}}
