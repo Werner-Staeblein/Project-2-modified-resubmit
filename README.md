@@ -305,6 +305,9 @@ Various tests on different screen sizes and types of devices (mobile phones, tab
 
 - Using **[Beautifytools](https://beautifytools.com/javascript-validator.php)** as a Javascript linter, I do not receive the warnings that JS Lint provides. I do, however, receive the error that 'applauseSound' and 'buzzerSound' are not defined. This is even though both are defined as const in my DOMContentLoaded. I was not able to resolve this. If I were to redeclare the same variables again with local scope in the validateAnswer()-function, I would have declared a constant twice.
 
+- After sharing the manually tested application with potential users, I learned that an iPhone user with iPhone 13 reported back that the radio button
+of the quiz section overlaps with the question immediately on right to the radio button. I have tested an additional eight iOS/apple devices in the Firefox developer tools. I have not been able to "replicate" the error the error that was reported to me. All iPhones tested additionally manually have passed the manual test with not a single radio button from any question overlapping with the answer choice immediately to the right of the radio button. I know that a potential issue exists on iPhone 13 but I do not have any such issue visible on my screen, i.e. I am not able "to see" an incorrect display of radio button with question next to it. I tested with dev tools of Firefox and Google literally trying to "make it visible to me what I was reported to exist as an issue on iPhone" but failed to create the same issue that was reported to me to exist. It is rather difficult to fix an issue of "overlap of radio buttons with text on iPhone" when I do not have an iPhone myself to try to verify and identify where the issue exists.
+
 ### 1. Feature Testing
 
 The working functionalities of the features of the site were tested manually in several test runs.
@@ -352,6 +355,20 @@ Responsiveness of the application was tested across a wide variety of devices wi
 | iPad Air iPadOS 14.7.1                 | 820px    | all 40 questions   | RENDERED AS EXPECTED |
 | iPad Pro (11-inch) iPadOS 14.7.1       | 834px    | all 40 questions   | RENDERED AS EXPECTED |
 | iPad Pro (12.9 inch) iPadOS 14.7.1     | 1024px   | all 40 questions   | RENDERED AS EXPECTED |
+
+After sharing the manually tested application with potential users, I learned that an iPhone user with iPhone 13 reported back that the radio button
+of the quiz section overlaps with the question immediately on right to the radio button. I have tested an additional eight iOS/apple devices in the Firefox developer tools. I have not been able to "replicate" the error the error that was reported to me. All iPhones tested additionally manually have passed the manual test with not a single radio button from any question overlapping with the answer choice immediately to the right of the radio button.
+
+| Device Tested                | Width | Test Scope   | Result                 |
+|------------------------------|-------|--------------|------------------------|
+| iPhone X/XS iOS 12           | 375px | 10 questions | RENDERED AS EXPECTED   |
+| iPhone XR/11 iOS 12          | 414px | 10 questions | RENDERED AS EXPECTED   |
+| iPhone XSMax iOS 12          | 414px | 10 questions | RENDERED AS EXPECTED   |
+| iPhone 12/13 ProMax iOS 14.6 | 428px | 10 questions | RENDERED AS EXPECTED   |
+| iPhone 12/13 mini iOS 14.6   | 375px | 10 questions | RENDERED AS EXPECTED   |
+| iPhone 12/13 + Pro iOS 14.6  | 390px | 10 questions | RENDERED AS EXPECTED   |
+| iPhone 11 ProMax iOS 14.6    | 414px | 10 questions | RENDERED AS EXPECTED   |
+| iPhone 11 Pro iOS 14.6       | 375px | 10 questions | RENDERED AS EXPECTED   |
 
 ### 4. Accessibility
 
