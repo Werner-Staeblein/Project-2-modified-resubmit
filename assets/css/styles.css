@@ -473,8 +473,16 @@ body{
     font-size: 1.2rem;
     text-align: center;
 }
-    
-#startQuizBtn {
+
+header h1{
+    font-size: 1.3rem;
+}
+
+#startQuizBtn,
+#submitAction,
+#nextQuestion,
+#tryAgain,
+#displayAnswers  {
     margin: 2rem auto 0 auto;
     padding: 1.1rem;
     font-size: 1rem;
@@ -515,7 +523,7 @@ body{
 @media screen and (max-width: 200px){
 
 header h1{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 #instructions h2{
@@ -534,15 +542,33 @@ header h1{
 
 #startQuizBtn,
 #submitAction,
-#nextQuestion {
+#nextQuestion,
+#tryAgain,
+#displayAnswers {
     margin: 2rem auto 0 auto;
     font-size: 1rem;     
 }    
   
 .options .option {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
-                
+
+.final-score-text{
+    font-size: 1.3rem;
+}
+
+.result-text{
+    font-size: 1.4rem;
+}
+
+p.correct-heading {
+    font-size: 1.2rem !important;   
+}
+
+p.wrong-heading {
+    font-size: 1.2rem !important;   
+}
+
 .option input[type="radio"] {
     vertical-align: middle;
     margin-right: 0.4rem;
@@ -563,5 +589,5 @@ header h1{
         
 .correct-answer,
 .wrong-answer{
-    font-size: 1.2rem;
+    font-size: 0.7rem;
 }}
