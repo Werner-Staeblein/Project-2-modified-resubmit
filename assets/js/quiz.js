@@ -95,6 +95,14 @@ function randomQuestionPick(triviaarray) {
 /**
  * Function to show questions including creation of questions container,
  * labels and radio (input) buttons.
+ * This function is doing the following:
+ * 1. Verify that unanswered questions remain
+ * 2. Create and populate the HTML elements for the current question
+ * 3. Create and populate the HTML elements for the answer choices/radio buttons
+ * 4. Created elements from 3. and 4. are appended to the quiz wrapper
+ * 5. Handle visibility of user action buttons (submit and next question)
+ * 6. Call the function for quiz outcome once all quiz questions answered
+ * 
 */
 
 function showQuestion() {
@@ -133,6 +141,7 @@ function showQuestion() {
         actionButton.classList.remove('hide');
         document.getElementById('nextQuestion').classList.add('hide');
   } else {
+// Once all questions are answered, the outcome of the quiz is shown
       showEntireTriviaOutcome();
     }
 }
