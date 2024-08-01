@@ -370,6 +370,15 @@ of the quiz section overlaps with the question immediately on right to the radio
 | iPhone 11 ProMax iOS 14.6    | 414px | 10 questions | RENDERED AS EXPECTED   |
 | iPhone 11 Pro iOS 14.6       | 375px | 10 questions | RENDERED AS EXPECTED   |
 
+
+Screenshots from a selection of iPhones tested
+
+| iPhone 12 Pro | iPhone 12/13+ Pro | iPhone12/13 mini iOs |
+|:--------------:|:--------------:|:--------------:|
+| ![iPhone12 Pro](readme_assets/iphone_12_pro_screenshot.png) | ![iPhone 12/13+ Pro](readme_assets/iphone_12_13_mini_ios.png) | ![iPhone 12/13 mini iOs](readme_assets/iphone_12_13_+_pro.png) |
+
+
+
 ### 4. Accessibility
 
 - alternative text/labels used to enable screen readers to provide information 
