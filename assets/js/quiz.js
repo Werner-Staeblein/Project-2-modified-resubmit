@@ -274,12 +274,13 @@ function retakeQuiz() {
 }
 
 /**
- * Hide quiz questions and related user actions.
- * Make div to store the correct and incorrect answers
- * Loop through stored answer data and allocate to
- * correct or incorrect
- * show result in divs that store correct and incorrect
- * answers
+ * Hide quiz questions and related user actions. Display quiz results
+ * 1. Hiding quiz wrapper, action button and solution button
+ * 2. Make restart quiz button visible at the end of the quiz 
+ * 3. HTML containers created to store and show the correct and incorrect answers
+ * 4. for-loop to loop through stored data and classify as wrong/correct
+ * 5. Generate HTML for each question including user answers and correct answers
+ * 6. Correct and wrong answers shown in containers generated in step 5.
  * */
 
 function showSolution() {
