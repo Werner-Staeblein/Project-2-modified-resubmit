@@ -111,9 +111,9 @@ header h1{
     background: linear-gradient(45deg, var(--background1), var(--background2));
 }
 
-/*--------------------------------------------------------------------
-            Styling of submitAction, tryAgain, displayAnswer button
-----------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------
+            Styling of submitAction, tryAgain, displayAnswer, nextQuestion button
+-----------------------------------------------------------------------------------*/
 
 #tryAgain,
 #displayAnswers{
@@ -462,7 +462,6 @@ body{
 }}
 
 @media screen and (max-width: 300px){
-
 #instructions h2{
     font-size: 1.5rem;
     text-shadow: none;
@@ -494,7 +493,7 @@ header h1{
 
 .options .option {
     font-size: 1rem;
-    }
+}
             
 .option input[type="radio"] {
     vertical-align: middle;
@@ -528,7 +527,6 @@ p.wrong-heading {
 }}
 
 @media screen and (max-width: 200px){
-
 header h1{
     font-size: 1.2rem;
 }
