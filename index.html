@@ -30,11 +30,16 @@
 <body>
 
   <header>
+
+<!--The image can be clicked. Once image is clicked, the quiz is restarted-->
+
     <img class="logo" id="logo" src="assets/icons/icons8-javascript-240.png" alt="Javscript logo" title="Click here to restart the quiz once a quiz round has already started">
     <h1>Test your Javascript Knowledge</h1>
   </header>
 
 <main>
+
+<!--Instructions for the quiz-->
   <div id="instructions">         
     <h2>Welcome to Javascript Quiz</h2>
     
@@ -45,6 +50,8 @@
     <p>Once you press the <b>Submit</b> button, you will receive immediate feedback on the correctness of your choice</p>
     <p>Proceed to the next question by clicking the button <b>Next Question</b></p>   
 
+<!--Warning that is highlighted in red that audio effects are used in the quiz-->
+
     <p class="warning">This trivia app provides user feedback with audio sound. <br>If you do not want to hear audio effects, please turn off your sound</p>   
 
     <p>If you are going to start the quiz again, please press the JS logo</p>
@@ -53,8 +60,12 @@
     <button id="startQuizBtn">Start JS Quiz</button>
   </div>
 
+<!--Container for the content of quiz. This div only shows up once the startQuizBtn was clicked-->
+
   <div class="container">
     <div id="trivia"></div>
+
+<!--DIV inside the quiz container to display the answer statistics with count of correct/wrong answers-->
 
     <div id="answerStatistics">
       <div class="correct-answers-count">
@@ -64,6 +75,8 @@
         Wrong Answers: <span id="wrongCount">0</span>
       </div>
     </div>
+
+<!--this div immediately belwo shos the outcome of each question-->
     
     <div id="outcome" class="outcome"></div>
     <button id="submitAction" class="button">Submit</button>
@@ -71,6 +84,7 @@
     <button id="tryAgain" class="button hide">Retry</button>
     <button id="displayAnswers" class="button hide">Show Answers</button>
   
+<!--Audio elements used / user is made aware in instructions that audio used and user can decide to turn off audio on device-->
     <audio id="applauseSound" src="assets/audio/small-applause.mp3" preload="auto"></audio>
     <audio id="buzzerSound" src="assets/audio/buzzer-or-wrong-answer.mp3" preload="auto"></audio>
   
